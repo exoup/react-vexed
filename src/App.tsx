@@ -4,9 +4,17 @@ import { gemColors } from "@/lib/constants";
 import Gem from "@/components/Gem";
 
 export function App() {
+  const applyGemColor = () => gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!;
+  const [gemColor, setGemColor] = useState<string>(applyGemColor());
+
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [dragDirection, setDragDirection] = useState<'left' | 'right' | null>(null);
   const pointerPos = useRef({ x: 0, y: 0 });
+
+  const resetDragState = () => {
+    setIsDragging(false);
+    setDragDirection(null);
+  };
 
   const handlePointerDown = (e: PointerEvent<HTMLDivElement>) => {
     setIsDragging(true);
@@ -15,8 +23,24 @@ export function App() {
   };
 
   const handlePointerUp = (e: PointerEvent<HTMLDivElement>) => {
-    setIsDragging(false);
-    e.currentTarget.releasePointerCapture(e.pointerId);
+    // Handle release behavior for movement
+
+    // Cleanup
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+    resetDragState();
+  };
+
+  const handlePointerCancel = (e: PointerEvent<HTMLDivElement>) => {
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+    resetDragState();
+  };
+
+  const handleLostPointerCapture = () => {
+    resetDragState();
   };
 
   const handlePointerMove = (e: PointerEvent<HTMLDivElement>) => {
@@ -25,10 +49,9 @@ export function App() {
     const dx = e.clientX - pointerPos.current.x;
     const threshold = 50;
     if (Math.abs(dx) > threshold) {
-      if (Number.isInteger(dx) && dx > 0) setDragDirection('right');
-      else if (Number.isInteger(dx) && dx < 0) setDragDirection('left');
-      else setDragDirection(null);
-    };
+      if (dx > 0) setDragDirection('right');
+      else if (dx < 0) setDragDirection('left');
+    } else setDragDirection(null);
   };
 
   return (
@@ -36,13 +59,15 @@ export function App() {
       <div className="m-auto flex h-1/2 w-1/2 items-center justify-center rounded-2xl border border-white/10 bg-linear-to-br bg-zinc-800 shadow-2xl shadow-black/55">
 
         <div
-          style={{ cursor: 'pointer' }}
+          className="cursor-pointer touch-none"
           onPointerDown={handlePointerDown}
-          onPointerUp={handlePointerUp}
           onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerCancel}
+          onLostPointerCapture={handleLostPointerCapture}
         >
           <Gem
-            color={gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!}
+            color={gemColor}
             isSelected={isDragging}
             dragDir={dragDirection}
             size={120}
