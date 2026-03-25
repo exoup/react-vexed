@@ -1,19 +1,34 @@
 import "./index.css";
-import { useState, type PointerEvent } from "react";
+import { useState, useRef, type PointerEvent } from "react";
 import { gemColors } from "@/lib/constants";
 import Gem from "@/components/Gem";
 
 export function App() {
-  const [activeBlock, setActiveBlock] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [dragDirection, setDragDirection] = useState<'left' | 'right' | null>(null);
+  const pointerPos = useRef({ x: 0, y: 0 });
 
   const handlePointerDown = (e: PointerEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    pointerPos.current = ({ x: e.clientX, y: e.clientY });
     e.currentTarget.setPointerCapture(e.pointerId);
-    setActiveBlock(1);
   };
 
   const handlePointerUp = (e: PointerEvent<HTMLDivElement>) => {
+    setIsDragging(false);
     e.currentTarget.releasePointerCapture(e.pointerId);
-    setActiveBlock(null);
+  };
+
+  const handlePointerMove = (e: PointerEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+
+    const dx = e.clientX - pointerPos.current.x;
+    const threshold = 50;
+    if (Math.abs(dx) > threshold) {
+      if (Number.isInteger(dx) && dx > 0) setDragDirection('right');
+      else if (Number.isInteger(dx) && dx < 0) setDragDirection('left');
+      else setDragDirection(null);
+    };
   };
 
   return (
@@ -24,10 +39,12 @@ export function App() {
           style={{ cursor: 'pointer' }}
           onPointerDown={handlePointerDown}
           onPointerUp={handlePointerUp}
+          onPointerMove={handlePointerMove}
         >
           <Gem
             color={gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!}
-            isSelected={activeBlock === 1}
+            isSelected={isDragging}
+            dragDir={dragDirection}
             size={120}
           />
         </div>
