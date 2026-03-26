@@ -4,12 +4,16 @@ import { cn } from "@/lib/utils";
 import Gem from "@/components/Blocks/Gem";
 
 export type GemBlockProps = {
+  x?: number,
+  y?: number,
   id: string;
   color?: string;
   size?: number | string;
 };
 
 export const GemBlock: React.FC<GemBlockProps> = ({
+  x = 0,
+  y = 0,
   id,
   color,
   size = blockSize,
@@ -94,9 +98,13 @@ export const GemBlock: React.FC<GemBlockProps> = ({
       id={id}
       style={{
         transform: `translate3d(${offsetX}px, 0, 0)`,
+        left: x * blockSize,
+        top: y * blockSize,
+        width: blockSize,
+        height: blockSize
       }}
       className={cn(
-        "relative cursor-pointer touch-none transition-transform duration-350 ease-out",
+        "absolute cursor-pointer touch-none transition-transform duration-350 ease-out",
         activeRef.current ? "z-20" : "z-10",
       )}
       onPointerDown={handlePointerDown}
