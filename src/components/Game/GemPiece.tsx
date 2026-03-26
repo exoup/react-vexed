@@ -1,21 +1,18 @@
 import React, { useState, useRef, type PointerEvent } from "react";
 import { gemColors } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import Gem from "@/components/Blocks/Gem";
 
 export type GemPieceProps = {
   id: string;
   color?: string;
   size?: number | string;
-  type?: string;
-  canDrag?: boolean;
-} & React.HTMLAttributes<HTMLDivElement>;
+};
 
 export const GemPiece: React.FC<GemPieceProps> = ({
   id,
   color,
   size = 120,
-  type = "0",
-  canDrag = false
 }) => {
   const applyGemColor = () => gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!;
   const [gemColor,] = useState<string>(applyGemColor());
@@ -23,14 +20,17 @@ export const GemPiece: React.FC<GemPieceProps> = ({
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [dragDirection, setDragDirection] = useState<'left' | 'right' | null>(null);
   const elementPos = useRef({ x: 0, y: 0 });
+  const activeRef = useRef(false);
 
   const resetDragState = () => {
     setIsDragging(false);
     setDragDirection(null);
+    activeRef.current = false;
   };
 
   const handlePointerDown = (e: PointerEvent<HTMLDivElement>) => {
     setIsDragging(true);
+    activeRef.current = true;
 
     const rect = e.currentTarget.getBoundingClientRect();
     elementPos.current = {
@@ -76,9 +76,10 @@ export const GemPiece: React.FC<GemPieceProps> = ({
   return (
     <div
       id={id}
-      data-type={type}
-      data-can-drag={canDrag}
-      className="cursor-pointer touch-none"
+      className={cn(
+        "cursor-pointer touch-none",
+        activeRef.current ? "z-20" : "z-10",
+      )}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
