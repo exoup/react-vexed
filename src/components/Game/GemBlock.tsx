@@ -1,5 +1,5 @@
 import React, { useState, useRef, type PointerEvent } from "react";
-import { gemColors } from "@/lib/constants";
+import { gemColors, blockSize } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Gem from "@/components/Blocks/Gem";
 
@@ -12,7 +12,7 @@ export type GemBlockProps = {
 export const GemBlock: React.FC<GemBlockProps> = ({
   id,
   color,
-  size = 120,
+  size = blockSize,
 }) => {
   const applyGemColor = () => gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!;
   const [gemColor,] = useState<string>(applyGemColor());

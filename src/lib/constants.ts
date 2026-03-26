@@ -7,3 +7,5 @@ export const gemColors = [
     '#a5b4fc', // Indigo
     '#d8b4fe'  // Violet
 ];
+
+export const blockSize = 120;
