@@ -1,7 +1,7 @@
 import "./index.css";
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
-import { gemColors } from "@/lib/constants";
+import { gemColors, blockSize } from "@/lib/constants";
 
 const levelMap = [
   [1, 1, 1, 1, 1, 1],
@@ -29,7 +29,7 @@ export function App() {
 
       if (cell > 1) return (
         <GemBlock
-          color={gemColors[cell-2]}
+          color={gemColors[cell - 2]}
           id={`${cell}-${x}-${y}`}
           key={`gem-${x}-${y}`}
           x={x}
@@ -40,8 +40,15 @@ export function App() {
   );
 
   return (
-    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-3/4 mx-auto h-1/2 w-1/2 rounded-2xl">
-      {mapBlocks}
+    <div className="min-h-screen bg-game-background text-neutral-800 p-4 font-sans flex flex-col items-center justify-center">
+
+      <div
+        className="relative bg-transparent shadow-2xl rounded-md overflow-clip select-none touch-none"
+        style={{ width: levelMap[0]!.length * blockSize, height: levelMap.length * blockSize }}
+      >
+        {mapBlocks}
+      </div>
+
     </div>
   );
 }

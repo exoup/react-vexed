@@ -5,8 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-border: var(--border);
-  --color-edge: var(--edge);
+  --color-game-background: var(--game-background);
+  --color-boundary-border: var(--border);
+  --color-boundary-edge: var(--edge);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -83,6 +84,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --border: oklch(0.9484 0.0196 17.5);
   --edge: oklch(0.8184 0.0491 49.44);
+  --game-background: oklch(0.9716 0.0051 67.76);
 }
 
 .dark {

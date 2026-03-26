@@ -8,4 +8,4 @@ export const gemColors = [
     '#d8b4fe'  // Violet
 ];
 
-export const blockSize = 120;
+export const blockSize = 80;
