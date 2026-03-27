@@ -39,15 +39,11 @@ export function Board() {
     );
 
     return (
-        <div className="min-h-screen bg-game-background text-neutral-800 p-4 font-sans flex flex-col items-center justify-center">
-
-            <div
-                className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs overflow-clip select-none touch-none"
-                style={{ width: levelMap[0]!.length * blockSize, height: levelMap.length * blockSize }}
-            >
-                {mapBlocks}
-            </div>
-
+        <div
+            className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs overflow-clip select-none touch-none"
+            style={{ width: levelMap[0]!.length * blockSize, height: levelMap.length * blockSize }}
+        >
+            {mapBlocks}
         </div>
     );
 }
