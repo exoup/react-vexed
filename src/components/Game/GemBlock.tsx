@@ -3,12 +3,15 @@ import { gemColors, blockSize } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Gem from "@/components/Blocks/Gem";
 
+type MoveDirection = "left" | "right";
+
 export type GemBlockProps = {
   x?: number,
   y?: number,
   id: string;
   color?: string;
   size?: number | string;
+  onMove?: (id: string, direction: MoveDirection) => void;
 };
 
 export const GemBlock: React.FC<GemBlockProps> = ({
@@ -17,6 +20,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   id,
   color,
   size = blockSize,
+  onMove,
 }) => {
   const applyGemColor = () => gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!;
   const [gemColor,] = useState<string>(applyGemColor());
@@ -24,7 +28,6 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   const gemSize = typeof size === "number" ? size : 120;
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [dragDirection, setDragDirection] = useState<'left' | 'right' | null>(null);
-  const [offsetX, setOffsetX] = useState(0);
   const elementPos = useRef({ x: 0, y: 0 });
   const activeRef = useRef(false);
 
@@ -58,11 +61,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
       return;
     }
 
-    if (dragDirection === "left") {
-      setOffsetX((current) => current - gemSize);
-    } else if (dragDirection === "right") {
-      setOffsetX((current) => current + gemSize);
-    }
+    onMove?.(id, dragDirection);
 
     // Cleanup
     if (e.currentTarget.hasPointerCapture(e.pointerId)) {
@@ -97,14 +96,12 @@ export const GemBlock: React.FC<GemBlockProps> = ({
     <div
       id={id}
       style={{
-        transform: `translate3d(${offsetX}px, 0, 0)`,
-        left: x * blockSize,
-        top: y * blockSize,
+        transform: `translate3d(${x * blockSize}px, ${y * blockSize}px, 0)`,
         width: blockSize,
         height: blockSize
       }}
       className={cn(
-        "absolute cursor-pointer touch-none transition-transform duration-350 ease-out",
+        "absolute cursor-pointer touch-none transition-transform duration-250 ease-in-out",
         activeRef.current ? "z-20" : "z-10",
       )}
       onPointerDown={handlePointerDown}
