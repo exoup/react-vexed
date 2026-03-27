@@ -22,8 +22,16 @@ export type BoundaryBlockProps = {
     size?: number | string
 };
 
+export const isGemCell = (cell: BoundaryLevelCell) => {
+    return typeof cell === "number" && cell > 1;
+};
+
+export const isBoundaryCell = (cell: BoundaryLevelCell) => {
+    return Boolean(cell) && !isGemCell(cell);
+};
+
 const hasBoundaryAt = (levelMap: BoundaryLevelMap, x: number, y: number) => {
-    return Boolean(levelMap[y]?.[x]);
+    return isBoundaryCell(levelMap[y]?.[x]);
 };
 
 export const getBoundaryEdges = (
