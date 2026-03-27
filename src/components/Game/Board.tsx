@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
 import { gemColors, blockSize } from "@/lib/constants";
@@ -12,29 +14,101 @@ const levelMap = [
     [1, 1, 1, 1, 1, 1],
 ];
 
-export function Board() {
-    const mapBlocks = levelMap.flatMap((row, y) =>
-        row.flatMap((cell, x) => {
-            if (!cell) return null;
+type BoardDirection = "left" | "right";
+type BoardCell = 0 | 1 | string;
+type BoardState = BoardCell[][];
 
+const boundaryLevelMap = levelMap.map((row) =>
+    row.map((cell) => (cell === 1 ? 1 : 0)),
+);
+
+const createGemId = (cell: number, x: number, y: number) => {
+    return `gem-${cell}-${x}-${y}`;
+};
+
+const createInitialBoardState = (map: number[][]) => {
+    const gemColorsById: Record<string, string> = {};
+
+    const boardState: BoardState = map.map((row, y) =>
+        row.map((cell, x) => {
+            if (cell <= 1) return cell as 0 | 1;
+
+            const gemId = createGemId(cell, x, y);
+            gemColorsById[gemId] = gemColors[cell - 2] ?? gemColors[0]!;
+            return gemId;
+        }),
+    );
+
+    return { boardState, gemColorsById };
+};
+
+const { boardState: initialBoardState, gemColorsById } = createInitialBoardState(levelMap);
+
+const isGemCell = (cell: BoardCell): cell is string => {
+    return typeof cell === "string";
+};
+
+export function Board() {
+    const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
+
+    const moveGem = (gemId: string, direction: BoardDirection) => {
+        setBoardState((currentBoardState) => {
+            let gemPosition: { x: number, y: number } | null = null;
+
+            for (let y = 0; y < currentBoardState.length; y += 1) {
+                const x = currentBoardState[y]!.findIndex((cell) => cell === gemId);
+
+                if (x !== -1) {
+                    gemPosition = { x, y };
+                    break;
+                }
+            }
+
+            if (!gemPosition) return currentBoardState;
+
+            const { x: currentX, y: currentY } = gemPosition;
+            const targetX = currentX + (direction === "left" ? -1 : 1);
+            const targetCell = currentBoardState[currentY]?.[targetX];
+
+            if (targetCell !== 0) return currentBoardState;
+
+            return currentBoardState.map((row, y) => {
+                if (y !== currentY) return row;
+
+                return row.map((cell, x) => {
+                    if (x === currentX) return 0;
+                    if (x === targetX) return gemId;
+                    return cell;
+                });
+            });
+        });
+    };
+
+    const mapBlocks = boardState.flatMap((row, y) =>
+        row.flatMap((cell, x) => {
             if (cell === 1) return (
                 <BoundaryBlock
                     key={`boundary-${x}-${y}`}
                     x={x}
                     y={y}
-                    levelMap={levelMap}
+                    levelMap={boundaryLevelMap}
                 />
             );
 
-            if (cell > 1) return (
+            if (isGemCell(cell)) return (
                 <GemBlock
-                    color={gemColors[cell - 2]}
-                    id={`${cell}-${x}-${y}`}
-                    key={`gem-${x}-${y}`}
+                    canMoveLeft={row[x - 1] === 0}
+                    canMoveRight={row[x + 1] === 0}
+                    color={gemColorsById[cell]}
+                    id={cell}
+                    key={cell}
+                    onMove={moveGem}
                     x={x}
                     y={y}
                 />
             );
+
+            return null;
         }),
     );
 

@@ -11,6 +11,8 @@ export type GemBlockProps = {
   id: string;
   color?: string;
   size?: number | string;
+  canMoveLeft?: boolean;
+  canMoveRight?: boolean;
   onMove?: (id: string, direction: MoveDirection) => void;
 };
 
@@ -20,6 +22,8 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   id,
   color,
   size = blockSize,
+  canMoveLeft = true,
+  canMoveRight = true,
   onMove,
 }) => {
   const applyGemColor = () => gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!;
@@ -86,10 +90,22 @@ export const GemBlock: React.FC<GemBlockProps> = ({
 
     const dx = e.clientX - elementPos.current.x;
     const threshold = gemSize / 2;
-    if (Math.abs(dx) > threshold) {
-      if (dx > 0) setDragDirection('right');
-      else if (dx < 0) setDragDirection('left');
-    } else setDragDirection(null);
+    if (Math.abs(dx) <= threshold) {
+      setDragDirection(null);
+      return;
+    }
+
+    if (dx > 0) {
+      setDragDirection(canMoveRight ? 'right' : null);
+      return;
+    }
+
+    if (dx < 0) {
+      setDragDirection(canMoveLeft ? 'left' : null);
+      return;
+    }
+
+    setDragDirection(null);
   };
 
   return (
