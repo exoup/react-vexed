@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
+import { GemStateProvider, useGemState } from "@/components/Game/GemStateContext";
 import { gemColors, blockSize } from "@/lib/constants";
 
 const levelMap = [
@@ -10,7 +11,7 @@ const levelMap = [
     [1, 1, 1, 0, 0, 1],
     [1, 0, 0, 0, 0, 1],
     [1, 8, 0, 0, 7, 1],
-    [1, 1, 8, 7, 1, 1],
+    [1, 1, 0, 7, 1, 1],
     [1, 1, 1, 1, 1, 1],
 ];
 
@@ -48,8 +49,9 @@ const isGemCell = (cell: BoardCell): cell is string => {
     return typeof cell === "string";
 };
 
-export function Board() {
+function BoardContent() {
     const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
+    const { slidingGemIds, startSliding } = useGemState();
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
         setBoardState((currentBoardState) => {
@@ -72,6 +74,8 @@ export function Board() {
 
             if (targetCell !== 0) return currentBoardState;
 
+            startSliding(gemId);
+
             return currentBoardState.map((row, y) => {
                 if (y !== currentY) return row;
 
@@ -83,6 +87,37 @@ export function Board() {
             });
         });
     };
+
+    useEffect(() => {
+        if (slidingGemIds.size > 0) return;
+
+        const nextBoardState = boardState.map((row) => [...row]);
+        let hasAnyFallingGem = false;
+
+        for (let x = 0; x < nextBoardState[0]!.length; x += 1) {
+            for (let y = nextBoardState.length - 2; y >= 0; y -= 1) {
+                const currentCell = nextBoardState[y]![x]!;
+                if (!isGemCell(currentCell)) continue;
+                if (slidingGemIds.has(currentCell)) continue;
+
+                let targetY = y;
+
+                while (nextBoardState[targetY + 1]?.[x] === 0) {
+                    targetY += 1;
+                }
+
+                if (targetY === y) continue;
+
+                nextBoardState[y]![x] = 0;
+                nextBoardState[targetY]![x] = currentCell;
+                hasAnyFallingGem = true;
+            }
+        }
+
+        if (!hasAnyFallingGem) return;
+
+        setBoardState(nextBoardState);
+    }, [boardState, slidingGemIds]);
 
     const mapBlocks = boardState.flatMap((row, y) =>
         row.flatMap((cell, x) => {
@@ -119,6 +154,14 @@ export function Board() {
         >
             {mapBlocks}
         </div>
+    );
+}
+
+export function Board() {
+    return (
+        <GemStateProvider>
+            <BoardContent />
+        </GemStateProvider>
     );
 }
 

@@ -1,4 +1,5 @@
-import React, { useState, useRef, type PointerEvent } from "react";
+import React, { useEffect, useRef, useState, type PointerEvent } from "react";
+import { useGemState } from "@/components/Game/GemStateContext";
 import { gemColors, blockSize } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Gem from "@/components/Blocks/Gem";
@@ -28,12 +29,34 @@ export const GemBlock: React.FC<GemBlockProps> = ({
 }) => {
   const applyGemColor = () => gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!;
   const [gemColor,] = useState<string>(applyGemColor());
+  const [renderedPosition, setRenderedPosition] = useState({ x, y });
+  const { slidingGemIds, finishSliding } = useGemState();
 
   const gemSize = typeof size === "number" ? size : 120;
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [dragDirection, setDragDirection] = useState<'left' | 'right' | null>(null);
   const elementPos = useRef({ x: 0, y: 0 });
   const activeRef = useRef(false);
+  const animationFrameRef = useRef<number | null>(null);
+  const isSliding = slidingGemIds.has(id);
+
+  useEffect(() => {
+    if (animationFrameRef.current !== null) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
+
+    animationFrameRef.current = requestAnimationFrame(() => {
+      animationFrameRef.current = null;
+      setRenderedPosition({ x, y });
+    });
+
+    return () => {
+      if (animationFrameRef.current !== null) {
+        cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+    };
+  }, [x, y]);
 
   const resetDragState = () => {
     setIsDragging(false);
@@ -108,16 +131,24 @@ export const GemBlock: React.FC<GemBlockProps> = ({
     setDragDirection(null);
   };
 
+  const handleTransitionEnd = (event: React.TransitionEvent<HTMLDivElement>) => {
+    if (event.propertyName !== "transform") return;
+    if (!isSliding) return;
+
+    finishSliding(id);
+  };
+
   return (
     <div
       id={id}
       style={{
-        transform: `translate3d(${x * blockSize}px, ${y * blockSize}px, 0)`,
+        transform: `translate3d(${renderedPosition.x * blockSize}px, ${renderedPosition.y * blockSize}px, 0)`,
         width: blockSize,
         height: blockSize
       }}
       className={cn(
-        "absolute cursor-pointer touch-none transition-transform duration-250 ease-in-out",
+        "absolute cursor-pointer touch-none transition-transform",
+        isSliding ? "duration-270 ease-in-out" : "duration-150 ease-in",
         activeRef.current ? "z-20" : "z-10",
       )}
       onPointerDown={handlePointerDown}
@@ -125,6 +156,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerCancel}
       onLostPointerCapture={handleLostPointerCapture}
+      onTransitionEnd={handleTransitionEnd}
     >
       <Gem
         color={color || gemColor}
