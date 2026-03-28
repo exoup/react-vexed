@@ -41,11 +41,8 @@ function BoardContent() {
         startFalling,
         clearingGemIds,
         startClearing,
+        isInteractionLocked
     } = useGemState();
-    const isInteractionLocked =
-        slidingGemIds.size > 0
-        || fallingGemIds.size > 0
-        || clearingGemIds.size > 0;
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
         setBoardState((currentBoardState) => {
