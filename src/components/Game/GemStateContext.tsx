@@ -13,6 +13,9 @@ type GemStateContextValue = {
   fallingGemIds: Set<string>;
   startFalling: (gemId: string) => void;
   finishFalling: (gemId: string) => void;
+  clearingGemIds: Set<string>;
+  startClearing: (gemId: string) => void;
+  finishClearing: (gemId: string) => void;
 };
 
 const GemStateContext = createContext<GemStateContextValue | null>(null);
@@ -20,6 +23,7 @@ const GemStateContext = createContext<GemStateContextValue | null>(null);
 export function GemStateProvider({ children }: PropsWithChildren) {
   const [slidingGemIds, setSlidingGemIds] = useState<Set<string>>(new Set());
   const [fallingGemIds, setFallingGemIds] = useState<Set<string>>(new Set());
+  const [clearingGemIds, setClearingGemIds] = useState<Set<string>>(new Set());
 
   const value = useMemo<GemStateContextValue>(() => ({
     slidingGemIds,
@@ -56,7 +60,24 @@ export function GemStateProvider({ children }: PropsWithChildren) {
         return nextSet;
       });
     },
-  }), [slidingGemIds, fallingGemIds]);
+    clearingGemIds,
+    startClearing: (gemId: string) => {
+      setClearingGemIds((currentSet) => {
+        const nextSet = new Set(currentSet);
+        nextSet.add(gemId);
+        return nextSet;
+      });
+    },
+    finishClearing: (gemId: string) => {
+      setClearingGemIds((currentSet) => {
+        if (!currentSet.has(gemId)) return currentSet;
+
+        const nextSet = new Set(currentSet);
+        nextSet.delete(gemId);
+        return nextSet;
+      });
+    },
+  }), [clearingGemIds, fallingGemIds, slidingGemIds]);
 
   return (
     <GemStateContext.Provider value={value}>

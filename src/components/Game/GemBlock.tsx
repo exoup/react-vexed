@@ -30,7 +30,14 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   const applyGemColor = () => gemColors[(Math.floor(Math.random() * gemColors.length) + 1) % gemColors.length]!;
   const [gemColor,] = useState<string>(applyGemColor());
   const [renderedPosition, setRenderedPosition] = useState({ x, y });
-  const { slidingGemIds, finishSliding, fallingGemIds, finishFalling } = useGemState();
+  const {
+    slidingGemIds,
+    finishSliding,
+    fallingGemIds,
+    finishFalling,
+    clearingGemIds,
+    finishClearing,
+  } = useGemState();
 
   const gemSize = typeof size === "number" ? size : 120;
   const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -40,6 +47,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   const animationFrameRef = useRef<number | null>(null);
   const isSliding = slidingGemIds.has(id);
   const isFalling = fallingGemIds.has(id);
+  const isClearing = clearingGemIds.has(id);
 
   useEffect(() => {
     if (animationFrameRef.current !== null) {
@@ -144,6 +152,12 @@ export const GemBlock: React.FC<GemBlockProps> = ({
     }
   };
 
+  const handleAnimationEnd = () => {
+    if (!isClearing) return;
+
+    finishClearing(id);
+  };
+
   return (
     <div
       id={id}
@@ -156,6 +170,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
         "absolute cursor-pointer touch-none transition-transform",
         isSliding ? "duration-270 ease-in-out" : "duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
         activeRef.current ? "z-20" : "z-10",
+        isClearing && "pointer-events-none",
       )}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
@@ -164,12 +179,20 @@ export const GemBlock: React.FC<GemBlockProps> = ({
       onLostPointerCapture={handleLostPointerCapture}
       onTransitionEnd={handleTransitionEnd}
     >
-      <Gem
-        color={color || gemColor}
-        isSelected={isDragging}
-        dragDir={dragDirection}
-        size={size}
-      />
+      <div
+        className={cn(
+          "h-full w-full",
+          isClearing && "animate-[gem-clear_320ms_cubic-bezier(0.22,1,0.36,1)_forwards]",
+        )}
+        onAnimationEnd={handleAnimationEnd}
+      >
+        <Gem
+          color={color || gemColor}
+          isSelected={isDragging}
+          dragDir={dragDirection}
+          size={size}
+        />
+      </div>
     </div>
   );
 }

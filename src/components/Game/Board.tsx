@@ -18,7 +18,7 @@ import {
 const levelMap = [
     [1, 1, 1, 1, 1, 1],
     [1, 7, 8, 0, 0, 1],
-    [1, 1, 1, 0, 0, 1],
+    [1, 0, 1, 0, 0, 1],
     [1, 0, 0, 0, 0, 1],
     [1, 8, 0, 0, 7, 1],
     [1, 1, 0, 7, 1, 1],
@@ -33,11 +33,14 @@ const { boardState: initialBoardState, gemColorsById } = createInitialBoardState
 
 function BoardContent() {
     const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
+    const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
     const {
         slidingGemIds,
         startSliding,
         fallingGemIds,
         startFalling,
+        clearingGemIds,
+        startClearing,
     } = useGemState();
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
@@ -54,6 +57,13 @@ function BoardContent() {
     useEffect(() => {
         if (slidingGemIds.size > 0) return;
         if (fallingGemIds.size > 0) return;
+        if (pendingMatchedGemIds.size > 0) {
+            if (clearingGemIds.size > 0) return;
+
+            setBoardState(removeMatchedGems(boardState, pendingMatchedGemIds));
+            setPendingMatchedGemIds(new Set());
+            return;
+        }
 
         const gravityResult = applyGravity(boardState, slidingGemIds);
         if (gravityResult.hasChanged) {
@@ -67,8 +77,19 @@ function BoardContent() {
         const matchedGemIds = findMatches(boardState);
         if (matchedGemIds.size === 0) return;
 
-        setBoardState(removeMatchedGems(boardState, matchedGemIds));
-    }, [boardState, fallingGemIds, slidingGemIds, startFalling]);
+        matchedGemIds.forEach((gemId) => {
+            startClearing(gemId);
+        });
+        setPendingMatchedGemIds(matchedGemIds);
+    }, [
+        boardState,
+        clearingGemIds,
+        fallingGemIds,
+        pendingMatchedGemIds,
+        slidingGemIds,
+        startClearing,
+        startFalling,
+    ]);
 
     const mapBlocks = boardState.flatMap((row, y) =>
         row.flatMap((cell, x) => {
