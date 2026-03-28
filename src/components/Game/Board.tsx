@@ -18,10 +18,10 @@ import {
 const levelMap = [
     [1, 1, 1, 1, 1, 1],
     [1, 7, 8, 0, 0, 1],
-    [1, 0, 1, 0, 0, 1],
+    [1, 1, 1, 0, 0, 1],
     [1, 0, 0, 0, 0, 1],
     [1, 8, 0, 0, 7, 1],
-    [1, 1, 0, 7, 1, 1],
+    [1, 1, 8, 7, 1, 1],
     [1, 1, 1, 1, 1, 1],
 ];
 
@@ -42,6 +42,10 @@ function BoardContent() {
         clearingGemIds,
         startClearing,
     } = useGemState();
+    const isInteractionLocked =
+        slidingGemIds.size > 0
+        || fallingGemIds.size > 0
+        || clearingGemIds.size > 0;
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
         setBoardState((currentBoardState) => {
@@ -108,6 +112,7 @@ function BoardContent() {
                     canMoveRight={row[x + 1] === 0}
                     color={gemColorsById[cell]}
                     id={cell}
+                    isInteractionLocked={isInteractionLocked}
                     key={cell}
                     onMove={moveGem}
                     x={x}

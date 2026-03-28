@@ -12,6 +12,7 @@ export type GemBlockProps = {
   id: string;
   color?: string;
   size?: number | string;
+  isInteractionLocked?: boolean;
   canMoveLeft?: boolean;
   canMoveRight?: boolean;
   onMove?: (id: string, direction: MoveDirection) => void;
@@ -23,6 +24,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   id,
   color,
   size = blockSize,
+  isInteractionLocked = false,
   canMoveLeft = true,
   canMoveRight = true,
   onMove,
@@ -74,6 +76,8 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   };
 
   const handlePointerDown = (e: PointerEvent<HTMLDivElement>) => {
+    if (isInteractionLocked) return;
+
     setIsDragging(true);
     activeRef.current = true;
 
@@ -118,6 +122,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
   };
 
   const handlePointerMove = (e: PointerEvent<HTMLDivElement>) => {
+    if (isInteractionLocked) return;
     if (!isDragging || !activeRef.current) return;
 
     const dx = e.clientX - elementPos.current.x;
@@ -167,10 +172,11 @@ export const GemBlock: React.FC<GemBlockProps> = ({
         height: blockSize
       }}
       className={cn(
-        "absolute cursor-pointer touch-none transition-transform",
+        "absolute cursor-grab active:cursor-grabbing touch-none transition-transform",
         isSliding ? "duration-270 ease-in-out" : "duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
         activeRef.current ? "z-20" : "z-10",
-        isClearing && "pointer-events-none",
+        (isClearing || isInteractionLocked) && "pointer-events-none",
+        isInteractionLocked && "cursor-default",
       )}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
