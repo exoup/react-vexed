@@ -10,12 +10,16 @@ type GemStateContextValue = {
   slidingGemIds: Set<string>;
   startSliding: (gemId: string) => void;
   finishSliding: (gemId: string) => void;
+  fallingGemIds: Set<string>;
+  startFalling: (gemId: string) => void;
+  finishFalling: (gemId: string) => void;
 };
 
 const GemStateContext = createContext<GemStateContextValue | null>(null);
 
 export function GemStateProvider({ children }: PropsWithChildren) {
   const [slidingGemIds, setSlidingGemIds] = useState<Set<string>>(new Set());
+  const [fallingGemIds, setFallingGemIds] = useState<Set<string>>(new Set());
 
   const value = useMemo<GemStateContextValue>(() => ({
     slidingGemIds,
@@ -35,7 +39,24 @@ export function GemStateProvider({ children }: PropsWithChildren) {
         return nextSet;
       });
     },
-  }), [slidingGemIds]);
+    fallingGemIds,
+    startFalling: (gemId: string) => {
+      setFallingGemIds((currentSet) => {
+        const nextSet = new Set(currentSet);
+        nextSet.add(gemId);
+        return nextSet;
+      });
+    },
+    finishFalling: (gemId: string) => {
+      setFallingGemIds((currentSet) => {
+        if (!currentSet.has(gemId)) return currentSet;
+
+        const nextSet = new Set(currentSet);
+        nextSet.delete(gemId);
+        return nextSet;
+      });
+    },
+  }), [slidingGemIds, fallingGemIds]);
 
   return (
     <GemStateContext.Provider value={value}>

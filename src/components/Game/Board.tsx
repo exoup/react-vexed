@@ -4,6 +4,16 @@ import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
 import { GemStateProvider, useGemState } from "@/components/Game/GemStateContext";
 import { gemColors, blockSize } from "@/lib/constants";
+import {
+    applyGravity,
+    createInitialBoardState,
+    findMatches,
+    isGemCell,
+    moveGemInBoard,
+    removeMatchedGems,
+    type BoardDirection,
+    type BoardState,
+} from "@/util/board";
 
 const levelMap = [
     [1, 1, 1, 1, 1, 1],
@@ -15,109 +25,50 @@ const levelMap = [
     [1, 1, 1, 1, 1, 1],
 ];
 
-type BoardDirection = "left" | "right";
-type BoardCell = 0 | 1 | string;
-type BoardState = BoardCell[][];
-
 const boundaryLevelMap = levelMap.map((row) =>
     row.map((cell) => (cell === 1 ? 1 : 0)),
 );
 
-const createGemId = (cell: number, x: number, y: number) => {
-    return `gem-${cell}-${x}-${y}`;
-};
-
-const createInitialBoardState = (map: number[][]) => {
-    const gemColorsById: Record<string, string> = {};
-
-    const boardState: BoardState = map.map((row, y) =>
-        row.map((cell, x) => {
-            if (cell <= 1) return cell as 0 | 1;
-
-            const gemId = createGemId(cell, x, y);
-            gemColorsById[gemId] = gemColors[cell - 2] ?? gemColors[0]!;
-            return gemId;
-        }),
-    );
-
-    return { boardState, gemColorsById };
-};
-
-const { boardState: initialBoardState, gemColorsById } = createInitialBoardState(levelMap);
-
-const isGemCell = (cell: BoardCell): cell is string => {
-    return typeof cell === "string";
-};
+const { boardState: initialBoardState, gemColorsById } = createInitialBoardState(levelMap, gemColors);
 
 function BoardContent() {
     const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
-    const { slidingGemIds, startSliding } = useGemState();
+    const {
+        slidingGemIds,
+        startSliding,
+        fallingGemIds,
+        startFalling,
+    } = useGemState();
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
         setBoardState((currentBoardState) => {
-            let gemPosition: { x: number, y: number } | null = null;
+            const nextBoardState = moveGemInBoard(currentBoardState, gemId, direction);
 
-            for (let y = 0; y < currentBoardState.length; y += 1) {
-                const x = currentBoardState[y]!.findIndex((cell) => cell === gemId);
-
-                if (x !== -1) {
-                    gemPosition = { x, y };
-                    break;
-                }
-            }
-
-            if (!gemPosition) return currentBoardState;
-
-            const { x: currentX, y: currentY } = gemPosition;
-            const targetX = currentX + (direction === "left" ? -1 : 1);
-            const targetCell = currentBoardState[currentY]?.[targetX];
-
-            if (targetCell !== 0) return currentBoardState;
+            if (!nextBoardState) return currentBoardState;
 
             startSliding(gemId);
-
-            return currentBoardState.map((row, y) => {
-                if (y !== currentY) return row;
-
-                return row.map((cell, x) => {
-                    if (x === currentX) return 0;
-                    if (x === targetX) return gemId;
-                    return cell;
-                });
-            });
+            return nextBoardState;
         });
     };
 
     useEffect(() => {
         if (slidingGemIds.size > 0) return;
+        if (fallingGemIds.size > 0) return;
 
-        const nextBoardState = boardState.map((row) => [...row]);
-        let hasAnyFallingGem = false;
-
-        for (let x = 0; x < nextBoardState[0]!.length; x += 1) {
-            for (let y = nextBoardState.length - 2; y >= 0; y -= 1) {
-                const currentCell = nextBoardState[y]![x]!;
-                if (!isGemCell(currentCell)) continue;
-                if (slidingGemIds.has(currentCell)) continue;
-
-                let targetY = y;
-
-                while (nextBoardState[targetY + 1]?.[x] === 0) {
-                    targetY += 1;
-                }
-
-                if (targetY === y) continue;
-
-                nextBoardState[y]![x] = 0;
-                nextBoardState[targetY]![x] = currentCell;
-                hasAnyFallingGem = true;
-            }
+        const gravityResult = applyGravity(boardState, slidingGemIds);
+        if (gravityResult.hasChanged) {
+            gravityResult.fallingGemIds.forEach((gemId) => {
+                startFalling(gemId);
+            });
+            setBoardState(gravityResult.boardState);
+            return;
         }
 
-        if (!hasAnyFallingGem) return;
+        const matchedGemIds = findMatches(boardState);
+        if (matchedGemIds.size === 0) return;
 
-        setBoardState(nextBoardState);
-    }, [boardState, slidingGemIds]);
+        setBoardState(removeMatchedGems(boardState, matchedGemIds));
+    }, [boardState, fallingGemIds, slidingGemIds, startFalling]);
 
     const mapBlocks = boardState.flatMap((row, y) =>
         row.flatMap((cell, x) => {
