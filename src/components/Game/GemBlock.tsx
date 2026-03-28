@@ -188,7 +188,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
       <div
         className={cn(
           "h-full w-full",
-          isClearing && "animate-[gem-clear_320ms_cubic-bezier(0.22,1,0.36,1)_forwards]",
+          isClearing && "animate-gem-clear",
         )}
         onAnimationEnd={handleAnimationEnd}
       >

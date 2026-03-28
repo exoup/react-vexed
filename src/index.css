@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --animate-gem-clear: gem-clear 240ms cubic-bezier(0.22,1,0.36,1) forwards;
   --color-game-background: var(--game-background);
   --color-boundary-border: var(--border);
   --color-boundary-edge: var(--edge);
@@ -130,22 +131,19 @@
   }
 }
 
-@keyframes gem-clear {
+  @keyframes gem-clear {
   0% {
-    opacity: 1;
     transform: scale(1) rotate(0deg);
     filter: brightness(1);
   }
 
   50% {
-    opacity: 1;
-    transform: scale(1.12) rotate(-10deg);
+    transform: scale(1.12) rotate(-5deg);
     filter: brightness(1.15);
   }
 
   100% {
-    opacity: 0;
-    transform: scale(0.2) rotate(12deg);
+    transform: scale(1.2) rotate(12deg);
     filter: brightness(1.35);
   }
 }
