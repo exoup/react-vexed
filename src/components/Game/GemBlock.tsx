@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, type PointerEvent } from "react";
-import { useGemState } from "@/components/Game/GemStateContext";
+import { useGemState } from "@/components/Context/GemStateContext";
 import { gemColors, blockSize } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Gem from "@/components/Blocks/Gem";

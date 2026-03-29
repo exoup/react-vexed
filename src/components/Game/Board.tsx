@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
-import { GemStateProvider, useGemState } from "@/components/Game/GemStateContext";
+import { GemStateProvider, useGemState } from "@/components/Context/GemStateContext";
 import { gemColors, blockSize } from "@/lib/constants";
 import {
     applyGravity,
@@ -43,7 +43,8 @@ function BoardContent() {
         startFalling,
         clearingGemIds,
         startClearing,
-        isInteractionLocked
+        isInteractionLocked,
+        isBoardSettled
     } = useGemState();
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
@@ -95,9 +96,10 @@ function BoardContent() {
     ]);
 
     useEffect(() => {
-        hasEmpty(boardState);
-        hasOrphans(boardState);
-    }, [boardState])
+        if (!isBoardSettled && pendingMatchedGemIds.size !== 0) return;
+        hasEmpty(boardState)
+        hasOrphans(boardState)
+    }, [boardState, isBoardSettled, pendingMatchedGemIds])
 
     const mapBlocks = boardState.flatMap((row, y) =>
         row.flatMap((cell, x) => {

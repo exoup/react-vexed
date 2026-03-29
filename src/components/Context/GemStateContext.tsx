@@ -17,6 +17,7 @@ type GemStateContextValue = {
   startClearing: (gemId: string) => void;
   finishClearing: (gemId: string) => void;
   isInteractionLocked: boolean;
+  isBoardSettled: boolean;
 };
 
 const GemStateContext = createContext<GemStateContextValue | null>(null);
@@ -79,6 +80,7 @@ export function GemStateProvider({ children }: PropsWithChildren) {
       });
     },
     isInteractionLocked: slidingGemIds.size > 0 || fallingGemIds.size > 0 || clearingGemIds.size > 0,
+    isBoardSettled: slidingGemIds.size === 0 && fallingGemIds.size === 0 && clearingGemIds.size === 0
   }), [clearingGemIds, fallingGemIds, slidingGemIds]);
 
   return (
