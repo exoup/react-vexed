@@ -155,3 +155,22 @@ export const removeMatchedGems = (boardState: BoardState, matchedGemIds: Set<str
     row.map((cell) => (isGemCell(cell) && matchedGemIds.has(cell) ? 0 : cell)),
   );
 };
+
+export const hasEmpty = (boardState: BoardState) => {
+  return boardState.every((row) => row.every((cell) => cell === 0 || cell === 1));
+};
+
+export const hasOrphans = (boardState: BoardState) => {
+  const gemTypeCounts = new Map<string, number>();
+
+  boardState.forEach((row) => {
+    row.forEach((cell) => {
+      if (isGemCell(cell)) {
+        const gemType = getGemType(cell);
+        gemTypeCounts.set(gemType, (gemTypeCounts.get(gemType) ?? 0) + 1);
+      }
+    });
+  });
+
+  return [...gemTypeCounts.values()].some((count) => count === 1);
+};

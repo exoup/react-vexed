@@ -11,18 +11,20 @@ import {
     isGemCell,
     moveGemInBoard,
     removeMatchedGems,
+    hasEmpty,
+    hasOrphans,
     type BoardDirection,
     type BoardState,
 } from "@/util/board";
 
 const levelMap = [
-    [1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 7, 0, 8, 0, 9, 0, 1],
-    [1, 1, 0, 1, 0, 1, 0, 1],
-    [1, 9, 0, 9, 7, 0, 8, 1],
-    [1, 1, 0, 1, 1, 0, 1, 1],
-    [1, 7, 0, 7, 8, 0, 8, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 5, 6, 0, 0, 1, 1],
+    [1, 1, 1, 0, 0, 1, 1],
+    [1, 0, 0, 0, 0, 1, 1],
+    [1, 6, 0, 0, 5, 1, 1],
+    [1, 1, 6, 5, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
 ];
 
 const boundaryLevelMap = levelMap.map((row) =>
@@ -91,6 +93,11 @@ function BoardContent() {
         startClearing,
         startFalling,
     ]);
+
+    useEffect(() => {
+        hasEmpty(boardState);
+        hasOrphans(boardState);
+    }, [boardState])
 
     const mapBlocks = boardState.flatMap((row, y) =>
         row.flatMap((cell, x) => {
