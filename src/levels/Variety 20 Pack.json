@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "category": "General",
+    "author": "Vexed Development Team",
+    "url": "http://vexed.sourceforge.net"
+  },
+  "levels": [
+    {
+      "board": "10/5~f3/5~2g1/5~~~a1/4~~~c2/1~~~~1~1c1/1g1f~g~ag1/10",
+      "solution": "IdHdIdfGHeHeGegGGgFgFeEfDfCfGbFeeGfGgG",
+      "title": "Stavernsodden"
+    },
+    {
+      "board": "10/2h3~a2/1~a3~3/1~4~3/1~4~a2/1~~g~e~hg1/2~1~ae3/10",
+      "solution": "FgHbdFeFHfGfHfFfIfHfCcEfDfbFcFdFCcbF",
+      "title": "Cape May"
+    },
+    {
+      "board": "10/3b~5/4~5/4f5/3~c~4/1g~~d~c~2/1f~d1~g~b1/10",
+      "solution": "DgbFIggFGgeEEecFfFeFdFfFeFdBeFGfHfFffGEfDfbG",
+      "title": "St. Simons Isl"
+    },
+    {
+      "board": "10/10/7~e1/7~2/3~f~~c2/3~a~eh~1/1c~~1fh1a1/10",
+      "solution": "HeeFGeFeEeEfFfGfHffFeFdFbGfFeFgFhFIcHf",
+      "title": "Oak Island"
+    },
+    {
+      "board": "10/6a3/5~f~2/5~1~2/5e1~2/1gb~~g~~~1/1ae~2bf~1/10",
+      "solution": "fFgFfFhFgFgCGcFfEfcFdFeFfFbFcFdFeFfFHfGfgGFfEfDfbG",
+      "title": "Charleston"
+    },
+    {
+      "board": "10/10/4c5/1g1~h5/1a~~b5/3hc~4/1~~b1a~g2/10",
+      "solution": "EdbEcEEeDedFeFDgCgcEbEcEdFbGeFfG",
+      "title": "Peck Ledge"
+    },
+    {
+      "board": "10/1a~7/2~7/2~~f~4/3~1~4/1f~ed~~3/2d1g~eag1/10",
+      "solution": "GgeFdFHgfFeFbFcFdFeFGfeDFfEfDfbBcDdFeFeGfGgG",
+      "title": "Cape Cod"
+    },
+    {
+      "board": "10/1f~2~d3/2~2~4/2~2~4/2~1~f4/2~1~e~c2/1~e~bdcb2/10",
+      "solution": "HfGbFeHgfFeGbBCgcGbGcGdGeG",
+      "title": "Cape Elizabeth"
+    },
+    {
+      "board": "10/4~e4/4~5/4~5/4~~f3/1f~~~hc~f1/2~ec1fh2/10",
+      "solution": "GeFeEfFfGfIfHfDgEfFfFbbFdFcFeFfFcG",
+      "title": "Beavertail"
+    },
+    {
+      "board": "10/6h3/5~e3/5~4/2~~~~1~a1/1e~1~a~~2/1g~hg1~~a1/10",
+      "solution": "GcGcFeFeEeDefFIebGcGbGcG",
+      "title": "Hunting Island"
+    },
+    {
+      "board": "10/10/10/4~g4/2~b~1c3/2cg~hg~~1/2gb~3h1/10",
+      "solution": "DedGFdEgFfEfGfFfGfFfdFcFeFcGfFgFhF",
+      "title": "Goderich Main"
+    },
+    {
+      "board": "10/1b8/1d8/1e8/1c~~3~a1/2c~~d~~2/1ae~~1b~2/10",
+      "solution": "bEfFcGbGbEbEcEgGIeHfGfFfdFeFfFbEcEdFcFeFfFcG",
+      "title": "Fort Point"
+    },
+    {
+      "board": "10/2a~6/3~3c~1/3~b3~1/3~g~~~g1/3ae~~~2/3cb1e~~1/10",
+      "solution": "cBeEfFeFhCgGIeIefFHehGGfFfgG",
+      "title": "Ballinacourty"
+    },
+    {
+      "board": "10/1c~7/2~~6/2d~3e2/3~~~~h~1/4d~~1c1/3bh~eb2/10",
+      "solution": "bBcCcDdEGgHgHeGfeEdEHefEFfgEhEGfdGeG",
+      "title": "Doubling Point"
+    },
+    {
+      "board": "10/5~~gb1/5~4/5~1e2/1ga~~~~f2/2f1~~~e2/3a~~b3/10",
+      "solution": "HbGbIbHbGbcEdGFfdEeEfFHebEcEdEeFGeFeEeEgDedGeG",
+      "title": "DeTour Reef"
+    },
+    {
+      "board": "10/7~e1/3b~2~2/4~~b~2/4~~1~2/3~~dcf~1/2c~~e1df1/10",
+      "solution": "hFIbdCFfGfHfcGEfFfGfeFdFeFGdFefFgFdG",
+      "title": "Mizen Head"
+    },
+    {
+      "board": "10/3b~1~d2/1f2~1~3/1g~1~1~3/2~~~g~3/1f~~~1~3/1d~hbh4/10",
+      "solution": "fEHbGeDgbFbDbDEgFgFeEfcEdBdEeEfEDfCfEfcG",
+      "title": "Sorhaugoy"
+    },
+    {
+      "board": "10/2e7/1~a~6/1~1~2~f2/1~1~1~~e2/1~~cfg~3/1~ag2~c2/10",
+      "solution": "HgfFHdGeDfGfFfEfHeGfFfEfcFCccCdFeFfF",
+      "title": "East Brother Isle"
+    },
+    {
+      "board": "10/5h~3/6~~a1/6~~g1/3~~~a3/1cb~~~h~~1/1b1c~~2g1/10",
+      "solution": "GecFbFFgdFcFIcHdIdHdfBGfGfGegFhFFeEeEfFfDfCfdG",
+      "title": "Sherwood Point"
+    },
+    {
+      "board": "10/6c3/6a~2/1g~4~2/2~3~c2/2~e~g~d2/2a1~d~e2/10",
+      "solution": "bDdFcFdFgCgCHeHeHeGfFfHfEfDfeGfG",
+      "title": "Seul Choix Point"
+    },
+    {
+      "board": "10/10/3e~5/4~5/1e~g~~4/1g~1h~~~d1/1b~~d~b~h1/10",
+      "solution": "dCGgeEfFeFfFgGIfHfGfFfbGcGdGGgFgEgDgbFDeCeCgcGdGeGfGbGcGdGeGfGgG",
+      "title": "Port Washington"
+    },
+    {
+      "board": "10/10/2h4~f1/2f~2~e2/3~2~3/1fe~~~~a2/1a2~~~h2/10",
+      "solution": "HdcFbFdFcFdFeFHfGfFfEfDfCfIccDHddFeFeGcDdFeGfG",
+      "title": "Bodie Island"
+    },
+    {
+      "board": "10/10/4h~4/3he~1~d1/5~1~h1/5~e~e1/4cdc~2/10",
+      "solution": "gFIdHfGfeGeCeDIeHgIffFdDFgHgeD",
+      "title": "Howth"
+    },
+    {
+      "board": "10/3~d2h~1/3~4~1/1fb~~3~1/3~~1h~~1/2~~~~fc~1/3cd2b~1/10",
+      "solution": "hBgEhEEbcDbDcDdDeFHfGfFfdEDfEfeFcFfFgF",
+      "title": "Black Head"
+    },
+    {
+      "board": "10/10/5~ah2/5~4/1ha~~~4/2d~~e4/1be~bd4/10",
+      "solution": "GccEcFdFFeEecGEfFfbGDfEfcGcGdGHcGcbEcGdG",
+      "title": "Point Cabrillo"
+    },
+    {
+      "board": "10/2~e6/2~d6/1b~7/2~1~h4/1f~~~f~3/1eh~d1~b2/10",
+      "solution": "DbcGFeEfFfbGbDDcEgcFdFcFeFfFcG",
+      "title": "Port Dalhousie"
+    },
+    {
+      "board": "10/3d~5/4~5/4~b4/4~1f3/2gcb~g3/3df~c~2/10",
+      "solution": "FddBeGGfgGcFdFdGeGfG",
+      "title": "East Chop"
+    },
+    {
+      "board": "10/2h~6/3~~f1~f1/3~~2~2/3~~1a~2/3~~af~b1/3b~f1~h1/10",
+      "solution": "gFIfIcHfcBGfFgdFFceFfFgFdG",
+      "title": "Saugeen River"
+    },
+    {
+      "board": "10/1ch~1~b3/3c1~4/2~f~~4/2~1~5/1~e~~h4/1b1e~f4/10",
+      "solution": "dDcFcBGbDdcFFgFddDEfDfCfbBcBdD",
+      "title": "Kewaunee"
+    },
+    {
+      "board": "10/10/2c~6/3~6/1h~~a5/1gf~g~~~~1/1ca~1~f1h1/10",
+      "solution": "cCbEcEEeDeeFdFeFfFgFhFCecFdFeFfFbFcFbFdFeFbG",
+      "title": "Boblo Island"
+    },
+    {
+      "board": "10/2~e3f~1/2~5~1/2~5~1/2~d~3~1/1b~f~h~~e1/2~1hd~b2/10",
+      "solution": "fGhBdEdFeFIfHfGfFfIfHfGfEfeGDfbFDbcFdFeGfG",
+      "title": "Sheboygan"
+    },
+    {
+      "board": "10/7~a1/6~~2/4~b~e2/4~1~g2/1c~~~ea3/2~~b1cg2/10",
+      "solution": "IbHcFfFdEgDgbFEgcFdFeFfFHgHdHeGfFfEfcG",
+      "title": "Minots Ledge"
+    },
+    {
+      "board": "10/1e~7/2~~a5/2~~2~a2/2~~1~~ec1/2~g~~~3/2g1~~c~e1/10",
+      "solution": "bBGgFgdFcFIgHgHdGgeFdFfFHeGeEcdFeGGfFfEfDfIeHeGfeG",
+      "title": "Poe Reef"
+    },
+    {
+      "board": "10/10/2d7/2c~6/3~3~h1/3~~e~df1/1f~e~h~1c1/10",
+      "solution": "IefGHfGfHfcDcDFfdFeFdFIfHffFdGgFhFbGcGdGeG",
+      "title": "Little Traverse"
+    },
+    {
+      "board": "10/8g1/3~d2~f1/3~3~a1/3~3~2/2~~~~~~f1/1gda~1e~e1/10",
+      "solution": "EcDfIcIdHfGfFfIdHfIfGfgGFfbGcG",
+      "title": "Oksoy"
+    },
+    {
+      "board": "10/4h1f~~1/4e~1h~1/4f~2~1/5~~1~1/5~~g~1/4feg1~1/10",
+      "solution": "HffGeGeCeCfEgFfFgBhFhBhCIfFgHfeD",
+      "title": "Geitungen"
+    },
+    {
+      "board": "10/3c~5/4~5/4~2c2/4~c~a2/1b~~~f~3/1fc~~1~ba1/10",
+      "solution": "FebFFfEfcFdFdBeFfFHeHeGfgGdGFfEfbGcG",
+      "title": "Pigeon Point"
+    },
+    {
+      "board": "10/10/10/4f~4/5~~3/2b~g~cb~1/2c1hfhg~1/10",
+      "solution": "eFhFgFfFhFgFgGIffGHfeGGfeDfEcFdFFffGEfDfeGfGgG",
+      "title": "Frankfort"
+    },
+    {
+      "board": "10/10/5~a3/5~4/5~1~b1/1cbea~~~2/2e1c~h~h1/10",
+      "solution": "gGIeeFdFcFbFeFdFcFHgfFeFdFFfGfGcFfEfDfeG",
+      "title": "Ocracoke"
+    },
+    {
+      "board": "10/2~ge5/2~7/2~g~5/2h1~~4/2eh~~fd2/3d~~1f2/10",
+      "solution": "dGcFdFcFeGGfFfHfGfdDeEeFfFgFDbEgcFdFEbDbcF",
+      "title": "Owls Head"
+    },
+    {
+      "board": "10/5~d3/3d~~4/4~~1e~1/1g~e~~2~1/2~h~~~~f1/1f~g~2h2/10",
+      "solution": "dCdFeFdFbEfFgFeFGbFehDfFgFIfHfIfGfFfbGcG",
+      "title": "Harbor Beach"
+    },
+    {
+      "board": "10/10/2g7/2d~3~d1/3~1~e~2/2b~~~g~~1/2fe~f2b1/10",
+      "solution": "GeFfcDcFcDGfFfdFeFdFfFgFhFIdHfGfFfcGdG",
+      "title": "Rockland Break"
+    },
+    {
+      "board": "10/3b6/3e~2e~1/4~2d~1/3~~~2~1/3~1h~~d1/1h~b~b1~e1/10",
+      "solution": "dCdCeEDgFgEehCfFIggFhDbGcGdG",
+      "title": "South Haven"
+    },
+    {
+      "board": "10/5d~~f1/3~g1~~2/3~3~a1/3~3~2/1f~~g~~~2/1ac~cd1~2/10",
+      "solution": "bFEfcFEcdFeFcGfBfFgFgCHfGfIdIbHfGfbGcGdG",
+      "title": "Eastern Point"
+    },
+    {
+      "board": "10/10/2a~3e~1/2d~2~d~1/3~~1e1~1/4~~b~f1/3af~1~b1/10",
+      "solution": "hCeGGfgFIfHfIfdGFfGfcCHddEGfeFfFgFcDdE",
+      "title": "Key West"
+    },
+    {
+      "board": "10/3~d2~g1/3~3~c1/3~~2~2/2~e~2~2/1bc1~~~~~1/1ed~b~~1g1/10",
+      "solution": "IbhFEbdDcGeGDecGIcdGfGHfGfbGcGdGeG",
+      "title": "Point Montara"
+    },
+    {
+      "board": "10/10/2~a6/2~7/1d~7/1f~~ea~b2/1d~eb2f2/10",
+      "solution": "EfEgDgbFDcFfHfGfFfEgcFdFcFeFcGfFgF",
+      "title": "Lorain West"
+    },
+    {
+      "board": "10/4f2e~1/3~gh~1~1/3~2~1~1/2~~2~~~1/2~f~~~~f1/1eg1~h~3/10",
+      "solution": "EcDehBIeFgfCdFeFHfGfFfEfDfEcdFIfHfeFeG",
+      "title": "Point Clark"
+    },
+    {
+      "board": "10/1b~7/2~7/2~7/1g~~3e2/2~~~hfh2/2f~b1eg2/10",
+      "solution": "FfGfHfEgFfGfHfEfFfbBbEcEdFdFcFeFfFcG",
+      "title": "Straw Island"
+    },
+    {
+      "board": "10/4~cf~2/4~b1~2/4~2~2/2~a~2~2/1c~e~~a~~1/2~1b~1ef1/10",
+      "solution": "gBhFbFdFFbEeDeFcGfeFfFdFgF",
+      "title": "Alligator Reef"
+    },
+    {
+      "board": "10/10/10/1h~2~c~h1/2~d1~1~2/2~a~~g~2/2g1~~acd1/10",
+      "solution": "dFgFeGbDGdIddFcFdFeFfFHfGfHfFffGEfDfeGfGgG",
+      "title": "Crooked River"
+    },
+    {
+      "board": "10/2b~3~h1/2d~3~2/3~3~2/3~3~2/2b~~a~~~1/2achc~1d1/10",
+      "solution": "cBcCdFfFeFfFgFhFIbHfGfFfdGcGdGeG",
+      "title": "Point Iroquois"
+    },
+    {
+      "board": "10/1d8/1c~1~f4/2~1~2b2/2~1~2d2/1h~~~~~b2/1f~c~1~h2/10",
+      "solution": "HgHfFcDgbFbCEgcFGfFfdFbGeFfFbCcG",
+      "title": "Skillagalee Isle"
+    },
+    {
+      "board": "10/4h~e~2/1~gc3~2/1~5~2/1~g~2~~2/1~1~~b~~2/1hbe3~c1/10",
+      "solution": "fFIggFgBHeGfFfEfHfGfFfEfeBfBgBCcDcCcHfGfFfEfcEbEbGcEdFbGeFfFgF",
+      "title": "Leamington"
+    },
+    {
+      "board": "10/2d~2c3/3~1~f~2/3~1~1~2/3~1~1~2/1h~~~~h~g1/1g1c~d1f2/10",
+      "solution": "cBdFGfIfgCHfbFcFGfGcdGFfEfFfDfCfdG",
+      "title": "Fort Niagara"
+    },
+    {
+      "board": "10/6~d2/6~3/6~1g1/6~~e1/2~h~~~f2/2d1ghfe2/10",
+      "solution": "HfIedFfGHbeGGfFfEfDfgGIeHfeGfG",
+      "title": "Grand Traverse"
+    },
+    {
+      "board": "10/10/2~f1e~3/1~f3~3/1~4~1a1/1~e~~~~~c1/1~b~cb1~a1/10",
+      "solution": "fCgFIfHfEgcFCgCdFgdFDgbFcFEfeGGfFfdFeFfFgFDcCdbFcFcGbGcGdG",
+      "title": "Martin Reef"
+    },
+    {
+      "board": "10/5f4/4~d~~f1/2g~~1~~2/3~~1~~2/1c~~~~~~c1/2~1~egde1/10",
+      "solution": "IfHffCgEFcbFGfFfEfDfcDdFeFfFfGgGIceGfG",
+      "title": "Duluth North"
+    },
+    {
+      "board": "10/10/2ab6/3h~~c3/3e~~b3/4~~a~e1/3hc~1~2/10",
+      "solution": "GddDGeGfFgdEdEeFcCfFdEgFIf",
+      "title": "Cape Lookout"
+    },
+    {
+      "board": "10/6~e2/6~a2/6~b2/2fa~e~3/3d~d~3/4b1~f2/10",
+      "solution": "dFHbfFcEdEeFfFdFeFfFHdHdGfFf",
+      "title": "Hog Island Shoal"
+    }
+  ]
+}

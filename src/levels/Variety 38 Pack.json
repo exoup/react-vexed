@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "category": "General",
+    "author": "Vexed Development Team",
+    "url": "http://vexed.sourceforge.net"
+  },
+  "levels": [
+    {
+      "board": "10/10/6~f2/2e~2~1h1/3~2~~f1/1~~h~~~~d1/1hd1~e~~h1/10",
+      "solution": "DfCfIeIefGHcGfHfGfFfIfHfGfFfEfDfcDdFeFfFfGeGfGgG",
+      "title": "Oh Baby"
+    },
+    {
+      "board": "10/7h2/2~a3a2/2~3~b2/2~2~~3/2~c~~4/2~1c~hb2/10",
+      "solution": "dFHdHdGgGeGeFgFffGDcEfDfHdGe",
+      "title": "Confessin"
+    },
+    {
+      "board": "10/5hc~2/7~2/7~2/1c4~~f1/1h~c~~~~2/2c1fhf~~1/10",
+      "solution": "bFdFcFbFeFdFfFgGgBfBgBHeeFhGeGfGIe",
+      "title": "The Next Goodbye"
+    },
+    {
+      "board": "10/2e~6/3~3a2/3~2~b2/3~2~3/2~f~h~1f1/1a~he1~~b1/10",
+      "solution": "HdgGFfbGDfEfEgcFcBIgHgHdGfFfdFeFfFcG",
+      "title": "Tie You Up"
+    },
+    {
+      "board": "10/1f~7/1c~3~b2/2~3~3/2~c1~~3/2~gfg~3/2~b1h~~h1/10",
+      "solution": "fGeFdFfFeFDfbBbCcFHcdFeFGeFfgGEf",
+      "title": "Empty Heart"
+    },
+    {
+      "board": "10/6~e2/2g~2~a2/3~2~3/1h1~2~~h1/1e~~~~~~a1/2~h~ga~2/10",
+      "solution": "HbgGIeHfHcgEcCbFbFGfdGcFdFdGcGdGeG",
+      "title": "Hot Stuff"
+    },
+    {
+      "board": "10/1~g2c~d2/1~4~3/1~4~3/1c~1c1~~g1/1b~~b~~~2/3b1~~d2/10",
+      "solution": "bFcFCbbEEfcFdFeFHgfBHbGfIeFffGbFcF",
+      "title": "Worried About You"
+    },
+    {
+      "board": "10/6f~f1/2b~3~2/3~3~2/2de~1~~2/3f~~f~~1/3e~2db1/10",
+      "solution": "gBcCdGdEcEdEeFfFeFdFgFIbfFHehFgFGfFf",
+      "title": "Rolling Stone"
+    },
+    {
+      "board": "10/10/10/2~~d1~e2/1e~ah~~3/2bdb~~~2/2h2a~~2/10",
+      "solution": "EdbEDdeEdEcEeEdEcEHdfEeEcFfEgFFffGEfDf",
+      "title": "Satisfaction"
+    },
+    {
+      "board": "10/10/10/6~b2/5~~3/1g~~~h~~c1/1h1fcg~bf1/10",
+      "solution": "bFcFdFHgfFeFHdeGGeFfGfFfEfDfCfgGIfHfeGfGdGeGfGgG",
+      "title": "Better Move On"
+    },
+    {
+      "board": "10/3c~a4/3a~5/2be~5/1~c1~e4/1~e~~1~b2/1~2a~~3/10",
+      "solution": "cFdFdDDdCfCfcFFbbFDdCecFdFHfeG",
+      "title": "Had It With You"
+    },
+    {
+      "board": "10/6~e2/6~1g1/3d2~~d1/2~b~1~~2/1~~e~~~~2/1bg1~a~~a1/10",
+      "solution": "DeCfdEdFeFfFIgIdIdHeHbGfFffGEfDfeGfG",
+      "title": "Moonlight Mile"
+    },
+    {
+      "board": "10/10/1e~1~d4/1c~1~e4/2~1~5/1a~~~~~~d1/1ea~~e~1c1/10",
+      "solution": "bCbDcFcFbFFcdFbGFdeFIfHffFeFgFhFeG",
+      "title": "Mixed Emotions"
+    },
+    {
+      "board": "10/10/3h6/2~c~~d3/2~1~~b~2/1f~~~~ch2/1d~~~1bf2/10",
+      "solution": "GdgEFfGfFfHfGfHfEfDgbFDdEgcFFfdFbGdDeFfF",
+      "title": "Ruby Tuesday"
+    },
+    {
+      "board": "10/7~h1/3~d2~2/2c~2~~2/2d~~~~g2/1c1~1~~3/1g~~gh~3/10",
+      "solution": "IbHdEgEccDdEdGeGdGfGeGcEeEfFdGHebGcGdGGebGcGdGeG",
+      "title": "Continental Drift"
+    },
+    {
+      "board": "10/7~h1/3h~2~d1/4~2~2/3d~2~b1/4~b~a2/1~~~~a1hd1/10",
+      "solution": "HfFgGfEgFgdCeFfFIbDgCgEgDgIgIeHfGfFfdEeFcGfFIcbGcGdG",
+      "title": "One Hit"
+    },
+    {
+      "board": "10/2h7/2b~6/3bh1~~g1/2d2~ad2/1~a~~~4/1g1~~~4/10",
+      "solution": "cCcCIdHdGeGecFcFdFFfEfDfCfHeGeFfdG",
+      "title": "Fight"
+    },
+    {
+      "board": "10/6~f2/4f~~3/5~~3/5~~3/2~e~~ac2/2c1~heah1/10",
+      "solution": "GfFgdFeFfFHbHfGfeCfEFffGEfDfeGfGgG",
+      "title": "Blinded By Love"
+    },
+    {
+      "board": "10/6c~2/1~g4~2/1~3h~~2/1~~1~f~~2/1f~~~a~~c1/2~~a1g1h1/10",
+      "solution": "gBfDgFhFCcFeEgFfDgbEEgcFbFdFcFeFfFcG",
+      "title": "Bad Times"
+    },
+    {
+      "board": "10/10/5a~3/6~f2/3~f1~b2/1e~~d~d3/1b~~1~ae2/10",
+      "solution": "EeEfDgbFcFdFeFGfFfEfHdGfFfEfHefCGfFffGEfbG",
+      "title": "Jig-Saw Puzzle"
+    },
+    {
+      "board": "10/10/10/4g~4/5b~3/1h~~~cf3/1f2gbch2/10",
+      "solution": "fEFfEfGfFfGfGgeFdFHgfFeFbFcFdFeGGfeDFfEfeGDfCf",
+      "title": "Sister Morphine"
+    },
+    {
+      "board": "10/5b4/5a~~e1/4~e~3/4~1~3/1d~~~f~3/1fb~a1~d2/10",
+      "solution": "IcHcfDbFFfEfcFdFFdeFfFdGFdEfbGcG",
+      "title": "Silver Train"
+    },
+    {
+      "board": "10/1b~7/2~a6/2~7/2~~6/1d~~c~h~d1/1ha~2c~b1/10",
+      "solution": "GfcGEfFfbGDfbBEfcECfDfdFeFfFDgbFDcgGIfHfGfFfEfcFdFbGeFfFgFgG",
+      "title": "Backstreet Girl"
+    },
+    {
+      "board": "10/10/1e~7/2~7/1~g~f~d3/1~d~1~f~2/1e1~~~bgb1/10",
+      "solution": "bCGeFgEgEecECedEdGeGGfeEfEgFgGdGfGcFdGeG",
+      "title": "Not Fade Away"
+    },
+    {
+      "board": "10/10/2a~6/3c~5/3fa~~~g1/2~e1~~~2/1e~g1~c~f1/10",
+      "solution": "cCdDeEdDeEeEdEDffEeEfEIggFIeHeGeFeEehGgFfFfG",
+      "title": "Beast Of Burden"
+    },
+    {
+      "board": "10/10/10/1b~c~5/2~1a~4/1f~~cfg~2/1a~~1g1~b1/10",
+      "solution": "EfEfFfGfeFDgbFDdbDcDcFdFbGdDeEfFeFgF",
+      "title": "Doo Doo Doo Doo"
+    },
+    {
+      "board": "10/2e~6/2b~6/3~6/2h~4f1/3~~~~~e1/2behbf~2/10",
+      "solution": "gGIffGHfIfcEcBeGGfdGdFdGGgFgcC",
+      "title": "Promotion Man"
+    },
+    {
+      "board": "10/1f~7/1b~7/2~7/2~1~h4/2~~ag~~~1/2~hb1afg1/10",
+      "solution": "FefFgFhFeFfFDgbBbCEgcFdFcFeFfFcG",
+      "title": "Saint Of Me"
+    },
+    {
+      "board": "10/1a~h1~b3/2~2~4/2~2~4/1~~~~~4/1ef~~~~~e1/1h1~ab1~f1/10",
+      "solution": "DbCeEgcFbFbBcEFgdEeFdFeFfFgFcFdFeFGbFefFgFdG",
+      "title": "New Faces"
+    },
+    {
+      "board": "10/3gf~4/5~4/5~~a2/5~df~1/4~~a1~1/3b~gb1d1/10",
+      "solution": "eBdBeBHdFgGeHefEFfgEhEGfdGeG",
+      "title": "No Use In Crying"
+    },
+    {
+      "board": "10/10/10/3h3~f1/3a~2~2/1~cb~~~~2/1b1ahc1~f1/10",
+      "solution": "IddEeFdFfFeFdFcFdGFfEfDfCfGfFfdG",
+      "title": "Get A Witness"
+    },
+    {
+      "board": "10/10/10/1c~7/1f~~1f~c2/1be~~b~3/3f~1ef2/10",
+      "solution": "bDcEHefEgEFfdFeFbEcFdFcFeFfFHebFcF",
+      "title": "Tell Me"
+    },
+    {
+      "board": "10/10/1e~7/2~b~5/2~f~5/1~~h~~~~b1/1dfdh1~1e1/10",
+      "solution": "dDDfbCcEdECfDfEfeFdFbGIfHffFgFhFeFfFbGcG",
+      "title": "Play With Fire"
+    },
+    {
+      "board": "10/5e~1e1/6~~a1/6~d2/2ah~1~b2/2b1~~~3/1dh~~1~3/10",
+      "solution": "dEcGfBHeGfFfcGIcHdGfFfcGIcHeHeGfFfbGcG",
+      "title": "Sparks Will Fly"
+    },
+    {
+      "board": "10/5~f3/2g~1~g3/3~1~1b~1/3~1~2~1/1a~~~~~~~1/1befe~1a2/10",
+      "solution": "eGGbFfGcbFFfEgcFcCFgdFhDIfHfGfeFcGfFgFbGcGdG",
+      "title": "Got A Good Thing"
+    },
+    {
+      "board": "10/1c~7/2d~6/2e~6/3~~~c3/2h~~~1d~1/4e~~he1/10",
+      "solution": "cFdFeFGeFfhFfGcCcDdEIgHgeEbBcDdEdFeGfGgG",
+      "title": "Moon Is Up"
+    },
+    {
+      "board": "10/10/10/10/10/1~a~~h~fd1/1~gfdgah2/10",
+      "solution": "CfFfEfDfHfGfFfEfIfHfGfFfCfcGdGbGcGdGeGbGcGdGeGfG",
+      "title": "Wanna Hold You"
+    },
+    {
+      "board": "10/4~a4/4~5/4~5/4~~~ec1/2g~a~~1e1/1~ce1~~eg1/10",
+      "solution": "cFeFdFeFHgfFHeGeFfEfFbeFIeHeCgGgGfgGFfEfbGfGgG",
+      "title": "Black Limousine"
+    },
+    {
+      "board": "10/4~b4/4~1d~d1/4~2~b1/4~2~2/2~~~~~~f1/1d~1bd~fb1/10",
+      "solution": "gCHfHgGgIgHgIgIcIdHfGfHfFffGFbEfDf",
+      "title": "Wild Horses"
+    },
+    {
+      "board": "10/4b~4/1d~2~4/2~1~~4/1h~1~5/1f~~~d~~c1/1c~bh1f~2/10",
+      "solution": "fFgFIfHfGfFfEfDgbFcFdFeFfFbCcFdFeFfFbFcFdFeBdGFdEfbGcG",
+      "title": "Summer Romance"
+    },
+    {
+      "board": "10/1hc~h5/3~gh~3/3~2~3/3~~~~~e1/3~~1~~2/2eg1c~h2/10",
+      "solution": "EbEccBbBcBdEdEeEEffGfCfEgEIeHeGeGgfGFeEf",
+      "title": "Too Tough"
+    },
+    {
+      "board": "10/7~c1/2h4~f1/2c~3~2/3~3~2/2gb~~~~2/2f1~bhg2/10",
+      "solution": "dFIbIccFdFHfGfHfGfFfEfDfcDdFeFcDdFeFeGfG",
+      "title": "Turd On The Run"
+    },
+    {
+      "board": "10/10/7h2/4~g1f~1/4~3~1/4d~g~~1/1cf~cd1~h1/10",
+      "solution": "eFhDhDgFIfHfeGGfFfFdeFcGfFgFbGcGdG",
+      "title": "Sing This"
+    },
+    {
+      "board": "10/10/2g7/1~f1~h4/1~b~~5/1~1~~h~~2/1~fg~1ebe1/10",
+      "solution": "CdcEcEFfdFFdeFfFgFgG",
+      "title": "Stray Cat Blues"
+    },
+    {
+      "board": "10/3f2~bh1/3b~1~e2/3e~1~bf1/4~~~3/2~~~~~3/2h1~~~3/10",
+      "solution": "HbdCHcHdGeIbdCdDHdeGGfFfEfDfIdHdGfeG",
+      "title": "Complicated"
+    },
+    {
+      "board": "10/1~a7/1~8/1~6f1/1~4~~g1/1~h~b~h~2/1~g~a~1fb1/10",
+      "solution": "GfeFfFEgcFdFCgCbbFgFIeHeIeGfHfgFbGcGdG",
+      "title": "Luxury"
+    },
+    {
+      "board": "10/10/3e~5/3c~~1~a1/3da~~~h1/3h1~~~2/4de~c~1/10",
+      "solution": "dCeDdDIdeEIefGeGeEdEeEfEHeGeFehGEefGgG",
+      "title": "Heartbreaker"
+    },
+    {
+      "board": "10/4h3d1/2~~f2~c1/2~a3~2/2~3c~~1/2~h~2a~1/1f~1~~~d~1/10",
+      "solution": "IcEcDcIchEEcDfDdDdcFdFeGfG",
+      "title": "Thru And Thru"
+    },
+    {
+      "board": "10/1~f7/1~2h5/1~1~b~4/1~h~1~~3/1~f~~~~c2/1cb1~e~e2/10",
+      "solution": "cEEdDeFgdFeFfGHfeGGfeDfECecFdFFffGCbEfDfbEcEdFcFbFDf",
+      "title": "Angie"
+    },
+    {
+      "board": "10/6~a2/2~b2~h2/2~1~~~d2/2~~d1~3/1~~~1~b3/1h1~~ah~h1/10",
+      "solution": "gGHbHdHdGdGfFdEeEeDfCfGfdGDccFdGeG",
+      "title": "One More Try"
+    },
+    {
+      "board": "10/1g~2~d3/2~2~1e~1/2~2~2~1/2~~~~2~1/3a~dfe~1/3f~1ag~1/10",
+      "solution": "FfdFeFhGgFfFbBcEdFeFGbFehCfFHfIfGfFfgG",
+      "title": "Let It Loose"
+    },
+    {
+      "board": "10/7~c1/7~2/4~a~f2/4~1~he1/1a~~~~~e2/1c1~f~~h2/10",
+      "solution": "IbFdeFHgHdGfHfIeFffGHfbFcFEfGfDfCfdGeG",
+      "title": "Think"
+    },
+    {
+      "board": "10/10/4~f4/3a~h~c2/4~1~3/1a~~e~~3/1fhc1~~e~1/10",
+      "solution": "dDeFeFhGfGHdGfgGFfEfFcbFEfcFdFeFFdEfDfbG",
+      "title": "You Can't Always"
+    },
+    {
+      "board": "10/10/1a~5d1/2~2~c~f1/1a~1b~1~2/2~~f~~~2/2dc1~~b2/10",
+      "solution": "bCbEgDIdIdHdeEeFfFHfGfHfFfEfGdFfEffG",
+      "title": "Ventilator Blues"
+    },
+    {
+      "board": "10/10/1d~7/2~7/2~1f~4/2~dce~~g1/2~fg1~ce1/10",
+      "solution": "fFIfHfGfeEDgEfFfbCFfdFcFeFcGfFgFgG",
+      "title": "It Must Be Hell"
+    },
+    {
+      "board": "10/1c2g~~~g1/1e~~d1~~2/2~~2~~2/2~~2~~2/2~~~b~~e1/1cb~~1~~d1/10",
+      "solution": "FfcGeBbCcGbGdGcGEcdFbCfBeFfFgGIfIbHfGfFfgG",
+      "title": "Hey Negrita"
+    },
+    {
+      "board": "10/1bd~6/3~6/3~a~1~g1/3~1~~~2/2h~~ha~2/3g~1db2/10",
+      "solution": "cBFfdFeFgFfFbBcBdFcFeFdFeDIdfEfFHeGeFfGfHffF",
+      "title": "Prodigal Son"
+    },
+    {
+      "board": "10/4c~4/5~4/3a1~h~2/3h~~1~2/3a~e~~b1/3eb1~~c1/10",
+      "solution": "FfdEEfeBfFeFfFgFIfgDHfGfFfgG",
+      "title": "Country Honk"
+    },
+    {
+      "board": "10/7~b1/2~hd~g~f1/2~1b~1~2/2~2~1~2/2~1fd~~~1/2~g2~1h1/10",
+      "solution": "eDdCeCGcFcEcDcIbfFfFfFgFhFeDfFIceFfFHf",
+      "title": "It's All Over Now"
+    },
+    {
+      "board": "10/7g2/3~f1~c2/1h~~2~3/2~d~~~~2/1~~f~~~~2/1c~2hd~g1/10",
+      "solution": "HcHcgEGfFfdEeEfFDfEfDfCfbDcFEcDedFeF",
+      "title": "Under Boardwalk"
+    }
+  ]
+}

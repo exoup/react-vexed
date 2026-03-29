@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "category": "General",
+    "author": "Vexed Development Team",
+    "url": "http://vexed.sourceforge.net"
+  },
+  "levels": [
+    {
+      "board": "10/2~a6/2~4d~1/2~5~1/1g~5~1/1c~~~~b~a1/1d~~gb1c2/10",
+      "solution": "GfDbbFIfHfGfEgcFbFFgdFcFhCIfHfGfeFcGfFgFbGcGdG",
+      "title": "Sio Bibble"
+    },
+    {
+      "board": "10/1~d7/1~1d6/1~~h~5/1~~1~2~g1/1~~~f~e~2/1he~g~1~f1/10",
+      "solution": "DdcGEfGfIgIeHfGfFfdDdFeFfFgFDgCgCbbFcGbGcGdG",
+      "title": "Ephant Mon"
+    },
+    {
+      "board": "10/10/2a~6/3~~~c3/4~~h3/2~~c~4/1bhahb~3/10",
+      "solution": "cCdDEfDfEffGeGGdGecGFecGdGbGcGdGeG",
+      "title": "Doctor Evazan"
+    },
+    {
+      "board": "10/3~d5/3~1h~3/1f~~g1b~2/2~~3~2/3~~~~~~1/1f~dhb~1g1/10",
+      "solution": "bDcEEdEbdFfGeGdFeFbGcGfFgFhFgDHffCgDHf",
+      "title": "Lexi Dio"
+    },
+    {
+      "board": "10/3f~5/4~5/4~5/4~c~~b1/3~~a~1c1/2bh~fha2/10",
+      "solution": "IeHefEgEhEdGFfdBeEcGEfeGdGeGdGeGfG",
+      "title": "Cord"
+    },
+    {
+      "board": "10/10/1~df2~c2/1~4~3/1~~3~3/1~a~b~~3/1~cbf~da2/10",
+      "solution": "EfCcDcCfCcbEcFHcGfcGdGbGcGdGeGbGcGdGeGfG",
+      "title": "Yaddle"
+    },
+    {
+      "board": "10/10/6a~2/7~2/1g2~~f~b1/1c~1~ba~2/1g~c~f1~2/10",
+      "solution": "bFGeFegFIegCHfGf",
+      "title": "Captain Panaka"
+    },
+    {
+      "board": "10/10/10/10/3f6/1f~e~cg~2/1dcd~g1~e1/10",
+      "solution": "DfdGFfGfcFbFeGdFcFeFcGfFgFbGcGdG",
+      "title": "Bail Organa"
+    },
+    {
+      "board": "10/1~e3h3/1~3~b3/1~d2~4/1~3~d3/1~h~~~1e2/1~1f~b~f2/10",
+      "solution": "GeGcdGFfcFEfeGfGGcDfdGCfCbCdbFcFdGeGfG",
+      "title": "Gasgano"
+    },
+    {
+      "board": "10/10/10/1e~3~c2/1h~~~b~3/2ge~gh3/2bc~5/10",
+      "solution": "bDcEcFdFFfHdGeFeFfcGbEGfFfcG",
+      "title": "Wicket Warrick"
+    },
+    {
+      "board": "10/10/10/1ba1g~4/2c~1~c~h1/1~h~~~g~a1/1b1~~~1~2/10",
+      "solution": "cEGedGbDcEcFCfdFgFIeHfGfIfHfGfeDfFgFdG",
+      "title": "Yarna Gargan"
+    },
+    {
+      "board": "10/10/7h~1/8~1/8~1/2c~de~~h1/3eacad2/10",
+      "solution": "hCfFeFgFfFhFgFcFdFeFeGIfdGeGfG",
+      "title": "Droopy McCool"
+    },
+    {
+      "board": "10/5a~c2/6~a2/6~1b1/6~~c1/5~~~2/1e~db~de2/10",
+      "solution": "fBHcHcIeIeHfGfdGeGbGcGdGeGfG",
+      "title": "Maximilian Veers"
+    },
+    {
+      "board": "10/10/6c~2/7~2/5b~a2/1~~c~gbh~1/1a2~2gh1/10",
+      "solution": "fEgCfFHeGeHehFgFdFFfEfDfCfGfFf",
+      "title": "Shaak Ti"
+    },
+    {
+      "board": "10/6c~2/1h~4~2/2~4~2/2~4~2/1d~~~c~~h1/1a~~ha~dc1/10",
+      "solution": "FfIfbGcGEfbGDfbCfGHfeGdGcGcFdFeFeGdGeGfGcGdGeGfGgB",
+      "title": "Rep Been"
+    },
+    {
+      "board": "10/1d8/1e~7/2~2g~3/2~3g3/1e~~~~d3/1heh1e4/10",
+      "solution": "fDbFGfFfEfDfbCbCcFdFeFbG",
+      "title": "Jira"
+    },
+    {
+      "board": "10/1b~7/2~7/2~a~5/3b~5/1ce1~~eg2/2cga~4/10",
+      "solution": "dDbBcDdGcGeGGfHfdGFfGfcGeGbFcGdG",
+      "title": "Garindan"
+    },
+    {
+      "board": "10/10/5d~3/6~3/3b2~3/2~g~~c~h1/2d1g~hcb1/10",
+      "solution": "dFfCGfGfIfHfdFFffGEfDfeGfGgG",
+      "title": "Ayy Vida"
+    },
+    {
+      "board": "10/7~c1/7~2/5c1~2/2a1~f~~2/2b~~1a~2/3hfbh~2/10",
+      "solution": "FecFdFdGeGIbfEGgcFdG",
+      "title": "Passel Argente"
+    },
+    {
+      "board": "10/1~b7/1~4~a2/1~b3~3/1~4~~h1/1haf~~~~c1/1f1c~~~~2/10",
+      "solution": "CbCdHcIeGgFgdFcFHgGgeFdFbFcFdGFfEfDfCffGeGgGIfHfdGeGfG",
+      "title": "Even Piell"
+    },
+    {
+      "board": "10/3d6/3b~1~a2/4~1~g2/4~1~3/4~~~h2/1h~a~1gbd1/10",
+      "solution": "HcGfFfHfHdGfFfdCeFfFdCeFfFgGbGcG",
+      "title": "Lando Calrissian"
+    },
+    {
+      "board": "10/3a2~e2/2~h~1~f2/2h1~1~3/4~1~3/1~~~~b~3/1b1f~a~e2/10",
+      "solution": "HbDcdGdCEfFfEfDfCffGHcGfdGeG",
+      "title": "Shmi Skywalker"
+    },
+    {
+      "board": "10/1b2~a4/1a1b~5/1f~g~5/2~c~5/1~~1~~~3/1g~1~1cf2/10",
+      "solution": "FbdEeFfFDdDebDcEdEeFfFbDcEdECfbD",
+      "title": "Rep Teers"
+    },
+    {
+      "board": "10/3~g5/3~6/2e~c~4/3e1~4/2~a~~~3/1c~1e~ga2/10",
+      "solution": "dFGgeFfFEdcDdDeDdFDfEbdF",
+      "title": "Ben Quadinaros"
+    },
+    {
+      "board": "10/6a~2/5e1~2/5h~~2/5a~~2/4~dh~2/1e~~~1ad2/10",
+      "solution": "fDgBfEfFFfbGcG",
+      "title": "Max Rebo"
+    },
+    {
+      "board": "10/1g~a2~~a1/1e~3~3/2~3~3/2~3~3/2~~~~~dh1/2~2hged1/10",
+      "solution": "DbbBcFdFeFfFbCcFdFeFHffFgFIbHbGfgGFfEfDffGgG",
+      "title": "Jek Porkins"
+    },
+    {
+      "board": "10/2~h1~h3/2~2~2a1/1c~2~1~b1/2~2~1~2/2~~a~1~c1/2~1f~fb2/10",
+      "solution": "IdgGeGGbFffGIdEfeGfGDfbDDbcFdFIfeGfG",
+      "title": "Admiral Piett"
+    },
+    {
+      "board": "10/2e~6/3~6/3b~5/3e~fg3/4g5/2~gb~f3/10",
+      "solution": "cBdDDgEgFeEeeGGecGFedEeG",
+      "title": "Joh Yowza"
+    },
+    {
+      "board": "10/3c~5/3f~5/4~5/3a~5/4~~hf2/1b~bh1ac2/10",
+      "solution": "bGGfFfHfGfFfdEeFfFdBdCeFfF",
+      "title": "Carlist Rieekan"
+    },
+    {
+      "board": "10/10/3g6/1g~d6/1d~h6/2ea~3e1/2h1~~~~a1/10",
+      "solution": "DdDdDedFcFeGfGgGdFeGfGgG",
+      "title": "Rappertunie"
+    },
+    {
+      "board": "10/1~b3~h2/1~3~~c2/1~3~f3/1~3~4/1~~~~e4/1hec1bf3/10",
+      "solution": "FfEfDfCbHbGcFfEfDgbFcFdFeFHcGgGcGdFfEfDfbG",
+      "title": "Elan Mak"
+    },
+    {
+      "board": "10/10/4c5/3~b~4/3~1~~f2/3~a~~ce1/1b~~ef~1a1/10",
+      "solution": "HeEdbGHfIfHfGgeFeDfFgFhFeG",
+      "title": "Moff Jerjerrod"
+    },
+    {
+      "board": "10/7b2/5~~d2/5~ab2/5~4/3~edag2/1g~~1e4/10",
+      "solution": "HcGceFGfHfGfGdFfEfbG",
+      "title": "Achk Med-Beq"
+    },
+    {
+      "board": "10/10/10/8d1/6~ce1/4~e~h2/2b~hcbd2/10",
+      "solution": "HeFfGfHfGfIeIeHfGfcGdGeG",
+      "title": "Bossk"
+    },
+    {
+      "board": "10/10/10/1g1e~h~3/1d~1~1~3/1g~d~~~3/2~1~eh~e1/10",
+      "solution": "bEFgdFFddDeDEfDfeFeGIgfD",
+      "title": "Princess Leia"
+    },
+    {
+      "board": "10/10/4~cb3/4b5/3~e~4/3hg~4/5ecgh1/10",
+      "solution": "eEFcEeeEGcFceFfGdFeFfGgG",
+      "title": "Ronet Coorr"
+    },
+    {
+      "board": "10/5~~f2/3~ed~b2/3~3d~1/1g~~4~1/2~~e1~~~1/2~fgb~1~1/10",
+      "solution": "EcDgbEcFfCHbGbFcEchDhDIfHfgChD",
+      "title": "Lama Su"
+    },
+    {
+      "board": "10/3b~5/4~5/4~~e~2/2h~c~1~2/1a1~2b~2/1ha~ce1~2/10",
+      "solution": "dBGdeDEefDgDgFFeEedGcGcEbGdGbGcG",
+      "title": "Admiral Thrawn"
+    },
+    {
+      "board": "10/3h~5/4~5/4~5/3d~5/3c~ecb2/3heb1d2/10",
+      "solution": "FfGfFfHfGfdBdEeFeFdFfFgFdG",
+      "title": "Kabe"
+    },
+    {
+      "board": "10/5~d3/5~1a2/2~~b~~h2/2~1a1~3/1~~3~3/1bg~~hdg~1/10",
+      "solution": "EdDdCfGbHdfDHdGdFdhGgGcGdGeGfGgG",
+      "title": "Nute Gunray"
+    },
+    {
+      "board": "10/1h~5b1/2~4~a1/2~4~2/2~2g~~2/1~~~~h~g2/1a1d~d~b2/10",
+      "solution": "IcIcHfHffEFfGfFfEfDfCfbBcFdFdG",
+      "title": "Chancellor Finis"
+    },
+    {
+      "board": "10/4c~4/3~a~4/2a~1~4/2h~1~4/3~b~~3/2b~1fcfh1/10",
+      "solution": "EfeBfFfGEccEcEdFeFfGgG",
+      "title": "Hermione Bagwa"
+    },
+    {
+      "board": "10/10/1h~~6/3g~1c~c1/4~~b~2/4~~h~g1/4c~1~b1/10",
+      "solution": "IfeGGfFfdDeFGeFegFIdfFHeGehFgFbCcCdD",
+      "title": "Zam Wesell"
+    },
+    {
+      "board": "10/4a~4/5~4/1d3~4/1f3~1~a1/1g~~fe~~2/1d~~e1g~2/10",
+      "solution": "EgDgbFEgcFbFFfdFcFeFfFcGeBIefF",
+      "title": "Ree-Yees"
+    },
+    {
+      "board": "10/4e1~a2/4c1~3/3~b~~c~1/3~1~~1~1/2~~~~g1~1/1b~a1g2e1/10",
+      "solution": "EdDfHbeDHdGeeDfDgDhDFfEfDfFfEfGeFfEfGf",
+      "title": "Muftak"
+    },
+    {
+      "board": "10/10/10/2a~f5/2d~g~4/3~1~~d~1/2~g~fg1a1/10",
+      "solution": "EdEecDdDFgGgeEdEDgHffFgFhFFgEecEdGeG",
+      "title": "Sebulba"
+    },
+    {
+      "board": "10/7~b1/4d~1~2/5~1~d1/5~1~2/1ha~~~bg2/1gh~1~1a2/10",
+      "solution": "IbGfHfGfFfHfGfEfcFbFdFbGIdHfGfeFeCfFgF",
+      "title": "Ody Mandrell"
+    },
+    {
+      "board": "10/5e4/5f~3/4~c~3/4~1~3/3c~~bf2/3g~bge2/10",
+      "solution": "GffCfCGgdGFd",
+      "title": "Dengar"
+    },
+    {
+      "board": "10/7c~1/7f~1/3h~g2~1/4~3~1/4~h~~b1/2c~b1gf2/10",
+      "solution": "dDIfHfGfFfhBhCIfHfIfGfFfFdeFfFcG",
+      "title": "Clegg Holdfast"
+    },
+    {
+      "board": "10/2g~6/3~6/1d~~6/2h~g~~3/3~e~~d~1/2g~1~~eh1/10",
+      "solution": "bDhFcGcDcEHgGgeEdEeEfEfFeFdFeFGfgGFfcBfGgG",
+      "title": "Siri Tachi"
+    },
+    {
+      "board": "10/6b3/3f~~d~2/5~1~2/1h3~1~2/1g~~~~~~b1/1h1~1~dgf1/10",
+      "solution": "bFdCeCIfgCHfGfHfFfEfcFdFeFfFGcFfEffGgG",
+      "title": "Ki-Adi-Mundi"
+    },
+    {
+      "board": "10/1b8/1c~~~a4/3~~5/1hc~~5/3~~1ba2/1h~h~~a3/10",
+      "solution": "bCcCcEbEdGbGcEbCGgFgEgcCdFeGHfGgFc",
+      "title": "Tessek"
+    },
+    {
+      "board": "10/2~g1~f3/1b~1~g4/1f~1~5/1h~~~5/2~~b~~3/2~~g1h3/10",
+      "solution": "DbFcEebCbDbEcFcFdFeFfFGbFcEfcG",
+      "title": "Stass Allie"
+    },
+    {
+      "board": "10/4be4/2~d1c~3/1~~3~3/1~2~f~~2/1~1e~1b3/1~df~1c3/10",
+      "solution": "FeDcCdfCfCgEGeFeeBfCHe",
+      "title": "Oppo Rancisis"
+    },
+    {
+      "board": "10/2~a6/2~bh~ebf1/2~7/2~7/1~~~~5/1ehfa5/10",
+      "solution": "DbcFdFDcEcDcCfGcFcEcDcHcGcFcEcDcIcHcGcFcEcDc",
+      "title": "JarJar Binks"
+    },
+    {
+      "board": "10/4~h4/1c~1~5/1f~h~5/2~1~g~3/2~gf1~3/2cf2f3/10",
+      "solution": "FbdDDfEfbCbDcDcFFedDeEfEEf",
+      "title": "Barquin D'an"
+    },
+    {
+      "board": "10/4e5/3~c~1~h1/3~1~1~2/2g~1~~~b1/1ebg~~~~2/2ch1~~~2/10",
+      "solution": "cEcFEcbFDedFcFIeIceFdFeFfFHfGfeCfEFfEffG",
+      "title": "Yarael Poof"
+    },
+    {
+      "board": "10/10/3d~1~a2/2g1~1~h2/2ah~g~3/4~bd~2/4~1b~2/10",
+      "solution": "gFfFFfdCeFfFHcHddEeFcEdEeFfFcEdE",
+      "title": "Coleman Trebor"
+    },
+    {
+      "board": "10/2h~3~d1/2a~1h1~2/3~~g1~2/3~~d~~2/2~~~1~~2/1g~~2da2/10",
+      "solution": "IbfEcBFdFeEecCdEDfeEfEEf",
+      "title": "Beru Lars"
+    },
+    {
+      "board": "10/6~c2/1h~3~3/1a~3~3/1c~~2~3/2~~~~bf2/2~~h1fba1/10",
+      "solution": "GfHffFbCbDbEcEcFdFeFfFHbGfgGFfEfcG",
+      "title": "Logray"
+    }
+  ]
+}

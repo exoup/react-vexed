@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "category": "General",
+    "author": "Vexed Development Team",
+    "url": "http://vexed.sourceforge.net"
+  },
+  "levels": [
+    {
+      "board": "10/10/10/10/1e~3~af1/1g~ad~~3/2~1e~fdg1/10",
+      "solution": "HeIeHeeFGfDfbEcFdFbFcFdFFffGEfDfeGfGgG",
+      "title": "Buffalo Bottle"
+    },
+    {
+      "board": "10/10/7e2/2h~2~b2/3~2~3/1~hd~~~3/1e2b~bd~1/10",
+      "solution": "hGgGeGHddFcFdFeFIgHgHdGfFfEfDfCfcDdFeFeG",
+      "title": "Eagle Harbor"
+    },
+    {
+      "board": "10/2ch~~~~e1/5~~3/5~~3/5~~3/1~~~ag~~2/1g1~ec~ah1/10",
+      "solution": "dBeBHgfEgFcBdBeBEfFfEfDfCfIbHbGfdGeG",
+      "title": "Nobska Point"
+    },
+    {
+      "board": "10/10/10/6~f2/2d2~~1d1/1~c~~~e~e1/1f1~~ca~a1/10",
+      "solution": "HdGecFcFdFFfEfDfCfGfgGFfEffGeGgGIfHfdGeGfGdGeGfGgG",
+      "title": "Battery Point"
+    },
+    {
+      "board": "10/10/10/1e5h2/1h~3~f2/2~~fd~e2/2d~h1h3/10",
+      "solution": "bEcFFfEfHeGfFfHfGfHfbEFfcG",
+      "title": "Old Long Point"
+    },
+    {
+      "board": "10/3f~h1b~1/2~e~f2~1/2~5~1/2~5~1/2~~~c~e~1/2c1~h~b~1/10",
+      "solution": "DccFdFFfEfDffGHfhBGfFbDcEcDccFdFeGFcEcDc",
+      "title": "Peche Island"
+    },
+    {
+      "board": "10/3c~5/2af~1~c2/4~1~3/1b~f~1~~c1/2~b~~~~2/2~1a~~c2/10",
+      "solution": "HcdBdCbEDfcCdCeFIefG",
+      "title": "Old Pelee"
+    },
+    {
+      "board": "10/5f4/3~fa1~b1/3~2a~2/3~3~2/3~~f~~2/1~e~~ab~e1/10",
+      "solution": "FgIggDIcHfGfHfEcFcEcdFFcCgDgFgEcbGcGdGeGfG",
+      "title": "Cove Island"
+    },
+    {
+      "board": "10/1~f7/1~4g3/1~e~1~c3/1~1~1~gc2/1f1~~~4/1c~~1~ec2/10",
+      "solution": "CbGgGdFfEfcDdFeFbGHeGefG",
+      "title": "Braddock Point"
+    },
+    {
+      "board": "10/2g~6/3~6/3~6/3~f~~~h1/2~~a~~b2/1gh~1fba2/10",
+      "solution": "eEcGcBDfIeHeeFGfHfFfEffG",
+      "title": "Charles Fort"
+    },
+    {
+      "board": "10/2~f6/1~~b2e~2/1~g4~2/1~d~3~2/1~1e~~1~2/1f1db~~~g1/10",
+      "solution": "DbCccEdFgCeFfGDccEcEdFdGeGfGgG",
+      "title": "Niagara River"
+    },
+    {
+      "board": "10/1d~d3~a1/2~a~1~~2/2~1~1~3/2~1~1~3/1~~c~~~3/1cha~~hd2/10",
+      "solution": "DfCfIbHcGfdCcGdGeGbBcGHgGgdC",
+      "title": "Pilot Island"
+    },
+    {
+      "board": "10/10/1~dg6/1~1b~5/1~2~~4/1~ga~a~~c1/1cd1~b~~2/10",
+      "solution": "CcdFcFbFdFfFeFfFgFIfHfGfFfdDeEEfDfeGdDeGfG",
+      "title": "Carquinez Strait"
+    },
+    {
+      "board": "10/3~d5/3~b~~a2/2d~1f~3/6~3/1~f~~b~3/1a1e~e~3/10",
+      "solution": "EbeCfFHcfCGfcFdFFfEfDfCffGfDGfdGeG",
+      "title": "Munising Range"
+    },
+    {
+      "board": "10/3~f5/1g1~6/1h~~3~a1/2~~1~g~2/2~~f~ad2/2~hd~4/10",
+      "solution": "EbbDIdGeHeHfGfFfbDcGdG",
+      "title": "Loop Head"
+    },
+    {
+      "board": "10/2a~3f~1/3~3h~1/3~g~~a~1/1~d~1~~1~1/1~1~1~~~f1/1~d~~~h1g1/10",
+      "solution": "hBCecBHdGfeDfFdGHdgFhF",
+      "title": "Perry Memorial"
+    },
+    {
+      "board": "10/3b~5/4h~4/4d~~d2/2f~1~~h2/3~~~~a2/2a~1f~b2/10",
+      "solution": "eCHdHecGcEdFeFdBeCHfGfeDfEFfEffG",
+      "title": "Prince Edward Pt"
+    },
+    {
+      "board": "10/5~a3/5~4/4g~4/5~g3/1~a~~~b~c1/1b1f~fc~2/10",
+      "solution": "eDGeGfIfGbcFdFFfEfFfDfCfdG",
+      "title": "Hereford Inlet"
+    },
+    {
+      "board": "10/7~c1/4c~~~2/6~~2/6~~2/2~~~fhfb1/1eh~be4/10",
+      "solution": "IbeCfCFfGfEgFfEfDfHfGfFfIfHfGfFfbGcGdG",
+      "title": "Rear Range"
+    },
+    {
+      "board": "10/4f5/4h~4/5~~1a1/3~b~a~c1/3c1~h~2/4f~1~b1/10",
+      "solution": "IggEIeHeIeeGeEGeeCfDFeEeeCfFgF",
+      "title": "Ashtabula"
+    },
+    {
+      "board": "10/5h4/3~~d~f2/3~2~3/2~~2~3/2~hb~~1c1/1fd1c~~~b1/10",
+      "solution": "FcEcDeeFfGHceGGfgGdFFfEfDffGgGfCeG",
+      "title": "Ashland Break"
+    },
+    {
+      "board": "10/3~g5/2~f6/2~7/2c7/2e~~~~~b1/1gc1~~bfe1/10",
+      "solution": "cFIfHfEbdFbGDcDccFdFeFfGeGfGgG",
+      "title": "Odderoya"
+    },
+    {
+      "board": "10/10/2b7/2c~3e~1/3~1~f1~1/3~~~1e~1/3c~afba1/10",
+      "solution": "cDhDGeFgEgcDdFeGfGdGeGfGgG",
+      "title": "Point Gratiot"
+    },
+    {
+      "board": "10/10/10/6b3/5~cd2/2~~~f1h2/2b1dchf~1/10",
+      "solution": "hGGeFfeGGeFffGEfDfeGfGgG",
+      "title": "Old Mackinac"
+    },
+    {
+      "board": "10/10/10/10/2f7/2ece~~~f1/2decd~1e1/10",
+      "solution": "eFdFcFIfHffFgFhFcGdGcGdGeG",
+      "title": "Sodus Point"
+    },
+    {
+      "board": "10/2~h3~e1/2~4~d1/2~1d~1~2/2~2~1~2/2f~a~~~f1/3~h1e1a1/10",
+      "solution": "IbHfeFIfHffFgFhFDbIcHfGfFfEgcFdFcFeFfFeDFf",
+      "title": "Stratford Point"
+    },
+    {
+      "board": "10/3b~5/4~5/3f~~4/4e~4/4f~~~a1/1heahb~~2/10",
+      "solution": "dBeDdDeGeFdGFfcGfGeGgGIfHfbGcGdGeGfG",
+      "title": "Buffalo Main"
+    },
+    {
+      "board": "10/2f~6/3~2f3/3~1~b~b1/3~1~e~e1/3~1~1~2/1g~eg~~~b1/10",
+      "solution": "GdfGIdeGdGfGgGIehGHgGecBGedGbGcGdGeGfGgG",
+      "title": "Grand Marais"
+    },
+    {
+      "board": "10/5b~e2/6~f2/1a~2~d3/1e~2~4/1d~~~f4/2a1~b4/10",
+      "solution": "bDfBGdGdFfFfHcEfGdDfbEcFbFHcGddF",
+      "title": "Absecon"
+    },
+    {
+      "board": "10/4g~4/5~4/1a~2~4/1d~~a~b~2/2~~b~1g2/2hdh~4/10",
+      "solution": "bDEebEcFeGGeeBfEgEFfcGdG",
+      "title": "Robert H Manning"
+    },
+    {
+      "board": "10/6d~2/6c~2/5~f~2/2c2~1~2/2b~~~~~b1/2dbfc~~2/10",
+      "solution": "gBGdfFIfHfGfFfcFEgcFFgGgGddFdGcGdGeGfG",
+      "title": "Stony Point"
+    },
+    {
+      "board": "10/10/1g~7/1b~3g~2/2~4~2/1g~~~e~f2/1bf1~g~e2/10",
+      "solution": "gDfGHfGfHfbFcFdFFffGEfDfbGbCbDcFdF",
+      "title": "Erie Pierhead"
+    },
+    {
+      "board": "10/4~f4/2~a~a~e2/2~1~f~3/2~1~1f3/2~~~~d~2/3ea~1~d1/10",
+      "solution": "gFFbeFFdeFDccFFdHcGfdG",
+      "title": "Governor's"
+    },
+    {
+      "board": "10/5~~a2/4d~4/1d~2~4/2~2~4/1e~ac~~~2/1h~ch~1~e1/10",
+      "solution": "eGeCbDbFcFFfdFeFfFgFHbGbFfEfcGbGcGdG",
+      "title": "Oswego West"
+    },
+    {
+      "board": "10/2~g1~h3/1e~h~~4/2~d~~~3/2~1~1~3/2~1~~~ad1/1g~~~e2a1/10",
+      "solution": "DbGbdCHfGfFfFddDeDeFfDgFfFgFhFbCcGdG",
+      "title": "South Rock Ship"
+    },
+    {
+      "board": "10/7b~1/8~1/5~g1~1/2ef~~2~1/1~c1~~~~e1/1cg2f~1b1/10",
+      "solution": "hBIfdEcECfdEeEGdFeEeDefFeFHf",
+      "title": "Cape Henry"
+    },
+    {
+      "board": "10/10/1g1~b5/1b1~e5/1e~~6/2~~~~~~c1/1c~e~~g1e1/10",
+      "solution": "bEbGcGEcEddGdFbEIfHfGgeFfFgFhFEgDgbEcFdGcGdGeG",
+      "title": "South Hyannis"
+    },
+    {
+      "board": "10/2hc~~~3/6~3/6~3/6~1e1/3f~~~hb1/4~bcfe1/10",
+      "solution": "HfIfdBeBfBGfHfcBdBeBfBdFeGfG",
+      "title": "Lindesnes"
+    },
+    {
+      "board": "10/1~h2~g3/1~3~1h2/1b~~1~~d2/3hg~~3/1~~d1~4/1b~1h~4/10",
+      "solution": "HdeGeEGeGbFeHdGeDfEeDfCfDfbDcDDfCbbDcDDf",
+      "title": "Sand Hills"
+    },
+    {
+      "board": "10/5f4/5c~h2/2f~~b~d2/3~~1~3/3d~~~c2/3h2~b2/10",
+      "solution": "fDfDcDFddEdFeFfFHcHdGfFfEf",
+      "title": "Finns Point"
+    },
+    {
+      "board": "10/5~hc2/5~ch2/2~~~~a3/2a1~~1h~1/5~2~1/3~c~c~~1/10",
+      "solution": "EgGgGbGcHcGcFdGdFddGHcGdEdDdhEFgIgHgeE",
+      "title": "South Manitou"
+    },
+    {
+      "board": "10/3d~2~a1/4~2~2/4~a1~2/1b~1~2~2/2~h~~h~2/1d~bd~1d2/10",
+      "solution": "dFbEbGcGIbEgGfHfGfFfdBFdeFfFgFdG",
+      "title": "Oakland Harbor"
+    },
+    {
+      "board": "10/2e4~b1/2c~3~2/3~3~2/3~~2~2/1g~~~~e~d1/2gdc2~b1/10",
+      "solution": "bFgFIfIbHfhFcCcCGfFfdEDgeFcGfFgF",
+      "title": "Saginaw River"
+    },
+    {
+      "board": "10/10/10/6~ed1/3a~~c3/3c~~h~2/4deah2/10",
+      "solution": "gFHdGedEeFdFeFIdHdeG",
+      "title": "Bristol Ferry"
+    },
+    {
+      "board": "10/1g~7/2~7/1~a7/1~2f~~ga1/1~~~1~~1f1/1~g~e~ge2/10",
+      "solution": "GgHgHeIeHeGeeEfEgEhEgGbBCgCdCdEgDgbFcFdGcGdGeGfG",
+      "title": "Cape San Blas"
+    },
+    {
+      "board": "10/1a~7/2~f~b4/2~1~d~3/2~1~1~~2/2~1~2f2/2db~~a3/10",
+      "solution": "dGFdFddCeDfDgEcGeGbBcGdGeG",
+      "title": "Sapelo Island"
+    },
+    {
+      "board": "10/10/4~b4/3~e5/2e~6/3cg~~~g1/2be1~~ce1/10",
+      "solution": "cEeFdFeFfFIffGFccGEdEddFeFfGgG",
+      "title": "Chatham"
+    },
+    {
+      "board": "10/10/2~h6/1~~2c~3/1~a~~e~a2/1~1hf1~f2/1~~ec~~3/10",
+      "solution": "fDeGFeeGHfDcCdbGcEHfdGeG",
+      "title": "Stamford Harbor"
+    },
+    {
+      "board": "10/1g~ge5/2~1a~4/2~2~4/2~2~~e2/2a~~~~3/3~c~ec2/10",
+      "solution": "bBDbeCeCHeEgcFdFdGeGfG",
+      "title": "Split Rock"
+    },
+    {
+      "board": "10/3~g5/3~6/2~g~5/2~1~~~~g1/1~~1~bcf2/1g2~1fbc1/10",
+      "solution": "DdCfIeHeGeFeFfGfHfHgfFgFeFfFEbdD",
+      "title": "Point Pinos"
+    },
+    {
+      "board": "10/2e~6/3f~5/4~5/4~~ef2/3~~~b3/2bfc~fc2/10",
+      "solution": "dCEfGeHeGfFfEfcBdCeFeGfG",
+      "title": "Saybrook Break"
+    },
+    {
+      "board": "10/1c~~d1~f2/2~~a1~3/1~~~2~3/1~1~~1~~f1/1~d1~1~~c1/1a2~~~~f1/10",
+      "solution": "HbIebBcDEbDdCdEcDdCddEeGfGgG",
+      "title": "Pomham Rocks"
+    },
+    {
+      "board": "10/5f~3/6~3/4hc~3/3e2~~f1/2~f~~~~2/2~hch~e2/10",
+      "solution": "DfdFeFfFfGfDGfeDdGgGeGfDIecGdGeGfB",
+      "title": "Curtis Island"
+    },
+    {
+      "board": "10/6eg2/5~f3/1f~1~~d~2/2~1~~1~~1/2~~~h2~1/2h1~gd1e1/10",
+      "solution": "GcGdgDhEbDFdFecFHbGdFfEfDfeG",
+      "title": "Colchester Reef"
+    },
+    {
+      "board": "10/7b~1/1~g5~1/1~6~1/1~5~~1/1~1f~1~a2/1~gacf~bc1/10",
+      "solution": "CcdFDgEghBIedGeGfGHfgGcGdGeG",
+      "title": "Port Stanley"
+    },
+    {
+      "board": "10/3e~5/1~gh~5/1~2~b1~f1/1~2~2~2/1g~e~2~f1/1b~1h2~2/10",
+      "solution": "dBCcIdIfFddCEfDf",
+      "title": "Cape Croker"
+    },
+    {
+      "board": "10/10/10/1hfg~f4/2a1~2a2/1~g~~b~b2/1h1~~5/10",
+      "solution": "fFdDcFFdCfcFbFbDcFCfHfGfFf",
+      "title": "Landsort Harbor"
+    },
+    {
+      "board": "10/3~h5/2~~6/1~c~6/1~1~h5/1~~c1h~~h1/1~h2b~~b1/10",
+      "solution": "fFIffGgGEecDEbDcDfCfCdbFDf",
+      "title": "Fastnet Rock"
+    },
+    {
+      "board": "10/1h~7/2~1~h4/2~1~5/2~~c5/1e~~h~~~2/1g~~cg1~e1/10",
+      "solution": "EgDgbFbBEgcFdFFcEeeFcGfFgFbGcGdG",
+      "title": "Gibraltar Point"
+    },
+    {
+      "board": "10/10/1h~2f~3/2~3~3/1b~3~3/2d~~~~3/1ebhfe~d2/10",
+      "solution": "bEcFdFeFfFfGfCGfbCbGcGdGeG",
+      "title": "Muskegon"
+    }
+  ]
+}

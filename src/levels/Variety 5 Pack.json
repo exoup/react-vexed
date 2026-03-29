@@ -1,0 +1,310 @@
+{
+  "metadata": {
+    "category": "General",
+    "author": "Vexed Development Team",
+    "url": "http://vexed.sourceforge.net",
+    "description": "Variety level pack"
+  },
+  "levels": [
+    {
+      "board": "10/1ga4a2/2h~2~e2/3~2~3/2a~~1~3/1~g~~1~3/1h1~e~~~e1/10",
+      "solution": "eGIgHccEcFcCDeCfcCHcGgdEbBcC",
+      "title": "Ghana"
+    },
+    {
+      "board": "10/3c~1a3/4~~d~2/4~~1~2/4~~1~~1/2b~~a~h~1/3~hb~cd1/10",
+      "solution": "gCGchEdBeFfFEgcFdFdGeGfG",
+      "title": "Ukraine"
+    },
+    {
+      "board": "10/7~c1/4d~1~2/2~e1~1~2/1e~2~~~2/1c~~1~~~d1/1dc~~e~~e1/10",
+      "solution": "DdcFdGcGdGbFeGcGfGdGgGIfIbeGHebGcGdGHgeCbGcGdGeGfGgG",
+      "title": "Uzbekistan"
+    },
+    {
+      "board": "10/4cd~~2/6~~2/4~~b~2/3~~ha~2/1b~~3~2/1d2ha~c2/10",
+      "solution": "fBeBfBgBGdFdEebFGdgEfGFdEeDfCffEgEeGfG",
+      "title": "Colombia"
+    },
+    {
+      "board": "10/10/10/10/5b~g2/1ag~~f~a2/1fh~h1b3/10",
+      "solution": "cGHefEgEFfGfFfEfbGcGHfGfHfFfbGcG",
+      "title": "Zimbabwe"
+    },
+    {
+      "board": "10/4~c~db1/3b~ag3/4~5/4~5/2~~~~a~c1/1dg1~~1~2/10",
+      "solution": "dCFbFcGfeFfFeFgFIfGcFcEfDfHbGcFcEfDfIbHbGcFc",
+      "title": "United States"
+    },
+    {
+      "board": "10/5b4/4~g~~d1/4~d~~2/1d~1~b~~2/2~~~c~~2/1~c~g2~2/10",
+      "solution": "FcfCgFIcHffEgEFeFfEfGfEgDgFfCgEgbE",
+      "title": "France"
+    },
+    {
+      "board": "10/4~b4/4f5/3~b~4/3~1h4/3~1e~~2/1hfa~a1~e1/10",
+      "solution": "fFgFdGeDEdFbeDbGcGdG",
+      "title": "Japan"
+    },
+    {
+      "board": "10/10/3c~e~3/4~bd3/4~fb3/4~1e~2/3~df1~c1/10",
+      "solution": "fCFeGeFedCeDEgfEgF",
+      "title": "Netherlands"
+    },
+    {
+      "board": "10/3c~5/1g~1~5/1d~1~1~d2/2~h~1~3/2~d~1~g2/1d~1~~~hc1/10",
+      "solution": "HddFeGdFeGfGbGbCbDcFdFeGfGdBeGfGgG",
+      "title": "Syria"
+    },
+    {
+      "board": "10/3c~1~h2/3a~e~3/4~1~3/2h~~1~3/2b~~~~~b1/3ae~~1c1/10",
+      "solution": "FcHbdGdBdCGgeFcEIfHffFdGgFhFcFdGeG",
+      "title": "Mexico"
+    },
+    {
+      "board": "10/10/10/5~e3/3h~~a3/1~~d~ef3/1da1fh4/10",
+      "solution": "GdGeFfdEeEDfCfEfDfGf",
+      "title": "Tanzania"
+    },
+    {
+      "board": "10/1de~2~~e1/3~~h~3/1f~~~1~3/2~1f~~3/2~~e~~3/2~~1~dhd1/10",
+      "solution": "fCGgcBbBcBdCbDeFeEEfIgfEIbdDfGgGeFHb",
+      "title": "Vietnam"
+    },
+    {
+      "board": "10/10/5b1~g1/5g~~2/6~~f1/4b~~a2/3fab~g2/10",
+      "solution": "IcHgfDHgfDeFeGIedGeGfG",
+      "title": "China"
+    },
+    {
+      "board": "10/10/2a7/1~c~6/1~1d~5/1~~1~df~2/1dcdf2a2/10",
+      "solution": "dECdbFGfFfcDdGdEeFfFgFbGcG",
+      "title": "Argentina"
+    },
+    {
+      "board": "10/3b6/3d6/1~~b6/1~~2~h~h1/1~~~1~1~2/1b~edeh~2/10",
+      "solution": "DgDdDdDdCdcFcGdGGgIeFgHgGe",
+      "title": "Guatemala"
+    },
+    {
+      "board": "10/7g2/3~ah~e2/2~~1d~3/1~~3~3/1~e2~~3/1~adhg~3/10",
+      "solution": "EcDdCeHcHcGffCGffDGfdGcGdGeG",
+      "title": "Ethiopia"
+    },
+    {
+      "board": "10/6f~2/5f1~2/2e~da~~2/2f~2~~2/3e2~~2/1d~a~~~3/10",
+      "solution": "cDEdbGdGFdEdgBcEdGeGfGfD",
+      "title": "Peru"
+    },
+    {
+      "board": "10/1gabe~4/5~4/4c~4/5~4/4~~~~~1/2ab~gc1e1/10",
+      "solution": "eBfFgFhFeDfFdBeBFfcBdBeBFfcGbBcBdBeB",
+      "title": "Malaysia"
+    },
+    {
+      "board": "10/10/10/10/5a4/2bhcb~3/3cda~dh1/10",
+      "solution": "fFeGcFFgdFeFeGfGdGeGfGgG",
+      "title": "Iraq"
+    },
+    {
+      "board": "10/2h~f5/2c~6/3~3~g1/2d~~2~2/3~~~d~~1/1gc~f~2h1/10",
+      "solution": "cCcEEbcCdEGfeFdFfFdGgFhFIdHfGfbGcGdG",
+      "title": "Poland"
+    },
+    {
+      "board": "10/10/4c~1c2/5~~d2/5~~3/5~bdf1/3a~a1fb1/10",
+      "solution": "dGeCHdGfIffFgFHdGf",
+      "title": "Germany"
+    },
+    {
+      "board": "10/5a~~2/1~h3g~2/1~5~2/1~5~2/1ce~3~2/1h1e~gc~a1/10",
+      "solution": "cFfBgBCcbFgGgCfGhGcFdGeGfGgG",
+      "title": "South Korea"
+    },
+    {
+      "board": "10/10/10/1d~4~d1/2~e~~~~2/2~fhf~~2/2~1bhb~e1/10",
+      "solution": "dEeEfEgFfFeFDfbDcFdFeFGfFfEfDfgGIdHfeGfG",
+      "title": "Philippines"
+    },
+    {
+      "board": "10/10/6c3/5~g3/4~~d3/1h~~b5/1d1~g~chb1/10",
+      "solution": "GdFeEfGdFeeGGebFcFdFFeEfDfCfeGfGdGeGfGgG",
+      "title": "Saudi Arabia"
+    },
+    {
+      "board": "10/10/10/10/1e~~3d2/1da~~2f~1/2fh~~eah1/10",
+      "solution": "bEcEdFeGcFdFhFeGfGbFcFdFeGfGdGeGfGgGcGdGeGfGgG",
+      "title": "Pakistan"
+    },
+    {
+      "board": "10/10/2g~6/3~1gb3/3~~f4/2~~dh~d~1/2bh2~1f1/10",
+      "solution": "EfDfFfEfcCcFdFFeEeGdFeEeHffFgFhFeFfF",
+      "title": "Romania"
+    },
+    {
+      "board": "10/4e5/3~d~e3/3~1~h3/2h~1~4/2c~b~4/2db1c4/10",
+      "solution": "EfcEcFEcDedFeFeCGdGdFfEf",
+      "title": "Russia"
+    },
+    {
+      "board": "10/10/4c5/4e~a3/4b~c~a1/5be~2/5ec~2/10",
+      "solution": "eEeDGdgFeEfEIefG",
+      "title": "Sri Lanka"
+    },
+    {
+      "board": "10/7g~1/5~c1~1/3~c~2~1/2g~4~1/2h~~e~~~1/2bebh2~1/10",
+      "solution": "FfEfEdGcFdcEEddFeFcGfFcGdGhBgFhF",
+      "title": "Burkina Faso"
+    },
+    {
+      "board": "10/10/4h5/4f~1e2/5~~f2/3~f~~1b1/1e~~1~~bh1/10",
+      "solution": "HeGgeDHgGgeDfFHeGfgGFfEfbGfGgG",
+      "title": "Spain"
+    },
+    {
+      "board": "10/4~h~f2/4~a~3/3~~1~3/1~~~~1~f2/1~1~~~adc1/1h1d~~c3/10",
+      "solution": "HeGfFgGgHfHbGfFfIfHfFbFcEdEeDeCeeGdG",
+      "title": "Nigeria"
+    },
+    {
+      "board": "10/1b2a5/1dh~d~4/3~1~4/3~1~4/2b~~~~fa1/2f~~~~1h1/10",
+      "solution": "cGEccCbCcCdGdFbCcCHfIfHfGfeFeCfFgFhFeG",
+      "title": "Burma"
+    },
+    {
+      "board": "10/6~~f1/6~3/1g~3~3/1h~3~a2/2~~~~~da1/1fhd~1~g2/10",
+      "solution": "HeHfGfFfIfHfIbcGbGbDbEcFHgHbGfFfdFcFeFfFcG",
+      "title": "Iran"
+    },
+    {
+      "board": "10/7~g1/6~~2/4h1~3/2h~c~~3/1~f~1~~~2/1g1ac~~af1/10",
+      "solution": "IbeGdGfGeGeEeEfEHcGeFegFfFfGcEdGeGfGcFEeDfCfdGeGfGgG",
+      "title": "South Africa"
+    },
+    {
+      "board": "10/4h5/4fa~~2/5d~~2/7~2/3b~1~f2/2ad~~hb2/10",
+      "solution": "fDeCfCgCeCfCgCHfdFeGfGgDdGeGfGfDgDcGdGeGfG",
+      "title": "Egypt"
+    },
+    {
+      "board": "10/3a~5/4~5/4~2~c1/3~~2~2/1dcf~~~~2/2hadh1f2/10",
+      "solution": "dFeFfFgFcFdFdBEebFeFcFIdfFgFcGdG",
+      "title": "Australia"
+    },
+    {
+      "board": "10/10/3d~5/2~g~5/1~~1~2e2/1ha~~2ha1/1g1~~~~de1/10",
+      "solution": "dCeGfGHgDdCecFbFcFdFeGdGeGfGgG",
+      "title": "Morocco"
+    },
+    {
+      "board": "10/7f~1/2d5~1/2a~1~b1~1/3~1~1~~1/3~~~f~d1/2be~~ae2/10",
+      "solution": "hBIecDdFeGdGeGfGGdcGdGcDIfdGeGfG",
+      "title": "Turkey"
+    },
+    {
+      "board": "10/3~ab4/3~1a4/3b~h1~e1/3a~2~2/4~~~~h1/1e~a~~1~2/10",
+      "solution": "dGFdFdFdIfIdHfEbGfdEeFfFgFbGcGdG",
+      "title": "Indonesia"
+    },
+    {
+      "board": "10/1~g~f1e3/1~1~1~c~2/1~1~1~1f~1/1~1~1~~g~1/1~1~~~~1~1/1~g~~1ecg1/10",
+      "solution": "CbhEgChDEbHeGfFfGcfF",
+      "title": "Mozambique"
+    },
+    {
+      "board": "10/2e~6/3h~2g~1/3a~3~1/4~3g1/4~~a3/4f~hef1/10",
+      "solution": "hCdCeFdDeFcBdDeFfGeGfGgG",
+      "title": "Brazil"
+    },
+    {
+      "board": "10/10/3a1~f3/2~d~~1~d1/2~1~2~2/2~a~~f~2/2f1h~h3/10",
+      "solution": "GcdDdDFdEdeFGfFfEfDdIdHfGfeG",
+      "title": "Taiwan"
+    },
+    {
+      "board": "10/10/6~fe1/6~d2/6~3/5~~~h1/2d~he~1f1/10",
+      "solution": "HdIcHcGfIfHfGfHdgFhFcGdGeG",
+      "title": "Ecuador"
+    },
+    {
+      "board": "10/1d~7/2~5h1/1g~1e~1~c1/2~2~~~2/2h~~~~e~1/2d~1~~gc1/10",
+      "solution": "IdHfhFbDbBcFcFIddFeFHfGfeDfEFfEffG",
+      "title": "Sudan"
+    },
+    {
+      "board": "10/1b~7/2~7/2~3g3/1b~~g~d~~1/2~~1~1b~1/2f~~~fd~1/10",
+      "solution": "gEhEbBcGEeDfdGeGbEHgGgFgcEGecGdG",
+      "title": "Algeria"
+    },
+    {
+      "board": "10/3~g5/3~6/3~h~1~c1/3~1~a~2/1~f~~~h~2/1c1~fag~2/10",
+      "solution": "cFGfFggGIdHfGfeDFfEbEfeGDfCfdGeGfG",
+      "title": "Kenya"
+    },
+    {
+      "board": "10/4e~1~e1/5~c~2/5~1g~1/5~~f~1/1g1~~c~1~1/1cf~~2c~1/10",
+      "solution": "gCHehDFfGfFfEfbGcGHeGfFfbGcGeBIbHe",
+      "title": "India"
+    },
+    {
+      "board": "10/4d5/3~e5/1f~~6/1c~~2~d2/1e~~~~~c2/1b~b~~1f2/10",
+      "solution": "EcDfbDcFbFHeGfFgdFbGHfGfeFEcfFgFbGcGdG",
+      "title": "North Korea"
+    },
+    {
+      "board": "10/2b7/2f7/2c~6/3~~c~~2/3~~1h~f1/3h~~dbd1/10",
+      "solution": "cDcDcDdGFedEeEeGfEgEgGdGeGfGgG",
+      "title": "Canada"
+    },
+    {
+      "board": "10/10/2h~3~h1/2c~3~2/1b1~3~2/1h~~c~~~g1/1c~~g~2b1/10",
+      "solution": "eFIfHfGfEgDgbFcFbFcFFfdFeFfFgFhFIcHfGfFfcCcGbGFgcD",
+      "title": "United Kingdom"
+    },
+    {
+      "board": "10/10/10/10/1e8/1fhe~~~g2/1hcfcg~3/10",
+      "solution": "HfdFcFbFeFdFcFcGbGcGbGcGdG",
+      "title": "Cambodia"
+    },
+    {
+      "board": "10/3h~5/3f~2h~1/4~1~fc1/4~~~ga1/2~~~c~3/1ga1~1~3/10",
+      "solution": "dBdChCfFHdeFHeIeHeGeFfEfDfGfFfEfDfIdHeGfFfIeHe",
+      "title": "Yemen"
+    },
+    {
+      "board": "10/10/1c~3~d2/1f~3~c2/2c~~~f3/3~~~4/2~b~db~f1/10",
+      "solution": "HcGeGedGFfcEEfeGbCHdcEGedEbDDgIgHgGgFgcE",
+      "title": "Madagascar"
+    },
+    {
+      "board": "10/1e~7/1a~3h3/2~~1~g~2/1~h~1~1~2/1~1~e~a~2/1h1~1g1h2/10",
+      "solution": "GdgDCebBbCEfcDcEdFeFGf",
+      "title": "Kazakhstan"
+    },
+    {
+      "board": "10/2b~2~b2/3~2~3/3~2~3/3~h~~3/5~fhc1/3hf~c1h1/10",
+      "solution": "GfHfGfdGHbIfGgHfFgEgGfeEfFdGgFhFcBdEeE",
+      "title": "Chile"
+    },
+    {
+      "board": "10/4h~4/5~4/5~~ea1/5~~1c1/5~bhe1/1b~~~~c1a1/10",
+      "solution": "GfeBfFHdgFIfHfbGcGdG",
+      "title": "Nepal"
+    },
+    {
+      "board": "10/5~a3/3~e~4/3d1~4/2~e1~4/1a~d~~4/1e~1b~~be1/10",
+      "solution": "DeEcdFeGGbFffGEfDfeGfGgG",
+      "title": "Uganda"
+    },
+    {
+      "board": "10/6~eg1/6~d2/6~h2/6e3/2d~h~cg2/2c~1~4/10",
+      "solution": "HbIbHbeFGfFfEfHcGfFfEfHdGf",
+      "title": "Bangladesh"
+    },
+    {
+      "board": "10/3b~5/4~5/4~5/4~5/2h~c~~~b1/1ac~adhd2/10",
+      "solution": "eFfFgFEgcFFgdFeFdBeFfGHfIfeGGfHfdGFfEffGbGcG",
+      "title": "Thailand"
+    }
+  ]
+}

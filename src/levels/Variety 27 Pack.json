@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "category": "General",
+    "author": "Vexed Development Team",
+    "url": "http://vexed.sourceforge.net"
+  },
+  "levels": [
+    {
+      "board": "10/7g2/4d~~d~1/4f~~1~1/5h~1~1/3g~1~~~1/3f~f~dh1/10",
+      "solution": "eChCfEfEgFgGdFfGHceGgGeDdGeGfE",
+      "title": "Aces Up"
+    },
+    {
+      "board": "10/2b4~e1/2e~3~2/3~3~~1/3~4~1/3~fe~g~1/1f~~1g~b~1/10",
+      "solution": "EfcCcCfFdFeFdFbGIbhFhDIffFeFfFfGgG",
+      "title": "ForeCell"
+    },
+    {
+      "board": "10/2c~2f~2/1d1~3~2/1g~~3~2/1a~~3~2/2~~~g~~2/2fc~d1a2/10",
+      "solution": "bEbDcEdFcFcBFgdFgBbEHfGfeFcFfFgFcGdG",
+      "title": "Variegated"
+    },
+    {
+      "board": "10/1c3a~3/1a~3~3/2~3~3/2h~2~3/2f~~~c1g1/3~g~h~f1/10",
+      "solution": "EgcEdFeGfBbCcEdFGfbCcEdFeGcFdFeGfGgGdGeGfGgG",
+      "title": "Streets & Alleys"
+    },
+    {
+      "board": "10/5h~b2/6~a2/2e3~3/2a~2~3/3~~~~~h1/2be~1h~2/10",
+      "solution": "HcfBgGgFHccEcEGfFfdFeFfFcG",
+      "title": "Octave"
+    },
+    {
+      "board": "10/1~a7/1~2~e4/1~2~2g2/1~2~~~c~1/1~1fc~~1~1/1a~gf~1e~1/10",
+      "solution": "CbHeHeeGGedFFceEfEgEhEDgEgGfFfcGdG",
+      "title": "Senior Wrangler"
+    },
+    {
+      "board": "10/10/10/5f2d1/3~~d1~b1/2c~~b~~e1/3~f1e~c1/10",
+      "solution": "IfFeEgcFdFFeEefFeFfFgGIeHfIfGfFfgG",
+      "title": "Fan"
+    },
+    {
+      "board": "10/10/1h~1~cf3/2~1~5/2~~~5/1~~~~~f~2/1~hch2h2/10",
+      "solution": "GfFfFcGcFcCgDgEgEeDfbCEfcEdECfDfbGeFfFgFbGcG",
+      "title": "Demon Fan"
+    },
+    {
+      "board": "10/1h~7/2~4~f1/2~3~~2/2~~2~b2/1cg~~~~3/2fc1hb~g1/10",
+      "solution": "bBcEdFeFcFbFdFcFIcHdHeeFGfFfEffGgG",
+      "title": "Ladies' Battle"
+    },
+    {
+      "board": "10/6b~2/2~d3~f1/2~1a~1~2/2~2~~~2/1~~~c~~~2/1dcf1b~~a1/10",
+      "solution": "DcCfEfDfeDfGIggBIcHeGfHfFfEffG",
+      "title": "Incompatibility"
+    },
+    {
+      "board": "10/5a~3/6~e2/4~~~3/1fe~~d4/1d1~~ac3/2f~~c4/10",
+      "solution": "HcfBGdcGdGFdGdFeGfcEbEcEEeDeCeDgcG",
+      "title": "Grounds4Divorce"
+    },
+    {
+      "board": "10/3~hd4/3~6/2~~6/2~~~5/1~ebe5/1bd1g~g~h1/10",
+      "solution": "EbFbEbDdCfdEDfEfDfeGeGfGgG",
+      "title": "Tournament"
+    },
+    {
+      "board": "10/2~d6/2~7/1h~7/1f~~~e4/2~~~c~h2/1fe~1d~c2/10",
+      "solution": "cGbGDbcFdFFefFbDbEcFEeeFdFeFfG",
+      "title": "Rittenhouse"
+    },
+    {
+      "board": "10/10/10/3c4f1/2gf~~2b1/4c~~~c1/1g~bg~~~2/10",
+      "solution": "dEeGdEfGgGIfHfeEIfeGdGfGHfGfIfHfcEbGcGHgGgdE",
+      "title": "Clover Leaf"
+    },
+    {
+      "board": "10/3f6/3c~5/4~2e~1/1c~1~3~1/1f~~~~b~~1/1e~~bf1~f1/10",
+      "solution": "GfEgDgbEFgdCeFfFEgcFbFFgdFcFhDgFIfHfGfeFfFgFdCeFcGfFgFbGcGdG",
+      "title": "Demonthief"
+    },
+    {
+      "board": "10/10/10/2h~6/3~1b~~~1/1f1~~cgcf1/1g~~~1h1b1/10",
+      "solution": "fEgEhEFfGfHfIfFfEfGfFfcDHfGfFfdFbGeFfFbGcG",
+      "title": "Gloucestershire"
+    },
+    {
+      "board": "10/6~a2/6~h2/3~bf~3/3~1a~3/3~h1b~f1/3~2c~c1/10",
+      "solution": "gGfDgFHbeDfDHcGdgFFdfEEdEf",
+      "title": "Trevi Garden"
+    },
+    {
+      "board": "10/6e3/5~b3/5~g3/5~d3/1b~hd~4/1e~1g~~~h1/10",
+      "solution": "GddFeGGcFfEfDfGdGeFfEfDfeGfGgG",
+      "title": "Anno Domini"
+    },
+    {
+      "board": "10/10/10/1g8/1b~~c~4/1d~~b~~h2/2h~1dcg2/10",
+      "solution": "bFbEHfGfeEEfcFdFFecFEefFeFbFDedFeFGfFfEfcECfDfdFbFeFfFfG",
+      "title": "Osmosis"
+    },
+    {
+      "board": "10/4f~~b2/5~~3/5~~3/2f~c~~3/1c1~1h~3/1fb~1f~~h1/10",
+      "solution": "eBIgHgfEeEfEHbGdFeEecEbGGeFegGfGEebG",
+      "title": "Spidercells"
+    },
+    {
+      "board": "10/10/8c1/3b3~a1/3a2~~2/2~d~~~a~1/1d~c2~ba1/10",
+      "solution": "DfhFIdIddFeFdFfFeFfFHehGGfgGFfEf",
+      "title": "Czarina"
+    },
+    {
+      "board": "10/1c~d6/2~5a1/1~~5d1/1~~2~~~h1/1~~~~~~h2/1d1~~c~a2/10",
+      "solution": "fGHfGfIeIeHfIeHeGeFfEgFgGgHfGfFfEfDfbBDbCdcFdFeFeGdGeGfG",
+      "title": "Twister"
+    },
+    {
+      "board": "10/3d~5/4~5/2~a~5/2~1~2h~1/1c~~~~~da1/1h~~b~b1c1/10",
+      "solution": "hEHfGfIfHfGfFfEfDgbFDdEgcFFgdFdBGgeFIfHffFdGgFhFbGcGdGeG",
+      "title": "Rank And File"
+    },
+    {
+      "board": "10/10/10/10/1ca~~5/1gec~~b~a1/3g~b1~e1/10",
+      "solution": "GfdGcFbEcEdEeFdFeFfFgFcFdFeFfFgFbFcFdFdG",
+      "title": "Outback"
+    },
+    {
+      "board": "10/10/2f~6/2e~1~h3/3~~~4/3~da~3/2aeh1df2/10",
+      "solution": "GdFeEfFfdFeFfFcCcDdFeFfFcG",
+      "title": "Penguin"
+    },
+    {
+      "board": "10/1a~7/2e~6/1hc~2e3/3~1~f~2/3~~~c~~1/3~~h1af1/10",
+      "solution": "gEhFcCGeFfbBcDcDGfFgdFeFfFgFbDcDdFdG",
+      "title": "Simon Jester"
+    },
+    {
+      "board": "10/3h~1d~2/4~2~2/4~2~2/3c~1~~d1/3hg~~~g1/3cd1~~d1/10",
+      "solution": "eFdFfFeFfFgFIfdBgBeFfFHehGGfFfgG",
+      "title": "Kingsley"
+    },
+    {
+      "board": "10/10/2c~6/3e~5/4~5/1~g~d~h~2/1edhg~1c2/10",
+      "solution": "CfEfDfeGGfFfcCdDdDeFfFgFbGcGbGcGdG",
+      "title": "Harp"
+    },
+    {
+      "board": "10/5f~3/6~3/2d~2~~a1/3~2~~h1/3h~~~e2/2ea~~1df1/10",
+      "solution": "IdHeGfdGHfGfdGcGcDdFeFfFgFIgIeHffBgEGfFfdG",
+      "title": "Amazons"
+    },
+    {
+      "board": "10/10/10/3g~5/3a~~4/2~gc~d~f1/3af~c1d1/10",
+      "solution": "eGGfFfdDDfIfHfGfeEeFfFgFhFEgcFdFdGeG",
+      "title": "Number Ten"
+    },
+    {
+      "board": "10/10/1f~f6/2~7/2~7/1ea~~~~hg1/1g1h~a~e2/10",
+      "solution": "cFdFbCcFbFdFcFdFeGHgIfHfGfFfEfDfCfDccFdFeFeGdGeGfG",
+      "title": "Triple Peaks"
+    },
+    {
+      "board": "10/5b~3/6~3/2h3~3/2b~~1~~c1/1~he~~~~f1/1f1c~~e~2/10",
+      "solution": "cEdEIedFIfHffBeGGfFfGfEfeGDfCfdGeGfG",
+      "title": "Raw Prawn"
+    },
+    {
+      "board": "10/4~d4/4~g~3/1a~1~1~3/1d~1~1~3/1c~~~~gha1/2~~~1h1c1/10",
+      "solution": "GfHfFbbDbFfFIfHfGfFfEgcFbFdFcFeFcGfFfCgFhF",
+      "title": "Unlimited"
+    },
+    {
+      "board": "10/10/1a~7/2~1~g4/2~1~1~c2/1e~~~c~3/1f~fg1ea~1/10",
+      "solution": "FfEfDfbFcFdFeFfFbCcFdFFdeFhGfFHeGfgGdGFfEfbGcG",
+      "title": "Crescent"
+    },
+    {
+      "board": "10/1a~3c3/1d~~1~a3/3~g~4/3~f~4/1~~~1~4/1fc1g~~~d1/10",
+      "solution": "EeDfCfGceEGcFefGbBEecCdEeEbCcCdEDfeEfGgG",
+      "title": "Right And Left"
+    },
+    {
+      "board": "10/1ch7/2c~1d~3/2e~2d3/3~1~h3/2a~~~4/3~1ae3/10",
+      "solution": "fCcCcFdFeFcDdFeFbBcDcDdFGeeF",
+      "title": "Three Blind Mice"
+    },
+    {
+      "board": "10/2~a2f~2/2~2~c~2/2~2~1~2/2~1~~1g2/2~g~a~f2/2~c1c~c2/10",
+      "solution": "DfDbcFdFgBHfHfGfHfGcFeEfFfEffG",
+      "title": "Single Rail"
+    },
+    {
+      "board": "10/1g~7/2~1h~4/2~~e~1~d1/2~e1~1~2/1~~c~~~~2/1d~1h~g~c1/10",
+      "solution": "dFeGIgIdHfGfeCFfDfEfDfCfbBcFEdDedFeFeGfG",
+      "title": "Arizona"
+    },
+    {
+      "board": "10/10/1f~~1~~g2/3~~~4/4~g2d1/3b~h~~h1/3d~1~bf1/10",
+      "solution": "FedFfFeFfFgFIgIfHfGfFfEfbCcCdDeFfFgFgGHcGcFf",
+      "title": "Hidden Treasures"
+    },
+    {
+      "board": "10/3g~~~1f1/6~~a1/4c1~c2/3~d~~3/1~~~1~~3/1g1~df~a2/10",
+      "solution": "EeIcHcdBeBIcHdHdfBeEGeFeFgEgEeDfCfdGeG",
+      "title": "Royal Cotillion"
+    },
+    {
+      "board": "10/7~b1/7~e1/7~2/6~~2/1~ge~~~a2/1a1hb~hg2/10",
+      "solution": "IbHeGfIcdFHfeGGfHfdGFfGfcFEfeGDfCfdGeGfG",
+      "title": "Dutchess"
+    },
+    {
+      "board": "10/3c~~b3/4~~4/4~~1~h1/5~~~e1/3~~bf~2/1e~~1chf~1/10",
+      "solution": "GbIdIeHehGGfgGdBeDFfEfbG",
+      "title": "Towers"
+    },
+    {
+      "board": "10/1h~7/2~2~c1a1/2~2~d~c1/2~2~1~2/2f~a~1~~1/2h~1f~~d1/10",
+      "solution": "bBEfcFdFeFGcIgIdgDIdHdhFGdFfEffGgG",
+      "title": "Fan Albert"
+    },
+    {
+      "board": "10/10/10/10/2a~~5/2b~d~~~f1/2acbcf1d1/10",
+      "solution": "IfHfEfcEdEeFdFcFfFeFdFfFdGgFhFcGdGeG",
+      "title": "Demon"
+    },
+    {
+      "board": "10/7~h1/5~~f2/5~4/5~~~a1/3~~g~~2/1ga~1h~~f1/10",
+      "solution": "HcGcFffGeFfFIggFIeHeGfFfEfHfGfFfEfbGIbHcGcfFfG",
+      "title": "Lady Jane"
+    },
+    {
+      "board": "10/7b~1/4e~~c~1/1d~2~~1~1/2~1~~~c~1/2~h~~~1b1/2h1~~~de1/10",
+      "solution": "hBbDHgHcGgFgdFcFGgeFdFeCFeFfHeEfDfeGfGgG",
+      "title": "Spanish Patience"
+    },
+    {
+      "board": "10/3~cd~h2/2~c2~3/2~3~3/2~3~3/1~f1~~~f2/1~dh~cd3/10",
+      "solution": "HbGfFfDcHfGfFfCgCfcGEbFgEgDgDcFbEbGgFgEgDc",
+      "title": "Archway"
+    },
+    {
+      "board": "10/10/1h~7/1d~7/1e~~~1~d2/2~~cb~hc1/1~b~2~1e1/10",
+      "solution": "EfFfEfDfHeHfGfFfEfIfHfGfFfDgbCbEEfcEbEdEcECgeFdFbGfFgFhFeFfF",
+      "title": "Royal Rendezvous"
+    },
+    {
+      "board": "10/3~f5/3~2~g2/3~1~~3/3~~~4/2~ah~~f~1/1hg1ca~c2/10",
+      "solution": "HceFGddFFeEeDfhFHgfFeFEbdFeFGfFfEfDfgGIfHfeGfG",
+      "title": "Lady Cadogan"
+    },
+    {
+      "board": "10/10/6~~a1/6~cd1/6~h2/1~g~~~~a2/1d1c~gh3/10",
+      "solution": "IcHcIdHdGfHfcFdGFfEfDfCffGHfGfdGeG",
+      "title": "Black Widow"
+    },
+    {
+      "board": "10/6~f2/2~h2~3/1c~3~3/2~~2~~f1/1~~~~~~3/1faha1c~f1/10",
+      "solution": "HbGfFfEfDfCfDcbDcEdFcFeFfFcGIeHegG",
+      "title": "Reserved Pyramid"
+    },
+    {
+      "board": "10/1~c4~f1/1~5~2/1~5~2/1~1g3~2/1~~c~~~fa1/1a2d~~gd1/10",
+      "solution": "CbbFdFeFHfIfIbHfGfHfFffGEfDfCfeGfGgG",
+      "title": "Forty And Eight"
+    },
+    {
+      "board": "10/7~h1/7~2/5~e~2/1g~~~g1~2/1h1~~b~~2/1aba~e1~2/10",
+      "solution": "dGFfEfbEfFEgcEFgdFbGgFIbHfGfeFGdFefFgFbGcGdG",
+      "title": "Lady Palk"
+    },
+    {
+      "board": "10/10/5d~g~1/5ch1~1/6f~~1/5g1c~1/5h~df1/10",
+      "solution": "gEhEHcfCgChCgEfGhGgEfGfDgE",
+      "title": "Assembly"
+    },
+    {
+      "board": "10/1h~7/1b~7/2~~6/2~~~1a~2/1~g~~~ge2/1~e1h2ab1/10",
+      "solution": "gEGfHfCfFfEfDfbBbCGfFfEfcDdEcECfDfeFdFfFgF",
+      "title": "Lady Of Manor"
+    },
+    {
+      "board": "10/4~~bg2/4~~4/4~e4/4c5/1b~~b~4/1g1~ebc3/10",
+      "solution": "eFeFGbHbGbFbFdbFcFEfDfFdCf",
+      "title": "Eight Off"
+    },
+    {
+      "board": "10/1f8/1g~7/2a~~f~3/3~2~h2/2~~~a~f~1/2~~hf2g1/10",
+      "solution": "FfHfGfHfGfbCFdEgEdcDcDdDDfbCcDeDfDgFhF",
+      "title": "Yukon Puzzle"
+    },
+    {
+      "board": "10/2b~6/2e~6/2g~6/3~~f4/2c~~e~~2/2f~b2cg1/10",
+      "solution": "cBFeFfEfcFdFeFfFgFcDcDdFeFcGfFgF",
+      "title": "Chameleon"
+    },
+    {
+      "board": "10/3c~5/4~2~b1/4~d~~2/4~1~~~1/1g~dc~~a~1/1a2g~~1b1/10",
+      "solution": "dBIchEbFdFcFeGdFfGHffDeGGfFfGfEfeGDfCf",
+      "title": "Adela"
+    },
+    {
+      "board": "10/2d~2~b2/2c~2~3/2b~e1~3/3~d~~3/3~1f~~f1/3~~e~1c1/10",
+      "solution": "cBEeHbfFgFEecDcDdEeEfFdGgFhFdGeG",
+      "title": "Shady Lanes"
+    }
+  ]
+}
