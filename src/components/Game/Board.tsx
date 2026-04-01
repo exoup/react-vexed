@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
 import { GemStateProvider, useGemState } from "@/components/Context/GemStateContext";
-import { gemColors, blockSize } from "@/lib/constants";
+import { blockSize } from "@/lib/constants";
 import {
     applyGravity,
     createInitialBoardState,
@@ -17,22 +17,11 @@ import {
     type BoardState,
 } from "@/util/board";
 
-const levelMap = [
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 4, 3, 0, 0, 1, 1, 1],
-    [1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
-    [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
-    [1, 1, 1, 3, 0, 0, 4, 1, 1, 1],
-    [1, 1, 1, 1, 3, 4, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-];
-
-const boundaryLevelMap = levelMap.map((row) =>
+const level = "abcdefghijklmnopqrstuvwxyz";
+const { boardState: initialBoardState, gemColorsById } = createInitialBoardState(level);
+const boundaryLevelMap = initialBoardState.map((row) =>
     row.map((cell) => (cell === 1 ? 1 : 0)),
 );
-
-const { boardState: initialBoardState, gemColorsById } = createInitialBoardState(levelMap, gemColors);
 
 function BoardContent() {
     const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
@@ -134,7 +123,7 @@ function BoardContent() {
     return (
         <div
             className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs overflow-clip select-none touch-none"
-            style={{ width: levelMap[0]!.length * blockSize, height: levelMap.length * blockSize }}
+            style={{ width: initialBoardState[0]!.length * blockSize, height: initialBoardState.length * blockSize }}
         >
             {mapBlocks}
         </div>

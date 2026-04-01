@@ -1,3 +1,4 @@
+import { gemColors } from "@/lib/constants";
 export type BoardDirection = "left" | "right";
 export type BoardCell = 0 | 1 | string;
 export type BoardState = BoardCell[][];
@@ -15,7 +16,47 @@ export const isGemCell = (cell: BoardCell): cell is string => {
   return typeof cell === "string";
 };
 
-export const createInitialBoardState = (map: number[][], gemColors: string[]) => {
+export const parseLevelString = (levelString: string): number[][] => {
+  const rows = levelString.split("/");
+  const level = rows.map((row, rowIndex) => {
+    const parsedRow: number[] = [];
+
+    for (let i = 0; i < row.length; i += 1) {
+      const cell = row[i]!;
+
+      if (cell === "~") {
+        parsedRow.push(0);
+        continue;
+      }
+
+      if (/\d/.test(cell)) {
+        let boundaryCount = cell;
+
+        while (/\d/.test(row[i + 1] ?? "")) {
+          i += 1;
+          boundaryCount += row[i]!;
+        }
+
+        parsedRow.push(...Array.from({ length: Number(boundaryCount) }, () => 1));
+        continue;
+      }
+
+      if (/[a-z]/.test(cell)) {
+        parsedRow.push(cell.charCodeAt(0) - 95);
+        continue;
+      }
+
+      throw new Error(`Unsupported cell ${cell} at row ${rowIndex + 1}`);
+    }
+
+    return parsedRow;
+  });
+
+  return level;
+};
+
+export const createInitialBoardState = (level: string) => {
+  const map = parseLevelString(level);
   const gemColorsById: Record<string, string> = {};
 
   const boardState: BoardState = map.map((row, y) =>
