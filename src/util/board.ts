@@ -215,3 +215,12 @@ export const hasOrphans = (boardState: BoardState) => {
 
   return [...gemTypeCounts.values()].some((count) => count === 1);
 };
+
+// level packing
+// temp levels import
+import levels from "levels.json";
+export const loadLevelPack = async (id: number) => {
+  const levelPack = levels[id];
+  return levelPack;
+};
+// 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
+import { useGameState } from "@/components/Context/GameStateContext"
 import { GemStateProvider, useGemState } from "@/components/Context/GemStateContext";
 import { blockSize } from "@/lib/constants";
 import {
@@ -17,13 +18,16 @@ import {
     type BoardState,
 } from "@/util/board";
 
-const level = "abcdefghijklmnopqrstuvwxyz";
-const { boardState: initialBoardState, gemColorsById } = createInitialBoardState(level);
-const boundaryLevelMap = initialBoardState.map((row) =>
-    row.map((cell) => (cell === 1 ? 1 : 0)),
-);
-
 function BoardContent() {
+    const { currentLevel } = useGameState();
+    if (!currentLevel) return null;
+
+    const { currentBoardState, initialBoardState, gemColorsById, title, par, solution } = currentLevel;
+
+    const boundaryLevelMap = initialBoardState.map((row) =>
+        row.map((cell) => (cell === 1 ? 1 : 0)),
+    );
+
     const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
     const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
     const {
@@ -122,7 +126,7 @@ function BoardContent() {
 
     return (
         <div
-            className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs overflow-clip select-none touch-none"
+            className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs select-none touch-none"
             style={{ width: initialBoardState[0]!.length * blockSize, height: initialBoardState.length * blockSize }}
         >
             {mapBlocks}
@@ -131,10 +135,14 @@ function BoardContent() {
 }
 
 export function Board() {
+    const { loadPack } = useGameState();
     return (
-        <GemStateProvider>
-            <BoardContent />
-        </GemStateProvider>
+        <>
+            <button className="p-3 mb-10 cursor-pointer active:bg-indigo-600 z-50 bg-indigo-500 text-white text-sm rounded-md" onClick={() => loadPack(0)}>Load Pack</button>
+            <GemStateProvider>
+                <BoardContent />
+            </GemStateProvider>
+        </>
     );
 }
 

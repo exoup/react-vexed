@@ -1,11 +1,614 @@
-{
-    "levelMap": [
-    [1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 7, 0, 8, 0, 9, 0, 1],
-    [1, 1, 0, 1, 0, 1, 0, 1],
-    [1, 9, 0, 9, 7, 0, 8, 1],
-    [1, 1, 0, 1, 1, 0, 1, 1],
-    [1, 7, 0, 7, 8, 0, 8, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1]
+[
+    {
+        "metadata": {
+            "name": "Classic Levels",
+            "category": "General",
+            "author": "James A. McCombe",
+            "url": "http://spacetube.tsx.org",
+            "description": "The classic levels released with the original Vexed"
+        },
+        "levels": [
+            {
+                "board": "10/10/3ba~~3/5~~3/3~~~~3/3a~~b3/4ab4/10",
+                "solution": "eCdFdCeC",
+                "title": "Good Night"
+            },
+            {
+                "board": "10/10/3~~a~~2/3~~b~~2/3~ac~~2/3~bd~~2/3bdc~c2/10",
+                "solution": "FdEdfE",
+                "title": "I Am The Walrus"
+            },
+            {
+                "board": "10/4~~4/3~~~~3/2e~gf~e2/2f~2~g2/3f~~g3/4~~4/10",
+                "solution": "EddFdFGfHeeFcEHefDGfGfdFcEdF",
+                "title": "I Call Your Name"
+            },
+            {
+                "board": "10/10/4b5/3ac~4/4a~a~2/4c~c3/6b3/10",
+                "solution": "eDdDeDeFfF",
+                "title": "Slow Down"
+            },
+            {
+                "board": "10/4a~c3/4d~d3/5~e3/4~~d3/4~~e3/4c1a3/10",
+                "solution": "GbFfeCGceCfF",
+                "title": "Two Of Us"
+            },
+            {
+                "board": "10/3~~~~~2/3e~~~g2/4f~~3/3fg~bg2/3ef~gb2/4egbg2/10",
+                "solution": "GfeEdCHc",
+                "title": "I'll Cry Instead"
+            },
+            {
+                "board": "10/10/3~~ac3/3~~cd3/3~~da3/3~~ac3/10/10",
+                "solution": "FdFeGdeF",
+                "title": "Can't Buy Me Love"
+            },
+            {
+                "board": "10/10/2~~~~~d2/2~~~~~e2/2b~~a~b2/2ae~e~3/2ebd1b3/10",
+                "solution": "dFcEcFFfEfHcGfFfHdHeGfFfcG",
+                "title": "Drive My Car"
+            },
+            {
+                "board": "10/10/5~b3/3a~~cb2/4a~bc2/5~c3/10/10",
+                "solution": "eEGdfEdDeE",
+                "title": "You Won't See Me"
+            },
+            {
+                "board": "10/2~~~~~~2/1c~~~~c~~1/1ded~~dg~1/1ebc~~gcb1/1ged~1bef1/1bge2efd1/10",
+                "solution": "gChDIdGeIeHeHfIffEgGbCcCdCdDeEdEdFcFEfFebEcEcFbFbG",
+                "title": "Old Brown Shoe"
+            },
+            {
+                "board": "10/2~~~~cd2/2~~e~4/2~~1~~~2/2d~1~~~2/4~~gc2/2c~~ecg2/10",
+                "solution": "GfHfGbHbeCGbFcEcfDfGcGdG",
+                "title": "Rocky Raccoon"
+            },
+            {
+                "board": "10/2bac~cab1/5~4/3a~~~a2/4~~~3/4~~~3/4bac3/10",
+                "solution": "dDHdeFeGeBdBeBGbfDcBdBeBHbGbFgfFIbHbGb",
+                "title": "Octopus's Garden"
+            },
+            {
+                "board": "10/1acdc~dca1/5~4/5~~3/5~~3/4d~~3/5~4/10",
+                "solution": "GbeBdBeBfFcBdBeBHbGbbBcBdBeBIbHbGb",
+                "title": "Get Back"
+            },
+            {
+                "board": "10/10/4e~~3/4g~~3/3~f~fe2/4g1e3/10/10",
+                "solution": "eDeDfDEeFeGedEFe",
+                "title": "Doctor Robert"
+            },
+            {
+                "board": "10/10/5a~3/3a~c~a2/4~a~c2/3c~1ca2/4c5/10",
+                "solution": "FefEdDdF",
+                "title": "Ask Me Why"
+            },
+            {
+                "board": "10/10/2bab~cbd1/3bd~da2/4c~a3/5d4/10/10",
+                "solution": "GceEHcGcIcHccCdCeEdDGeHdeE",
+                "title": "Hey Bulldog"
+            },
+            {
+                "board": "10/3acd~a2/3e1ead2/3g~gec2/4~5/3eg5/3ga5/10",
+                "solution": "FdHbHceBfDdBeBFddDdD",
+                "title": "Eleanor Rigby"
+            },
+            {
+                "board": "10/5e~3/5g~~2/3f~f~3/3g~e~3/4~g~~2/5e4/10",
+                "solution": "dDFdfCfDFfeFdEeF",
+                "title": "I'm Only Sleeping"
+            },
+            {
+                "board": "10/4b~4/5~b3/2ac~~d3/2da~~bc2/2cd~dc3/4~5/10",
+                "solution": "dDcDcEGeeBGeHecFdF",
+                "title": "Carry That Weight"
+            },
+            {
+                "board": "10/5~4/5~a3/4~~c~2/3d~~e~2/4ac1e2/7d2/10",
+                "solution": "dEeEGcFdGdgEfEgE",
+                "title": "Bungalow Bill"
+            },
+            {
+                "board": "10/10/4~b4/5ac3/3c~ba3/3d~cd~2/10/10",
+                "solution": "FcFedEeEeCdFeF",
+                "title": "Eight Days A Week"
+            },
+            {
+                "board": "10/2f~~~~3/5~~3/2h~~~fh2/4~~4/4h~~3/4f~~3/10",
+                "solution": "cDeFdDGdHdGdfFcBdBeB",
+                "title": "The Word"
+            },
+            {
+                "board": "10/10/8b1/2~~~~a~c1/2d~e~g~a1/2c~b~f~f1/2d~g~e~e1/10",
+                "solution": "cEgDIeGgGfIfeEIgfEIfeGfGcGdGeGfGgG",
+                "title": "She Loves You"
+            },
+            {
+                "board": "10/10/3d~d~~2/4~e~e2/3e~g~g2/3d~5/10/10",
+                "solution": "fCFdHdGdFddFFedCGeEeHeGeFe",
+                "title": "I'm A Loser"
+            },
+            {
+                "board": "10/10/2~bacd~2/2~3e~2/2e~1~b~2/2d~~~1e2/2ca1ebd2/10",
+                "solution": "gDcEdFeFDccEdFGgGeEcDccFdFcFFcEcDcHgGgGe",
+                "title": "Rain"
+            },
+            {
+                "board": "10/3ba~~3/3cb~~3/3ac~d3/5~c3/3ca~b3/3d1~a3/10",
+                "solution": "eBeDGfdCeFeCdFGfFfEfeDdDeDFfdDGgeD",
+                "title": "I Me Mine"
+            },
+            {
+                "board": "10/10/5~c3/4~~dc2/3d~eg3/4cgc~2/5ed3/10",
+                "solution": "GdfDgDgFdEeFeFHdHf",
+                "title": "Dig It"
+            },
+            {
+                "board": "10/10/5~d3/5e4/3g~g~~2/3dg1fd2/2de3f2/10",
+                "solution": "dEdFFeEeEfGcfEgEgF",
+                "title": "The Inner Light"
+            },
+            {
+                "board": "10/4b~4/5~~a2/3a~~~c2/3c~~ab2/3d~dc3/3c~5/10",
+                "solution": "dEHdGeeBfDHeFefFHeGedFGfFf",
+                "title": "Yes It Is"
+            },
+            {
+                "board": "10/10/2a1~~c~2/2c1~~d~2/2e~g~ed2/4c~1c2/5a1g2/10",
+                "solution": "gDgDGeeEfEgEcEdEeEcEdEcEdEeF",
+                "title": "For You Blue"
+            },
+            {
+                "board": "10/3~b~a~2/3~abc~2/3dcab~2/3becae2/4deba2/5d4/10",
+                "solution": "eBGcgDHeeEdDeDGfeFfFdEHfeF",
+                "title": "Golden Slumbers"
+            },
+            {
+                "board": "10/3~~~4/1b~~ac~~2/2~~c1~~~1/1d~~d~~~b1/2a~1~~3/2d3c3/10",
+                "solution": "EeeEfCbEbCEecDCeDedEbEeEIeHefF",
+                "title": "Sexy Sadie"
+            },
+            {
+                "board": "10/4ba4/3~cde3/2~~gafe2/2~~cdhg2/3~hfg3/4eb4/10",
+                "solution": "EdFbGcGdEeFeDeEeGeHdGedEGfFfHeGfdFcEdF",
+                "title": "Don't Let Me Down"
+            },
+            {
+                "board": "10/2c~~~~d2/4~~4/3cec4/4d5/4e~4/3~d5/10",
+                "solution": "cBdBEgeFHbGbdGFd",
+                "title": "Love Me Do"
+            },
+            {
+                "board": "10/4ba~3/5b~3/6~3/3dac~3/5d~3/3bacbd2/10",
+                "solution": "fFfCeGGfeEfGfCdEFgHgeEeBfCdGeG",
+                "title": "Words Of Love"
+            },
+            {
+                "board": "10/3ac5/4d5/3~e~4/2~~c~~e2/2c~1~~d2/2acade3/10",
+                "solution": "cFeDHeEeEddBEdFgHfeE",
+                "title": "Paperback Writer"
+            },
+            {
+                "board": "10/2~b~~~~2/2~a~~c~2/2a1a~1c2/3~de~3/2e~cdeb2/3aecb3/10",
+                "solution": "EfDcgCdCeEfFfGeGcFdFdGeG",
+                "title": "I'll Be Back"
+            },
+            {
+                "board": "10/5~~ba1/5~~ab1/3~~~bca1/2da6/2cb6/2dc6/10",
+                "solution": "HcGcFdEdGdFdEdHdGdFdEd",
+                "title": "All My Loving"
+            },
+            {
+                "board": "10/3ba~~3/3cd~4/4e~4/5e4/4~ad3/3~~cb3/10",
+                "solution": "eDeCeDdCeDdCeD",
+                "title": "Glass Onion"
+            },
+            {
+                "board": "10/5~~ba1/5~~cb1/5~bda1/2ca~~4/2db6/2ad6/10",
+                "solution": "HbIbHbGddEHcGdcEdEIcHcGdFeEeHdGdFeEeIdHdGdFeEe",
+                "title": "Blue Jay Way"
+            },
+            {
+                "board": "10/3~~ba3/3c~a4/2da~c~a2/2ab~da3/2da~ad3/4a5/10",
+                "solution": "FcdEFeGbHdFf",
+                "title": "Come Together"
+            },
+            {
+                "board": "10/3~~~4/3cd~~3/4ed~~2/5c~e2/6~c2/10/10",
+                "solution": "HffDeCdCeCfCgEeDfDfE",
+                "title": "Act Naturally"
+            },
+            {
+                "board": "10/2a~~5/2c~1c4/3d~de3/3e~ade2/4~da3/5a4/10",
+                "solution": "dEFdFdGdFdEdcCdDcCdDGeGfHeeFdEeF",
+                "title": "Long, Long, Long"
+            },
+            {
+                "board": "10/2ba~~~c2/2dcd~~d2/3bca~c2/6~3/6~3/10/10",
+                "solution": "dBeBeCdCcBHbcCfDdDeDHcHd",
+                "title": "Twist And Shout"
+            },
+            {
+                "board": "10/3b1~~a2/3a1~bc2/3d~ceb2/4~dbe2/4~be3/4~a4/10",
+                "solution": "dDFeGdfDHdfEFfdDeFdD",
+                "title": "Please Please Me"
+            },
+            {
+                "board": "10/3b~5/3a~~~~2/4~~~b2/3~~a~a2/3~~b1b2/3~~aba2/10",
+                "solution": "FfHedCdCeEHgGe",
+                "title": "How Do You Do It"
+            },
+            {
+                "board": "10/10/2~ba~cad1/2~ce~ed2/2~2~4/2ceb~c3/5~b3/10",
+                "solution": "DdeCGcHcGcIcGgeDdDeDfFdFGgGd",
+                "title": "When I Get Home"
+            },
+            {
+                "board": "10/3~~b~~2/3a~c~~2/4~1~~2/3~~c~~2/3a~a~c2/3b~b4/10",
+                "solution": "FbfCdC",
+                "title": "And I Love Her"
+            },
+            {
+                "board": "10/2ba~5/2cbd~~3/1c4~~2/1e~~~~e~~1/1c~dbdbab1/2d7/10",
+                "solution": "DfeCfCGeFeGedCeCfCdCeCfCcBdCEebFbFeCeFIffCcCdCeCfCGfFfEfbF",
+                "title": "Taxman"
+            },
+            {
+                "board": "10/3b~a4/1~~a~1~~c1/1b~d~~cd2/4~~e3/3d~e4/3e~a4/10",
+                "solution": "dDDcGdHdGdFdFgFfFbeEdDEfIcHdGdGeFedG",
+                "title": "All Together Now"
+            },
+            {
+                "board": "10/2b~~~~a2/1cd~ba~ec1/1ge~2~cd1/3~~~~3/3~~~g3/4ge4/10",
+                "solution": "cBEcHbfCHccDdFGecDbDcDHdGeGfdEIcbDcDHddFdFeFIdHdGf",
+                "title": "Lady Madonna"
+            },
+            {
+                "board": "10/4~b4/4~a4/1~~~~b~cd1/1e~~~a~de1/4~b4/4~c4/10",
+                "solution": "fDHdIdGebEcEdEIeHeGe",
+                "title": "Ticket To Ride"
+            },
+            {
+                "board": "10/4bac3/4dba3/3~c1d~2/2~~3~a1/2~~dbd~c1/2dc3cb1/10",
+                "solution": "gDEdcGEdgDgDHffCgDgFfFgF",
+                "title": "Don't Pass Me By"
+            },
+            {
+                "board": "10/2~~bac~2/2~4~a1/2~~~d~~e1/2e~~e~~b1/2c~bc~~g1/2bce1agd1/10",
+                "solution": "cFcFIfcGfDgFgBfEgFfFgFfBgGgBeBfBgB",
+                "title": "Oh! Darling"
+            },
+            {
+                "board": "10/10/1ba~~~~cd1/1dec~~gae1/1ebd~~edg1/1gdb~~1gd1/10/10",
+                "solution": "dFHceFGcFebDFfcDGdHdGdIdHdFecFHeIebFcFdFGebFcFdF",
+                "title": "Revolution"
+            },
+            {
+                "board": "10/2~b1a~~2/2cd3~2/2de~~1~2/2cg1~1~2/2geb~~a2/2fbc~cf2/10",
+                "solution": "dDDeDfeGfBgBEdcFcGdGeGfG",
+                "title": "Mr. Moonlight"
+            },
+            {
+                "board": "10/10/1~~~~~b~~1/1a~~c~d~~1/1e~~dcab~1/1g~~cdbf~1/1e~~ghfbh1/10",
+                "solution": "EebDbFcFdFGcGddGFdhFGfIfFfcGfGgG",
+                "title": "In My Life"
+            },
+            {
+                "board": "10/3b~2~~1/4~~g~a1/3~g~a~2/2~~eab~2/3~b1g~2/3eg1aba1/10",
+                "solution": "gEIcEeEedB",
+                "title": "I Feel Fine"
+            },
+            {
+                "board": "10/b~4a~a1/1~1b~~c~d1/1~2~~e~e1/1b~ed~c~cg/4e~1~ge/4c~1~2/10",
+                "solution": "GcIbgCdEeGGdIdgEIdHeIeJeJfIfbEcEaBdEbEcEdCGe",
+                "title": "Piggies"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "name": "Classic II",
+            "category": "General",
+            "author": "Steve Haynal",
+            "url": "softerhardware.com/vexed.html",
+            "description": "This is the challenging follow-on to the Vexed Classic levels."
+        },
+        "levels": [
+            {
+                "board": "10/1~~~~~~~~1/1~hf~~~e~1/1~eab~~fh1/1~3~~3/1~1c~~~~2/1~~b~a~c~1/10",
+                "solution": "eDFfdDeDdDeDHddGeGfGcDdDeDHdcDdDeDIdHd",
+                "title": "Albuquerque"
+            },
+            {
+                "board": "10/1~~2~2~1/1~~d~~~~c1/1~~1~~~~2/1~d1~~~~~1/1ha~~~c~f1/1bf~b~1ha1/10",
+                "solution": "IcdCCeEfcFIfHfeGGfFfdFeFfFgFhFbFcFbFdFcFeFcGfFgFbGcGdG",
+                "title": "Fort Wayne"
+            },
+            {
+                "board": "10/1~~a~1~~2/1~~f~~~~~1/1g~1~~c~~1/1eb~~hd~d1/1cae~ebdh1/1efafdg1f1/10",
+                "solution": "dFdBcFcGbFGeFeIeIfgEGfFfHfGfdCHfGfeFcGfFgFhFcGdGbGcGdGeG",
+                "title": "Salt Lake City"
+            },
+            {
+                "board": "10/1h~2ad1~1/2~~2fd~1/1c~~~~2~1/2~~~~~~~1/1~c~ab~~b1/2a~hf~~2/10",
+                "solution": "EgfGhCIegChCIecFdFeFfFgChCIeHeGebDcFdFbBcFfBgChCIeHeGeFeEeFfGfHfIfHfeGfG",
+                "title": "Metairie"
+            },
+            {
+                "board": "10/2~1~~~~~1/1~~2~e~~1/1~e~~2~~1/1~a~~~~cf1/1~1bhf~h2/1~a2h1cb1/10",
+                "solution": "CeHfIggFIeHeHfeFgCdFHfGfeFfFgFcEdFeF",
+                "title": "Las Vegas"
+            },
+            {
+                "board": "10/1h2~2d~1/1e~~~1~g~1/2~~~~~1e1/1~~a~~fgb1/1~~1~~dfa1/2~h~f1bf1/10",
+                "solution": "GeHcHcHfIfIeHeGeGfHfIfdGFfdEeEeFfFgFEgDgbCbCCfbFcGdG",
+                "title": "Hampton"
+            },
+            {
+                "board": "10/1~~~~~~~~1/1~h~~~b~a1/1~a~1fa~2/1~1~~ch~2/1a~~~2e~1/1ef~~gbcg1/10",
+                "solution": "CdIcgDFgFeFeEeGdFeEgDgEgeGhFdGeGfGcDGeFecGdGeGfGgGbGcGdGeGfGgG",
+                "title": "Ontario"
+            },
+            {
+                "board": "10/2~1~g~~~1/1~d~a1~e~1/1~c~2~f~1/1~a~1~~1~1/1~d~e~~~~1/3fcg~~~1/10",
+                "solution": "fBCcEcHceFcFdFHddGeG",
+                "title": "Worcester"
+            },
+            {
+                "board": "10/1~~~~d~~~1/1h~~~1~~~1/1b~~g~1~~1/2~~1~1~~1/1~~1~~be~1/2ghe~2d1/10",
+                "solution": "EdDebCfBgChEGfHfGfFfbDcGdG",
+                "title": "Amarillo"
+            },
+            {
+                "board": "10/1~~~~~d~~1/2~~~~1~~1/1d~~~~~~2/2~~~~~~~1/1h~~f~~~~1/1f~~d~dh~1/10",
+                "solution": "eGbGcGGbbDcGdGbGcGdGeGfG",
+                "title": "Irvine"
+            },
+            {
+                "board": "10/1~~~gh~~~1/1g~~hg~~g1/1fe~2~ef1/1ba~2~ba1/1cd~~~~dc1/1gh1ge1hg1/10",
+                "solution": "cDdFHdGfcEdFeFcFdFeFfFbDIdHecFdFeFbEcFbFIeHeGfHfIfdFeFGfHffBgEEbfCGfGfdFcFdFEcDf",
+                "title": "Hollywood"
+            },
+            {
+                "board": "10/1~~2~~~2/1~c~1~~~b1/1~1~~~~~2/1~~1~1h~2/1~~~h~d1~1/1~~c1~bd~1/10",
+                "solution": "GgCcbGeFfFIcHe",
+                "title": "Indianapolis"
+            },
+            {
+                "board": "10/1dc1~~~~~1/1agde~~h~1/2e2~f1~1/2g~~~2~1/1~1~~~2~1/1~caf~ha~1/10",
+                "solution": "GdHcGdcEbBcEeCdEcEcEdGbCEgDgHgGgFgcE",
+                "title": "Fort Worth"
+            },
+            {
+                "board": "10/1~~~1cd~e1/1f~~~1g~2/2~~~g1~~1/1~~~~1~~~1/1~~c~~~~~1/1~fd~e~~~1/10",
+                "solution": "bCIbfGgBdGeGfGgCFdeGfGfBgCdGeGfG",
+                "title": "El Monte"
+            },
+            {
+                "board": "10/1~d~d~~1~1/1h1~f1~~~1/1a~~1~~~~1/2~~~g~~~1/1eh~~a~~~1/2aga1f~e1/10",
+                "solution": "FfFfbDcFcBEcdGdFeFfFbDbFcFEcdFeFcGfFgG",
+                "title": "Philadelphia"
+            },
+            {
+                "board": "10/1gf~~~~~~1/3b~~~3/1~2~~~a~1/1~1~~~g1~1/1~~~~ab~d1/1~~~dbf~2/10",
+                "solution": "HdGddCeFcBdCeFbBcBdCeFIfeGfG",
+                "title": "Boston"
+            },
+            {
+                "board": "10/1~g~~2~f1/1~1~~~d~e1/1~1~~~1~2/1~~~~~~ha1/1~~~~~fg2/1e~chfdac1/10",
+                "solution": "HeGeFfGcFgIeHfIgIcIcHeGecBdFeGdGeGfGbGcGdGeGfG",
+                "title": "Orange"
+            },
+            {
+                "board": "10/3~f1~h2/2~hg~~1~1/1~~3~~2/1~~2~~~2/1~~b~~~~2/1b~2f~g~1/10",
+                "solution": "DfeCfCeCfCHbdCeCfC",
+                "title": "Charlotte"
+            },
+            {
+                "board": "10/2~bhf2~1/1bc1a1~~~1/1cg~e~~~~1/3~1~c~~1/1ca~cge~d1/2bhbfcdb1/10",
+                "solution": "cDIfgEeDfEEdfFeFdFEdcGFbeDFfeGbFcGdBbDcDdGIgHgeD",
+                "title": "Chesapeake"
+            },
+            {
+                "board": "10/1b~~a~h1~1/2~e1cb~~1/1~~1~h1~~1/1~~~~1~~c1/1a~d~~bef1/1f~h~~had1/10",
+                "solution": "bFDfCfDccFdFGfbBcFdFgCHeGfgCFdFdEeHfGfHfIeHfdGeGcGHgGgeBFdIfbGcGdGeGfGIgHgGgFgEgDg",
+                "title": "Waco"
+            },
+            {
+                "board": "10/1~~gf~f~d1/1g~1e~1~f1/1aedf~~~g1/1gbhb~fa2/1ahf1~dec1/1efeb~cdb1/10",
+                "solution": "IbHdGdeBeDGfeGHfGfIcHeIdHeGeeDfDdDeDfDgDdBeDcDdDeDbDcDdDCeDeGbHfGfIffGIgHgFgDfDgEebFbGEe",
+                "title": "Greensboro"
+            },
+            {
+                "board": "10/1~~b1~~ed1/1~f1~~~h2/1~1~~~~1~1/1bf~~~gac1/1ch~hfcge1/1d1f1ca3/10",
+                "solution": "cEDbCbEfFfGfCcbEcEHbHcGfGfFfcFIbHcIeHeGfFfGfHfbFcFEfDfCfFfEfIfHf",
+                "title": "Citrus Heights"
+            },
+            {
+                "board": "10/1h~1h~c~a1/1g~1a~1~b1/2~~h~~~d1/1~~~1e~~2/1ec~hgbd2/1ab~ehabg1/10",
+                "solution": "EdbBcEIdgFfFcFbFcFdFgGeCGbFgIdHfGfFgEgIdEdDgGgFgEgDgCgIgHgGgFgEgbC",
+                "title": "Albany"
+            },
+            {
+                "board": "10/2~eb1~~d1/1~~fa~~~f1/1~a2~~~a1/1~e1~~hfe1/1~f~~~eb2/1ah1afad~1/10",
+                "solution": "IcCdDbeCFfeCGeIeHeIeHeIefGHfcFdFFfGfEfDfdCeC",
+                "title": "Minneapolis"
+            },
+            {
+                "board": "10/2~caf2e1/1~~4~f1/1cb~~~~~c1/3f~g~~h1/1h~a~a~~2/2bdgefdh1/10",
+                "solution": "DfFfcDdEeEfEgFIdbDcDdEeEfEDbcDdEeEfEEbDbCdFbEbDbcDbDcDFfIcHeGfIdHedGeGfGcGdGeGfGbFcGdGeGfGIe",
+                "title": "Rochester"
+            },
+            {
+                "board": "10/1a~~g1~~~1/2~ge~~a~1/1~~h1~d1~1/2~e~~2b1/1~~1~1~ed1/1hd~gbfdf1/10",
+                "solution": "HfIfgGDdCfCggGfGeGEceCdCDdcGFeGdFeEgDgGgFgEgDgCgbBDeCfHcGdFeEgHgGgFgEgDgEcDebGIgcGHgdGGg",
+                "title": "New Haven"
+            },
+            {
+                "board": "10/1~~b~~~~2/1~~1~~~~~1/1a~1~~~~~1/2e~~b~~~1/1~gh~1~~g1/1a1c~hc~e1/10",
+                "solution": "dFdBFedGeGbDcEcFCfdFIfeGfGdGeGfGgG",
+                "title": "San Jose"
+            },
+            {
+                "board": "10/1e~~~f~fb1/1dh~~1~cg1/1ag~~c~ed1/2e~gacf2/2fdcgfgf1/1hde1fbdg1/10",
+                "solution": "cDFdHcfBfFHfIdIdcEbDcDdDdFbCeFgFfFcEcFdFeFIdcFdFeFGfHfFffGEfbDbG",
+                "title": "Newport News"
+            },
+            {
+                "board": "10/1~e~3~~1/1~1~~~~b~1/1~1~~~~1e1/1~f~~~~cf1/1ag~~c~g2/3b~gea~1/10",
+                "solution": "HecBdFcFdFHfeFHcIeIeHeGedGeGcFHfdGeGbFcFdGeGfG",
+                "title": "Flint"
+            },
+            {
+                "board": "10/1~~bde~c2/1~~c1ch3/1hd2ba1~1/1acb~1b~~1/1e1f~gh~f1/1ahecbagb1/10",
+                "solution": "HbgEgEfDHffFfGgGDbEbDbCcbCdFcEdEcEDccEeFfGgGbDcEdGbEcEbGbGeGcGfGdGgGeGfD",
+                "title": "Winston-Salem"
+            },
+            {
+                "board": "10/1~~~c~f1~1/1~~~1~1~f1/1~~~~~~~a1/1h~~~c~~2/1g~~~d~g~1/2~dh1~a~1/10",
+                "solution": "eBFfEfbEcGGbIdfFHfGfIdbFFfcG",
+                "title": "Scottsdale"
+            },
+            {
+                "board": "10/1~~1~c~e~1/1~~~~d~c~1/1~h~1ac3/1~d~~b1~e1/1~cf~2~a1/1dbhfce~2/10",
+                "solution": "fBdFcDcFdGFccFdGFeEfbGEcIfGgFgFeEgeGfGHcGdIfHgGgFe",
+                "title": "Santa Clarita"
+            },
+            {
+                "board": "10/1f~~1h~~~1/1c~~~1~~~1/2~~~~~~e1/2~bg~~~a1/1~efd~~~2/1hc1g~abd1/10",
+                "solution": "eEbBCfbFbCdFcFGgeFfFfGfBeGGfIedFFfEfDffGgGIeeGfG",
+                "title": "Pittsburgh"
+            },
+            {
+                "board": "10/1~cd~f1hc1/1~1c~1~ch1/1~~h~d~gc1/1b~c~f~ch1/1dabga~ea1/1f1eachfd1/10",
+                "solution": "HdDdFdcEbEdEcEfEeEEfFfFfdFeFcBIdHedFGeIeHeGedGeGfGcFbFcFdFFbEfDfCfeGfGgGdGeGfGgG",
+                "title": "Paradise"
+            },
+            {
+                "board": "10/1~~~f1c~~1/1~~~c~1g~1/1~~~h~~d~1/1~~~1~~1~1/1~~~~gbh~1/1~~fhd1bh1/10",
+                "solution": "EbEdhFgFhCfFgFHdGfgBeDHdGf",
+                "title": "Shreveport"
+            },
+            {
+                "board": "10/1~a~~g~~~1/1~e~e1~~~1/1~h~2~~b1/1c1ea~~~f1/1bcfcd~cg1/1cghdb~hc1/10",
+                "solution": "fGCdEccDdEGgHgbDdFcFbFeFdFcFFfdFgGIfHfIfHfeFeGCgDgHgGgFgcDbGcGdGeGIgfB",
+                "title": "Salinas"
+            },
+            {
+                "board": "10/3~~1~~~1/1~~~~~~~~1/1~~~~~~e2/1~~1a~~1~1/1~~~f~~~~1/1defdhah2/10",
+                "solution": "EfeFfFfGcGeGdGfGHdGfbGcGdGeG",
+                "title": "Elizabeth"
+            },
+            {
+                "board": "10/1~~g~1~3/1~~d~~~~2/1~~1~~~~2/1~~~~~e1~1/1~chd~1h~1/1hgebhbc~1/10",
+                "solution": "dCDcCfdFeFeGGedGbFcGdGeGfGbGcGdGeGfG",
+                "title": "Toledo"
+            },
+            {
+                "board": "10/1c~b~c~c~1/2~1~1g1~1/2b~~~b~~1/1gh~~~ac~1/1bd~da1de1/2bdehcbc1/10",
+                "solution": "DbfBGeeFcFEgcFbFdFhEFgGgHgIfGeDgEgFgbBcFdFdGeGfGGebFcFdGcGdGeGfG",
+                "title": "Omaha"
+            },
+            {
+                "board": "10/1h~b~1~c~1/1a~1fg~1~1/1b~~gc~1~1/1d~ad1d~~1/1gehfbe~~1/1cadbac~c1/10",
+                "solution": "hBbCDbbDbDcEEeEeFfcFdFGfFfbFFgFccFcGbGcGGgFdbGcGdGeG",
+                "title": "Irving"
+            },
+            {
+                "board": "10/1~~~a~a~~1/1~a~1~1~~1/1~1~~~~~~1/1~~~d~~~~1/1~~gc~~~~1/1~~fgcf~d1/10",
+                "solution": "eFeBeFdFfFgFcCFgGgGbdFdG",
+                "title": "Yonkers"
+            },
+            {
+                "board": "10/1~~~~~a~b1/1c~~g~1~d1/1g~~1~ea2/2~~h~f1~1/1hd~1~1~~1/1ec~~~~fb1/10",
+                "solution": "gBbCcEGefGEcbDcFEebFcFIcHdGdcGdGGebGcGdGIcHdGefGgG",
+                "title": "Fullerton"
+            },
+            {
+                "board": "10/1~~b~~~~~1/1~~1~~c~2/1d~~~~h~~1/2~h~d1~~1/1~~a~1~~~1/1~abec~~e1/10",
+                "solution": "DfDbgCfGGdFdeGfGgGbDFecG",
+                "title": "Tulsa"
+            },
+            {
+                "board": "10/1~1~~~1c~1/1~~d~~~1~1/1~~ah~~~~1/2~1f~~~~1/1cd~a~~~b1/3ghgfb2/10",
+                "solution": "DcIfDdcFEfdGdGeGhBbFcFIfdGeGfG",
+                "title": "Milwaukee"
+            },
+            {
+                "board": "10/1~~g1~~3/1~~1~~~~c1/1~~~~~~1g1/1~~~~~haf1/1~~b~~4/1~ac~fhgb1/10",
+                "solution": "GeFgIcHceGGeFfHeGedGFfEfIeHeGeIeHeEgDgDbcFdGHgGecGdGeGfGgG",
+                "title": "Little Rock"
+            },
+            {
+                "board": "10/1c~1~~1~~1/2~1~~~~~1/1~~~~~~~~1/1~dbgc~~~1/1~cdfgh~h1/1gfbgac~a1/10",
+                "solution": "CfbBEecGfEgEIffGgGbGcGdG",
+                "title": "Aurora"
+            },
+            {
+                "board": "10/2~~f~1~~1/1c~~b~~e~1/1g~~1~~a~1/1df~~d~cb1/2d~~c~3/1ac~ge~cd1/10",
+                "solution": "HcHeEbcEbEbDbEcGfGgGHebGcGdGeGeCIeHe",
+                "title": "Sioux Falls"
+            },
+            {
+                "board": "10/1~~1~1~a2/1~~~~f~df1/1~~~~b~gd1/1~h~bahb2/1h1dagcgc1/1bhcecefd1/10",
+                "solution": "FdCeHcHcGcFcFeGeFeEeDeGeFeEeEfFfGfeGeGfGHdIcdFeGHecEdGIfHfeGIdHgbGcGdGeG",
+                "title": "Durham"
+            },
+            {
+                "board": "10/1~~~~~~~2/1~d~~~~hb1/1~1~~~~3/2~~~~~~~1/1~~~a~eah1/1~c~c~dbe1/10",
+                "solution": "cGHcgEhEIcHcgEhFgFEgcCdFeGdGeGfGgG",
+                "title": "Mobile"
+            },
+            {
+                "board": "10/1e~~f~1~~1/1acfe~h~b1/1dgdg~g~d1/1hafc~h~a1/1d1ba~a~h1/2cgf~1ha1/10",
+                "solution": "gCeBGfdDbBcBGeeFcDbCcDbEDdGfeFdFfFgFeFcDfFgFcEdG",
+                "title": "San Antonio"
+            },
+            {
+                "board": "10/1~g~~1~~2/1~1~~a~~~1/1~1~~1~~h1/1~~~d~1~a1/1~fhce~~e1/1adfdcga2/10",
+                "solution": "IeIefFgFFcEeDeEeeFCbCeDedFcFGgeFfFbEcEbGcGdG",
+                "title": "Madison"
+            },
+            {
+                "board": "10/1~h~c~2~1/1~f~d~~c~1/1~he1~~g~1/1a1da~~f~1/1b~bfb~h~1/1c~fbgdef1/10",
+                "solution": "hEbFDffFHeGeCbcCDfDfGfcGbFcFdFdGeCcGdGeGfGbFHgGgFgcDbGcGdGHgeC",
+                "title": "Sunnyvale"
+            },
+            {
+                "board": "10/1~~1~~~~e1/1gb~~~~~2/1ef~~d~~~1/3~1e~~f1/1~~~~1~cd1/1b1~~ecdg1/10",
+                "solution": "HffEIbHffEgFcDcDDfCfbDcDdFeGIfdGeGfGbDcDdGeGfGgG",
+                "title": "Memphis"
+            },
+            {
+                "board": "10/2~~~~~~~1/1~a~1~~~~1/1~f~~g~~~1/1~1~~1~~~1/1f~~~b~~~1/1ag~~e~eb1/10",
+                "solution": "CdCdfGFdcGfGgG",
+                "title": "Salem"
+            },
+            {
+                "board": "10/1~~2~~b2/1~~~fc~h~1/1~~g2~d2/2~hge~1~1/1gfbhd~c~1/1dg1ef~d~1/10",
+                "solution": "DefFfCfGHccEdFeFGfdFcFbFHcHdGedFFfGfEfDfeCgGeGfC",
+                "title": "Phoenix"
+            },
+            {
+                "board": "10/1~~e~ba~h1/1h~d~2~2/1b~b~~1~b1/1hea1~~~2/1bf1dh~~d1/1chfhbcdh1/10",
+                "solution": "IfFbDcDdbCcDdDGbFbEccEbECfbFfFIgIbgGIdHfeDDecGbGcGdGeGfG",
+                "title": "Oxnard"
+            },
+            {
+                "board": "10/1f~~~~g~2/1g~~~~a~~1/2~1ch1~~1/1~~fa1~bc1/1fhdbd~ed1/2egaf~af1/10",
+                "solution": "fFeFfFHeIeHeGfFfHfGfFfgCgGfGFdeFdFeFfFgFIgdFeFfFcFdFeFbCGcFdEfEgGgFgEgDgbC",
+                "title": "Jackson"
+            },
+            {
+                "board": "10/2~~~~1~h1/1~~~~~f~d1/1~~~~~b~2/1c~~~~1~~1/1h~h~cedf1/2fg~bge2/10",
+                "solution": "IcgFGdFedFbFcFIfIcHfGfdFbFcFdFdGeGcGdGHgGd",
+                "title": "Baltimore"
+            },
+            {
+                "board": "10/1~1~~bh~~1/1~~~b2~~1/2~~1g~~~1/1~~~~ac~~1/1a~~~2~~1/1gch~1h~h1/10",
+                "solution": "FbgGGbFbEcFebFcFFeGeFeEfbGcG",
+                "title": "Grand Rapids"
+            }
+        ]
+    }
 ]
-}
