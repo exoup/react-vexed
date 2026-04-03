@@ -31,7 +31,7 @@ export function GameStateProvider({ children }: PropsWithChildren) {
 
     const loadPack = async (id: number) => {
         const levelPack = await loadLevelPack(id);
-        const level = levelPack?.levels[levelPack?.levels.length-1];
+        const level = levelPack?.levels[levelPack?.levels.length - 3];
         if (!level || !levelPack) return;
 
         const { boardState, gemColorsById } = createInitialBoardState(level.board);

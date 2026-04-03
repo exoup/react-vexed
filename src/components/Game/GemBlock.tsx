@@ -173,7 +173,7 @@ export const GemBlock: React.FC<GemBlockProps> = ({
       }}
       className={cn(
         "absolute cursor-grab active:cursor-grabbing touch-none transition-transform",
-        isSliding ? "duration-270 ease-in-out" : "duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
+        isSliding ? "duration-200 ease-in-out" : "duration-150 ease-[cubic-bezier(0.22,1,0.36,1)]",
         activeRef.current ? "z-20" : "z-10",
         (isClearing || isInteractionLocked) && "pointer-events-none",
         isInteractionLocked && "cursor-default",
