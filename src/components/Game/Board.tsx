@@ -7,7 +7,6 @@ import { GemStateProvider, useGemState } from "@/components/Context/GemStateCont
 import { blockSize } from "@/lib/constants";
 import {
     applyGravity,
-    createInitialBoardState,
     findMatches,
     isGemCell,
     moveGemInBoard,
@@ -15,11 +14,10 @@ import {
     hasEmpty,
     hasOrphans,
     type BoardDirection,
-    type BoardState,
 } from "@/util/board";
 
 function BoardContent() {
-    const { currentLevel } = useGameState();
+    const { currentLevel, updateBoard } = useGameState();
     if (!currentLevel) return null;
 
     const { currentBoardState, initialBoardState, gemColorsById, title, par, solution } = currentLevel;
@@ -28,7 +26,7 @@ function BoardContent() {
         row.map((cell) => (cell === 1 ? 1 : 0)),
     );
 
-    const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
+    // const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
     const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
     const {
         slidingGemIds,
@@ -42,14 +40,12 @@ function BoardContent() {
     } = useGemState();
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
-        setBoardState((currentBoardState) => {
-            const nextBoardState = moveGemInBoard(currentBoardState, gemId, direction);
+        const nextBoardState = moveGemInBoard(currentBoardState, gemId, direction);
 
-            if (!nextBoardState) return currentBoardState;
+        if (!nextBoardState) return;
 
-            startSliding(gemId);
-            return nextBoardState;
-        });
+        startSliding(gemId);
+        updateBoard(nextBoardState);
     };
 
     useEffect(() => {
@@ -58,21 +54,21 @@ function BoardContent() {
         if (pendingMatchedGemIds.size > 0) {
             if (clearingGemIds.size > 0) return;
 
-            setBoardState(removeMatchedGems(boardState, pendingMatchedGemIds));
+            updateBoard(removeMatchedGems(currentBoardState, pendingMatchedGemIds));
             setPendingMatchedGemIds(new Set());
             return;
         }
 
-        const gravityResult = applyGravity(boardState, slidingGemIds);
+        const gravityResult = applyGravity(currentBoardState, slidingGemIds);
         if (gravityResult.hasChanged) {
             gravityResult.fallingGemIds.forEach((gemId) => {
                 startFalling(gemId);
             });
-            setBoardState(gravityResult.boardState);
+            updateBoard(gravityResult.boardState);
             return;
         }
 
-        const matchedGemIds = findMatches(boardState);
+        const matchedGemIds = findMatches(currentBoardState);
         if (matchedGemIds.size === 0) return;
 
         matchedGemIds.forEach((gemId) => {
@@ -80,7 +76,7 @@ function BoardContent() {
         });
         setPendingMatchedGemIds(matchedGemIds);
     }, [
-        boardState,
+        currentBoardState,
         clearingGemIds,
         fallingGemIds,
         pendingMatchedGemIds,
@@ -91,11 +87,11 @@ function BoardContent() {
 
     useEffect(() => {
         if (!isBoardSettled && pendingMatchedGemIds.size !== 0) return;
-        hasEmpty(boardState)
-        hasOrphans(boardState)
-    }, [boardState, isBoardSettled, pendingMatchedGemIds])
+        hasEmpty(currentBoardState)
+        hasOrphans(currentBoardState)
+    }, [currentBoardState, isBoardSettled, pendingMatchedGemIds])
 
-    const mapBlocks = boardState.flatMap((row, y) =>
+    const mapBlocks = currentBoardState.flatMap((row, y) =>
         row.flatMap((cell, x) => {
             if (cell === 1) return (
                 <BoundaryBlock

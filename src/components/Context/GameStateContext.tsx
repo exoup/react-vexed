@@ -21,6 +21,8 @@ type LevelState = {
 
 type GameStateContextValue = {
     currentLevel: LevelState | null;
+    // actions
+    updateBoard: (nextBoardState: BoardState) => void;
     loadPack: (id: number) => Promise<void>;
 };
 
@@ -28,6 +30,17 @@ const GameStateContext = createContext<GameStateContextValue | null>(null);
 
 export function GameStateProvider({ children }: PropsWithChildren) {
     const [currentLevel, setCurrentLevel] = useState<LevelState | null>(null);
+
+    const updateBoard = (nextBoardState: BoardState) => {
+        setCurrentLevel((prevLevel) => {
+            if (!prevLevel) return prevLevel;
+
+            return {
+                ...prevLevel,
+                currentBoardState: nextBoardState,
+            };
+        });
+    };
 
     const loadPack = async (id: number) => {
         const levelPack = await loadLevelPack(id);
@@ -54,6 +67,7 @@ export function GameStateProvider({ children }: PropsWithChildren) {
     const value = useMemo(
         () => ({
             currentLevel,
+            updateBoard,
             loadPack,
         }),
         [currentLevel],
