@@ -1,31 +1,30 @@
-// temp colors
 export const gemColors = [
-    '#fca5a5', // Red (Rose)
-    '#fdba74', // Orange
-    '#fef08a', // Yellow
-    '#86efac', // Green (Emerald)
-    '#93c5fd', // Blue (Sky)
-    '#a5b4fc', // Indigo
-    '#d8b4fe',  // Violet
-    '#f5a97f',  // Peach
-    '#ff69b4', // Pink
-    '#ffb347', // Coral
-    '#ffd700', // Orange-Red
-    '#ffe4c4', // Carrot
-    '#ffec99', // Canary
-    '#ffd966', // Tangerine
-    '#ffff00', // Yellow
-    '#00ff00', // Green
-    '#0000ff', // Blue
-    '#4b0082', // Teal
-    '#008000', // Cyan
-    '#ff00ff', // Magenta
-    '#b300ff', // Fuchsia
-    '#7a00e6', // Lime
-    '#00b300', // Spring Green
-    '#00bfff', // Aqua
-    '#0040ff', // Teal Blue
-    '#008080', // Sea Green
+  '#ff6b6b', // 1 Bright red
+  '#ff9f43', // 2 Bright orange
+  '#ffd93d', // 3 Bright yellow
+  '#6bcB77', // 4 Bright green
+  '#4dd4ff', // 5 Bright cyan
+  '#4d96ff', // 6 Bright blue
+  '#9d4edd', // 7 Bright purple
+  '#ff66c4', // 8 Bright pink
+  '#00c2a8', // 9 Teal
+  '#c77dff', // 10 Lavender
+  '#f28482', // 11 Coral
+  '#84cc16', // 12 Lime
+  '#222222', // 13 Near-black
+  '#ff8fab', // Soft rose
+  '#ffb86b', // Soft amber
+  '#ffe66d', // Soft gold
+  '#8ce99a', // Soft mint green
+  '#74c0fc', // Soft sky blue
+  '#a78bfa', // Soft indigo
+  '#da77f2', // Soft magenta
+  '#5eead4', // Soft aqua
+  '#b6e880', // Light lime
+  '#f9a8d4', // Light pink
+  '#fdba74', // Light orange
+  '#93c5fd', // Light blue
+  '#d8b4fe', // Light violet
 ];
 
 export const blockSize = 80;
