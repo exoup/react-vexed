@@ -1,8 +1,19 @@
-import { loadLevelPack, createInitialBoardState, type BoardState, type BoardDirection, moveGemInBoard } from "@/util/board";
+import {
+    applyGravity,
+    createInitialBoardState,
+    findMatches,
+    hasEmpty,
+    hasOrphans,
+    loadLevelPack,
+    moveGemInBoard,
+    removeMatchedGems,
+    type BoardDirection,
+    type BoardState,
+} from "@/util/board";
 import {
     createContext,
     useContext,
-    useMemo,
+    useEffect,
     useState,
     type PropsWithChildren,
 } from "react";
@@ -22,8 +33,9 @@ type LevelState = {
 
 type GameStateContextValue = {
     currentLevel: LevelState | null;
+    hasOrphanedGems: boolean;
+    isLevelCleared: boolean;
     // actions
-    // updateBoard: (nextBoardState: BoardState) => void;
     loadPack: (id: number) => Promise<void>;
     moveGem: (gemId: string, direction: BoardDirection) => void;
 };
@@ -32,21 +44,26 @@ const GameStateContext = createContext<GameStateContextValue | null>(null);
 
 export function GameStateProvider({ children }: PropsWithChildren) {
     const [currentLevel, setCurrentLevel] = useState<LevelState | null>(null);
+    const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
 
     const {
-        startSliding
+        clearingGemIds,
+        fallingGemIds,
+        isBoardSettled,
+        slidingGemIds,
+        startClearing,
+        startFalling,
+        startSliding,
     } = useGemState();
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
-        const nextBoardState = moveGemInBoard(currentLevel?.currentBoardState!, gemId, direction);
+        if (!currentLevel) return;
+
+        const nextBoardState = moveGemInBoard(currentLevel.currentBoardState, gemId, direction);
 
         if (!nextBoardState) return;
 
         startSliding(gemId);
-        updateBoard(nextBoardState);
-    };
-
-    const updateBoard = (nextBoardState: BoardState) => {
         setCurrentLevel((prevLevel) => {
             if (!prevLevel) return prevLevel;
 
@@ -57,9 +74,77 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         });
     };
 
+    useEffect(() => {
+        if (!currentLevel) return;
+        if (slidingGemIds.size > 0) return;
+        if (fallingGemIds.size > 0) return;
+
+        if (pendingMatchedGemIds.size > 0) {
+            if (clearingGemIds.size > 0) return;
+
+            setCurrentLevel((prevLevel) => {
+                if (!prevLevel) return prevLevel;
+
+                return {
+                    ...prevLevel,
+                    currentBoardState: removeMatchedGems(prevLevel.currentBoardState, pendingMatchedGemIds),
+                };
+            });
+            setPendingMatchedGemIds(new Set());
+            return;
+        }
+
+        const gravityResult = applyGravity(currentLevel.currentBoardState, slidingGemIds);
+        if (gravityResult.hasChanged) {
+            gravityResult.fallingGemIds.forEach((gemId) => {
+                startFalling(gemId);
+            });
+
+            setCurrentLevel((prevLevel) => {
+                if (!prevLevel) return prevLevel;
+
+                return {
+                    ...prevLevel,
+                    currentBoardState: gravityResult.boardState,
+                };
+            });
+            return;
+        }
+
+        const matchedGemIds = findMatches(currentLevel.currentBoardState);
+        if (matchedGemIds.size === 0) return;
+
+        matchedGemIds.forEach((gemId) => {
+            startClearing(gemId);
+        });
+        setPendingMatchedGemIds(matchedGemIds);
+    }, [
+        clearingGemIds,
+        currentLevel,
+        fallingGemIds,
+        pendingMatchedGemIds,
+        slidingGemIds,
+        startClearing,
+        startFalling,
+    ]);
+
+    const gravityPreview = currentLevel
+        ? applyGravity(currentLevel.currentBoardState, new Set<string>())
+        : null;
+    const isBoardReadyForValidation = Boolean(currentLevel)
+        && isBoardSettled
+        && pendingMatchedGemIds.size === 0
+        && !gravityPreview?.hasChanged;
+    const isLevelCleared = isBoardReadyForValidation && currentLevel
+        ? hasEmpty(currentLevel.currentBoardState)
+        : false;
+    const hasOrphanedGems = isBoardReadyForValidation && currentLevel
+        ? hasOrphans(currentLevel.currentBoardState)
+        : false;
+
     const loadPack = async (id: number) => {
         const levelPack = await loadLevelPack(id);
-        const level = levelPack?.levels[levelPack?.levels.length - 3];
+        const level = levelPack?.levels[50];
         if (!level || !levelPack) return;
 
         const { boardState, gemColorsById } = createInitialBoardState(level.board);
@@ -77,17 +162,16 @@ export function GameStateProvider({ children }: PropsWithChildren) {
             currentBoardState: boardState,
             gemColorsById,
         });
+        setPendingMatchedGemIds(new Set());
     };
 
-    const value = useMemo(
-        () => ({
-            currentLevel,
-            // updateBoard,
-            loadPack,
-            moveGem,
-        }),
-        [currentLevel],
-    );
+    const value: GameStateContextValue = {
+        currentLevel,
+        hasOrphanedGems,
+        isLevelCleared,
+        loadPack,
+        moveGem,
+    };
 
     return (
         <GameStateContext.Provider value={value}>

@@ -1,85 +1,23 @@
-import { useEffect, useState } from "react";
-
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
-import { useGameState } from "@/components/Context/GameStateContext"
+import { useGameState } from "@/components/Context/GameStateContext";
 import { useGemState } from "@/components/Context/GemStateContext";
 import { blockSize } from "@/lib/constants";
 import {
-    applyGravity,
-    findMatches,
     isGemCell,
-    moveGemInBoard,
-    removeMatchedGems,
-    hasEmpty,
-    hasOrphans,
-    type BoardDirection,
 } from "@/util/board";
 
 function BoardContent() {
     const { currentLevel, moveGem } = useGameState();
     if (!currentLevel) return null;
 
-    const { currentBoardState, initialBoardState, gemColorsById, title, par, solution } = currentLevel;
+    const { currentBoardState, initialBoardState, gemColorsById } = currentLevel;
 
     const boundaryLevelMap = initialBoardState.map((row) =>
         row.map((cell) => (cell === 1 ? 1 : 0)),
     );
 
-    // const [boardState, setBoardState] = useState<BoardState>(initialBoardState);
-    const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
-    const {
-        slidingGemIds,
-        fallingGemIds,
-        startFalling,
-        clearingGemIds,
-        startClearing,
-        isInteractionLocked,
-        isBoardSettled
-    } = useGemState();
-
-    useEffect(() => {
-        if (slidingGemIds.size > 0) return;
-        if (fallingGemIds.size > 0) return;
-        if (pendingMatchedGemIds.size > 0) {
-            if (clearingGemIds.size > 0) return;
-
-            // updateBoard(removeMatchedGems(currentBoardState, pendingMatchedGemIds));
-            setPendingMatchedGemIds(new Set());
-            return;
-        }
-
-        // const gravityResult = applyGravity(currentBoardState, slidingGemIds);
-        // if (gravityResult.hasChanged) {
-        //     gravityResult.fallingGemIds.forEach((gemId) => {
-        //         startFalling(gemId);
-        //     });
-        //     updateBoard(gravityResult.boardState);
-        //     return;
-        // }
-
-        const matchedGemIds = findMatches(currentBoardState);
-        if (matchedGemIds.size === 0) return;
-
-        matchedGemIds.forEach((gemId) => {
-            startClearing(gemId);
-        });
-        setPendingMatchedGemIds(matchedGemIds);
-    }, [
-        currentBoardState,
-        clearingGemIds,
-        fallingGemIds,
-        pendingMatchedGemIds,
-        slidingGemIds,
-        startClearing,
-        startFalling,
-    ]);
-
-    useEffect(() => {
-        if (!isBoardSettled && pendingMatchedGemIds.size !== 0) return;
-        hasEmpty(currentBoardState)
-        hasOrphans(currentBoardState)
-    }, [currentBoardState, isBoardSettled, pendingMatchedGemIds])
+    const { isInteractionLocked } = useGemState();
 
     const mapBlocks = currentBoardState.flatMap((row, y) =>
         row.flatMap((cell, x) => {
@@ -124,7 +62,7 @@ export function Board() {
     const { loadPack } = useGameState();
     return (
         <>
-            <button className="p-3 mb-10 cursor-pointer active:bg-indigo-600 z-50 bg-indigo-500 text-white text-sm rounded-md" onClick={() => loadPack(0)}>Load Pack</button>
+            <button className="p-3 mb-10 cursor-pointer active:bg-indigo-600 z-50 bg-indigo-500 text-white text-sm rounded-md" onClick={() => loadPack(1)}>Load Pack</button>
             <BoardContent />
         </>
     );
