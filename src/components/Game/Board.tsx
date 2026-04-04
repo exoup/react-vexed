@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import GemBlock from "@/components/Game/GemBlock";
 import BoundaryBlock from "@/components/Game/BoundaryBlock";
 import { useGameState } from "@/components/Context/GameStateContext"
-import { GemStateProvider, useGemState } from "@/components/Context/GemStateContext";
+import { useGemState } from "@/components/Context/GemStateContext";
 import { blockSize } from "@/lib/constants";
 import {
     applyGravity,
@@ -17,7 +17,7 @@ import {
 } from "@/util/board";
 
 function BoardContent() {
-    const { currentLevel, updateBoard } = useGameState();
+    const { currentLevel, moveGem } = useGameState();
     if (!currentLevel) return null;
 
     const { currentBoardState, initialBoardState, gemColorsById, title, par, solution } = currentLevel;
@@ -30,7 +30,6 @@ function BoardContent() {
     const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
     const {
         slidingGemIds,
-        startSliding,
         fallingGemIds,
         startFalling,
         clearingGemIds,
@@ -39,34 +38,25 @@ function BoardContent() {
         isBoardSettled
     } = useGemState();
 
-    const moveGem = (gemId: string, direction: BoardDirection) => {
-        const nextBoardState = moveGemInBoard(currentBoardState, gemId, direction);
-
-        if (!nextBoardState) return;
-
-        startSliding(gemId);
-        updateBoard(nextBoardState);
-    };
-
     useEffect(() => {
         if (slidingGemIds.size > 0) return;
         if (fallingGemIds.size > 0) return;
         if (pendingMatchedGemIds.size > 0) {
             if (clearingGemIds.size > 0) return;
 
-            updateBoard(removeMatchedGems(currentBoardState, pendingMatchedGemIds));
+            // updateBoard(removeMatchedGems(currentBoardState, pendingMatchedGemIds));
             setPendingMatchedGemIds(new Set());
             return;
         }
 
-        const gravityResult = applyGravity(currentBoardState, slidingGemIds);
-        if (gravityResult.hasChanged) {
-            gravityResult.fallingGemIds.forEach((gemId) => {
-                startFalling(gemId);
-            });
-            updateBoard(gravityResult.boardState);
-            return;
-        }
+        // const gravityResult = applyGravity(currentBoardState, slidingGemIds);
+        // if (gravityResult.hasChanged) {
+        //     gravityResult.fallingGemIds.forEach((gemId) => {
+        //         startFalling(gemId);
+        //     });
+        //     updateBoard(gravityResult.boardState);
+        //     return;
+        // }
 
         const matchedGemIds = findMatches(currentBoardState);
         if (matchedGemIds.size === 0) return;
@@ -135,9 +125,7 @@ export function Board() {
     return (
         <>
             <button className="p-3 mb-10 cursor-pointer active:bg-indigo-600 z-50 bg-indigo-500 text-white text-sm rounded-md" onClick={() => loadPack(0)}>Load Pack</button>
-            <GemStateProvider>
-                <BoardContent />
-            </GemStateProvider>
+            <BoardContent />
         </>
     );
 }

@@ -1,4 +1,4 @@
-import { loadLevelPack, createInitialBoardState, type BoardState } from "@/util/board";
+import { loadLevelPack, createInitialBoardState, type BoardState, type BoardDirection, moveGemInBoard } from "@/util/board";
 import {
     createContext,
     useContext,
@@ -6,6 +6,7 @@ import {
     useState,
     type PropsWithChildren,
 } from "react";
+import { useGemState } from "@/components/Context/GemStateContext";
 
 type LevelState = {
     id: number;
@@ -22,14 +23,28 @@ type LevelState = {
 type GameStateContextValue = {
     currentLevel: LevelState | null;
     // actions
-    updateBoard: (nextBoardState: BoardState) => void;
+    // updateBoard: (nextBoardState: BoardState) => void;
     loadPack: (id: number) => Promise<void>;
+    moveGem: (gemId: string, direction: BoardDirection) => void;
 };
 
 const GameStateContext = createContext<GameStateContextValue | null>(null);
 
 export function GameStateProvider({ children }: PropsWithChildren) {
     const [currentLevel, setCurrentLevel] = useState<LevelState | null>(null);
+
+    const {
+        startSliding
+    } = useGemState();
+
+    const moveGem = (gemId: string, direction: BoardDirection) => {
+        const nextBoardState = moveGemInBoard(currentLevel?.currentBoardState!, gemId, direction);
+
+        if (!nextBoardState) return;
+
+        startSliding(gemId);
+        updateBoard(nextBoardState);
+    };
 
     const updateBoard = (nextBoardState: BoardState) => {
         setCurrentLevel((prevLevel) => {
@@ -67,8 +82,9 @@ export function GameStateProvider({ children }: PropsWithChildren) {
     const value = useMemo(
         () => ({
             currentLevel,
-            updateBoard,
+            // updateBoard,
             loadPack,
+            moveGem,
         }),
         [currentLevel],
     );
