@@ -72,6 +72,21 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         startFalling,
         startSliding,
     } = useGemState();
+
+    const gravityPreview = currentLevel
+        ? applyGravity(currentLevel.currentBoardState, new Set<string>())
+        : null;
+    const isBoardReadyForValidation = Boolean(currentLevel)
+        && isBoardSettled
+        && pendingMatchedGemIds.size === 0
+        && !gravityPreview?.hasChanged;
+    const isLevelCleared = isBoardReadyForValidation && currentLevel
+        ? hasEmpty(currentLevel.currentBoardState)
+        : false;
+    const hasOrphanedGems = isBoardReadyForValidation && currentLevel
+        ? hasOrphans(currentLevel.currentBoardState)
+        : false;
+
     const canUndo = isBoardSettled && history.past.length > 0;
     const canRedo = isBoardSettled && history.future.length > 0;
 
@@ -183,6 +198,20 @@ export function GameStateProvider({ children }: PropsWithChildren) {
     useEffect(() => {
         if (!currentLevel) return;
         if (!isBoardSettled) return;
+        if (!isLevelCleared) return;
+
+        const timeoutId = window.setTimeout(() => {
+            loadNextLevel();
+        }, 500);
+
+        return () => {
+            window.clearTimeout(timeoutId);
+        };
+    }, [currentLevel, isBoardSettled, isLevelCleared]);
+
+    useEffect(() => {
+        if (!currentLevel) return;
+        if (!isBoardSettled) return;
         if (pendingMatchedGemIds.size > 0) return;
         if (history.present === currentLevel) return;
 
@@ -211,20 +240,6 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         });
     }, [currentLevel, history.present, isBoardSettled, pendingMatchedGemIds]);
 
-    const gravityPreview = currentLevel
-        ? applyGravity(currentLevel.currentBoardState, new Set<string>())
-        : null;
-    const isBoardReadyForValidation = Boolean(currentLevel)
-        && isBoardSettled
-        && pendingMatchedGemIds.size === 0
-        && !gravityPreview?.hasChanged;
-    const isLevelCleared = isBoardReadyForValidation && currentLevel
-        ? hasEmpty(currentLevel.currentBoardState)
-        : false;
-    const hasOrphanedGems = isBoardReadyForValidation && currentLevel
-        ? hasOrphans(currentLevel.currentBoardState)
-        : false;
-
     const loadPack = async (id: number) => {
         const levelPack = await loadLevelPack(id);
         const level = levelPack?.levels[0];
@@ -244,6 +259,38 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         };
 
         // TODO: Porabably write some kind of level pack level parser
+
+        clearTransientBoardState();
+        setCurrentLevel(nextLevel);
+        setHistory({
+            past: [],
+            present: nextLevel,
+            future: [],
+        });
+    };
+
+    const loadNextLevel = async () => {
+        const currentLevel = history.present;
+        if (!currentLevel) return;
+        const { id } = currentLevel;
+        // TODO: Get level pack ID from level pack state.
+        // TODO: Explore storing entire level pack in state or something to avoid fetching.
+        const levelPack = await loadLevelPack(0);
+        const level = levelPack?.levels[id + 1];
+        if (!level || !levelPack) return;
+
+        const { boardState, gemColorsById } = createInitialBoardState(level.board);
+        const nextLevel = {
+            id: id + 1,
+            packName: levelPack.metadata.name,
+            title: level.title,
+            solution: level.solution ?? undefined,
+            par: level.solution ? level.solution.length / 2 : undefined,
+            moveCount: 0,
+            initialBoardState: boardState.map((row) => [...row]),
+            currentBoardState: boardState,
+            gemColorsById,
+        };
 
         clearTransientBoardState();
         setCurrentLevel(nextLevel);
