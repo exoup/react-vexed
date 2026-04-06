@@ -11,7 +11,7 @@ function BoardContent() {
     const { currentLevel, moveGem } = useGameState();
     if (!currentLevel) return null;
 
-    const { currentBoardState, initialBoardState, gemColorsById } = currentLevel;
+    const { currentBoardState, initialBoardState, gemColorsById, moveCount } = currentLevel;
 
     const boundaryLevelMap = initialBoardState.map((row) =>
         row.map((cell) => (cell === 1 ? 1 : 0)),
@@ -49,20 +49,37 @@ function BoardContent() {
     );
 
     return (
-        <div
-            className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs select-none touch-none"
-            style={{ width: initialBoardState[0]!.length * blockSize, height: initialBoardState.length * blockSize }}
-        >
-            {mapBlocks}
-        </div>
+        <>
+            <div>{moveCount}</div>
+            <div
+                className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs select-none touch-none"
+                style={{ width: initialBoardState[0]!.length * blockSize, height: initialBoardState.length * blockSize }}
+            >
+                {mapBlocks}
+            </div>
+        </>
     );
 }
 
 export function Board() {
-    const { loadPack } = useGameState();
+    const { loadPack, undo, redo, canUndo, canRedo } = useGameState();
     return (
         <>
-            <button className="p-3 mb-10 cursor-pointer active:bg-indigo-600 z-50 bg-indigo-500 text-white text-sm rounded-md" onClick={() => loadPack(1)}>Load Pack</button>
+            <div className="flex flex-row gap-10">
+                <button
+                    className="p-3 mb-10 cursor-pointer active:bg-indigo-600 z-50 bg-indigo-500 text-white text-sm rounded-md"
+                    onClick={() => loadPack(0)}
+                >Load Pack</button>
+                <button
+                    className="disabled:cursor-not-allowed p-3 mb-10 cursor-pointer active:bg-emerald-600 z-50 bg-emerald-500 text-white text-sm rounded-md"
+                    disabled={!canUndo}
+                    onClick={undo}
+                >Undo</button>
+                <button className="disabled:cursor-not-allowed p-3 mb-10 cursor-pointer active:bg-amber-600 z-50 bg-amber-500 text-white text-sm rounded-md"
+                    disabled={!canRedo}
+                    onClick={redo}
+                >Redo</button>
+            </div>
             <BoardContent />
         </>
     );

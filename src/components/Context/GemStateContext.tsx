@@ -16,6 +16,7 @@ type GemStateContextValue = {
   clearingGemIds: Set<string>;
   startClearing: (gemId: string) => void;
   finishClearing: (gemId: string) => void;
+  resetTransientState: () => void;
   isInteractionLocked: boolean;
   isBoardSettled: boolean;
 };
@@ -78,6 +79,11 @@ export function GemStateProvider({ children }: PropsWithChildren) {
         nextSet.delete(gemId);
         return nextSet;
       });
+    },
+    resetTransientState: () => {
+      setSlidingGemIds(new Set());
+      setFallingGemIds(new Set());
+      setClearingGemIds(new Set());
     },
     isInteractionLocked: slidingGemIds.size > 0 || fallingGemIds.size > 0 || clearingGemIds.size > 0,
     isBoardSettled: slidingGemIds.size === 0 && fallingGemIds.size === 0 && clearingGemIds.size === 0

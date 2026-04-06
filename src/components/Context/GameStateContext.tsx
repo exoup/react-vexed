@@ -31,46 +31,98 @@ type LevelState = {
     gemColorsById: Record<string, string>;
 };
 
+type LevelHistoryState = {
+    past: LevelState[];
+    present: LevelState | null;
+    future: LevelState[];
+};
+
 type GameStateContextValue = {
     currentLevel: LevelState | null;
     hasOrphanedGems: boolean;
     isLevelCleared: boolean;
+    canUndo: boolean;
+    canRedo: boolean;
     // actions
     loadPack: (id: number) => Promise<void>;
     moveGem: (gemId: string, direction: BoardDirection) => void;
+    undo: () => void;
+    redo: () => void;
 };
 
 const GameStateContext = createContext<GameStateContextValue | null>(null);
+const initialLevelHistoryState: LevelHistoryState = {
+    past: [],
+    present: null,
+    future: [],
+};
 
 export function GameStateProvider({ children }: PropsWithChildren) {
     const [currentLevel, setCurrentLevel] = useState<LevelState | null>(null);
+    const [history, setHistory] = useState<LevelHistoryState>(initialLevelHistoryState);
     const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
 
     const {
         clearingGemIds,
         fallingGemIds,
         isBoardSettled,
+        resetTransientState,
         slidingGemIds,
         startClearing,
         startFalling,
         startSliding,
     } = useGemState();
+    const canUndo = isBoardSettled && history.past.length > 0;
+    const canRedo = isBoardSettled && history.future.length > 0;
+
+    const clearTransientBoardState = () => {
+        resetTransientState();
+        setPendingMatchedGemIds(new Set());
+    };
+
+    const undo = () => {
+        if (!isBoardSettled) return;
+
+        const previousLevel = history.past[history.past.length - 1];
+        if (!previousLevel) return;
+
+        clearTransientBoardState();
+        setCurrentLevel(previousLevel);
+        setHistory({
+            past: history.past.slice(0, -1),
+            present: previousLevel,
+            future: history.present ? [history.present, ...history.future] : history.future,
+        });
+    };
+
+    const redo = () => {
+        if (!isBoardSettled) return;
+
+        const nextLevel = history.future[0];
+        if (!nextLevel) return;
+
+        clearTransientBoardState();
+        setCurrentLevel(nextLevel);
+        setHistory({
+            past: history.present ? [...history.past, history.present] : history.past,
+            present: nextLevel,
+            future: history.future.slice(1),
+        });
+    };
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
         if (!currentLevel) return;
+        if (!isBoardSettled) return;
 
         const nextBoardState = moveGemInBoard(currentLevel.currentBoardState, gemId, direction);
 
         if (!nextBoardState) return;
 
         startSliding(gemId);
-        setCurrentLevel((prevLevel) => {
-            if (!prevLevel) return prevLevel;
-
-            return {
-                ...prevLevel,
-                currentBoardState: nextBoardState,
-            };
+        setCurrentLevel({
+            ...currentLevel,
+            moveCount: currentLevel.moveCount + 1,
+            currentBoardState: nextBoardState,
         });
     };
 
@@ -82,12 +134,12 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         if (pendingMatchedGemIds.size > 0) {
             if (clearingGemIds.size > 0) return;
 
-            setCurrentLevel((prevLevel) => {
-                if (!prevLevel) return prevLevel;
+            setCurrentLevel((previousLevel) => {
+                if (!previousLevel) return previousLevel;
 
                 return {
-                    ...prevLevel,
-                    currentBoardState: removeMatchedGems(prevLevel.currentBoardState, pendingMatchedGemIds),
+                    ...previousLevel,
+                    currentBoardState: removeMatchedGems(previousLevel.currentBoardState, pendingMatchedGemIds),
                 };
             });
             setPendingMatchedGemIds(new Set());
@@ -100,11 +152,11 @@ export function GameStateProvider({ children }: PropsWithChildren) {
                 startFalling(gemId);
             });
 
-            setCurrentLevel((prevLevel) => {
-                if (!prevLevel) return prevLevel;
+            setCurrentLevel((previousLevel) => {
+                if (!previousLevel) return previousLevel;
 
                 return {
-                    ...prevLevel,
+                    ...previousLevel,
                     currentBoardState: gravityResult.boardState,
                 };
             });
@@ -128,6 +180,37 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         startFalling,
     ]);
 
+    useEffect(() => {
+        if (!currentLevel) return;
+        if (!isBoardSettled) return;
+        if (pendingMatchedGemIds.size > 0) return;
+        if (history.present === currentLevel) return;
+
+        const gravityPreview = applyGravity(currentLevel.currentBoardState, new Set<string>());
+        if (gravityPreview.hasChanged) return;
+
+        const matchedGemIds = findMatches(currentLevel.currentBoardState);
+        if (matchedGemIds.size > 0) return;
+
+        setHistory((currentHistory) => {
+            if (currentHistory.present === currentLevel) return currentHistory;
+
+            if (!currentHistory.present) {
+                return {
+                    past: [],
+                    present: currentLevel,
+                    future: [],
+                };
+            }
+
+            return {
+                past: [...currentHistory.past, currentHistory.present],
+                present: currentLevel,
+                future: [],
+            };
+        });
+    }, [currentLevel, history.present, isBoardSettled, pendingMatchedGemIds]);
+
     const gravityPreview = currentLevel
         ? applyGravity(currentLevel.currentBoardState, new Set<string>())
         : null;
@@ -144,14 +227,11 @@ export function GameStateProvider({ children }: PropsWithChildren) {
 
     const loadPack = async (id: number) => {
         const levelPack = await loadLevelPack(id);
-        const level = levelPack?.levels[50];
+        const level = levelPack?.levels[0];
         if (!level || !levelPack) return;
 
         const { boardState, gemColorsById } = createInitialBoardState(level.board);
-
-        // TODO: Porabably write some kind of level pack level parser
-
-        setCurrentLevel({
+        const nextLevel = {
             id: 0,
             packName: levelPack.metadata.name,
             title: level.title,
@@ -161,8 +241,17 @@ export function GameStateProvider({ children }: PropsWithChildren) {
             initialBoardState: boardState.map((row) => [...row]),
             currentBoardState: boardState,
             gemColorsById,
+        };
+
+        // TODO: Porabably write some kind of level pack level parser
+
+        clearTransientBoardState();
+        setCurrentLevel(nextLevel);
+        setHistory({
+            past: [],
+            present: nextLevel,
+            future: [],
         });
-        setPendingMatchedGemIds(new Set());
     };
 
     const value: GameStateContextValue = {
@@ -171,6 +260,10 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         isLevelCleared,
         loadPack,
         moveGem,
+        undo,
+        redo,
+        canUndo,
+        canRedo,
     };
 
     return (
