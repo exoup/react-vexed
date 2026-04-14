@@ -43,6 +43,7 @@ type GameStateContextValue = {
     isLevelCleared: boolean;
     canUndo: boolean;
     canRedo: boolean;
+    score: number;
     // actions
     loadPack: (id: number) => Promise<void>;
     moveGem: (gemId: string, direction: BoardDirection) => void;
@@ -58,6 +59,7 @@ const initialLevelHistoryState: LevelHistoryState = {
 };
 
 export function GameStateProvider({ children }: PropsWithChildren) {
+    const [score, setScore] = useState(0);
     const [currentLevel, setCurrentLevel] = useState<LevelState | null>(null);
     const [history, setHistory] = useState<LevelHistoryState>(initialLevelHistoryState);
     const [pendingMatchedGemIds, setPendingMatchedGemIds] = useState<Set<string>>(new Set());
@@ -200,6 +202,11 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         if (!isBoardSettled) return;
         if (!isLevelCleared) return;
 
+        const { par, moveCount } = currentLevel;
+        if (par != null) {
+            setScore((prevScore) => prevScore + (moveCount - par));
+        }
+
         const timeoutId = window.setTimeout(() => {
             loadNextLevel();
         }, 500);
@@ -261,6 +268,7 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         // TODO: Porabably write some kind of level pack level parser
 
         clearTransientBoardState();
+        setScore(0);
         setCurrentLevel(nextLevel);
         setHistory({
             past: [],
@@ -305,6 +313,7 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         currentLevel,
         hasOrphanedGems,
         isLevelCleared,
+        score,
         loadPack,
         moveGem,
         undo,
