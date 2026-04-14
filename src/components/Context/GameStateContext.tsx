@@ -56,12 +56,14 @@ type GameStateContextValue = {
     isLevelCleared: boolean;
     canUndo: boolean;
     canRedo: boolean;
+    canReset: boolean;
     score: number;
     // actions
     loadPack: (id: number) => Promise<void>;
     moveGem: (gemId: string, direction: BoardDirection) => void;
     undo: () => void;
     redo: () => void;
+    reset: () => void;
 };
 
 const GameStateContext = createContext<GameStateContextValue | null>(null);
@@ -105,6 +107,7 @@ export function GameStateProvider({ children }: PropsWithChildren) {
 
     const canUndo = isBoardSettled && history.past.length > 0;
     const canRedo = isBoardSettled && history.future.length > 0;
+    const canReset = isBoardSettled && hasOrphanedGems;
 
     const clearTransientBoardState = () => {
         resetTransientState();
@@ -139,6 +142,18 @@ export function GameStateProvider({ children }: PropsWithChildren) {
             present: nextLevel,
             future: history.future.slice(1),
         });
+    };
+
+    const reset = () => {
+        if (!isBoardSettled) return;
+
+        clearTransientBoardState();
+        // reset current level to initial state
+        const initialLevelState = history.past[0];
+        if (!initialLevelState) return;
+
+        setHistory(initialLevelHistoryState);
+        setCurrentLevel(initialLevelState);
     };
 
     const moveGem = (gemId: string, direction: BoardDirection) => {
@@ -338,8 +353,10 @@ export function GameStateProvider({ children }: PropsWithChildren) {
         moveGem,
         undo,
         redo,
+        reset,
         canUndo,
         canRedo,
+        canReset
     };
 
     return (

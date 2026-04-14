@@ -68,7 +68,7 @@ function BoardContent() {
 }
 
 export function Board() {
-    const { loadPack, undo, redo, canUndo, canRedo } = useGameState();
+    const { loadPack, undo, redo, reset, canUndo, canRedo, canReset } = useGameState();
     return (
         <>
             <div className="flex flex-row gap-10">
@@ -85,6 +85,10 @@ export function Board() {
                     disabled={!canRedo}
                     onClick={redo}
                 >Redo</button>
+                <button className="disabled:cursor-not-allowed p-3 mb-10 cursor-pointer active:bg-violet-600 z-50 bg-violet-500 text-white text-sm rounded-md"
+                    disabled={!canReset}
+                    onClick={reset}
+                >Reset</button>
             </div>
             <BoardContent />
         </>
