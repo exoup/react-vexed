@@ -19,6 +19,18 @@ import {
 } from "react";
 import { useGemState } from "@/components/Context/GemStateContext";
 
+type PackState = {
+    id: number;
+    metadata: {
+        name: string;
+        category: string;
+        author: string;
+        url: string;
+        description: string;
+    };
+    levels: LevelState[];
+};
+
 type LevelState = {
     id: number;
     packName: string;
@@ -38,6 +50,7 @@ type LevelHistoryState = {
 };
 
 type GameStateContextValue = {
+    currentPack: PackState | null;
     currentLevel: LevelState | null;
     hasOrphanedGems: boolean;
     isLevelCleared: boolean;
@@ -59,6 +72,7 @@ const initialLevelHistoryState: LevelHistoryState = {
 };
 
 export function GameStateProvider({ children }: PropsWithChildren) {
+    const [currentPack, setCurrentPack] = useState<PackState | null>(null);
     const [score, setScore] = useState(0);
     const [currentLevel, setCurrentLevel] = useState<LevelState | null>(null);
     const [history, setHistory] = useState<LevelHistoryState>(initialLevelHistoryState);
@@ -269,6 +283,11 @@ export function GameStateProvider({ children }: PropsWithChildren) {
 
         clearTransientBoardState();
         setScore(0);
+        setCurrentPack({
+            id,
+            metadata: levelPack.metadata,
+            levels: [nextLevel],
+        });
         setCurrentLevel(nextLevel);
         setHistory({
             past: [],
@@ -310,6 +329,7 @@ export function GameStateProvider({ children }: PropsWithChildren) {
     };
 
     const value: GameStateContextValue = {
+        currentPack,
         currentLevel,
         hasOrphanedGems,
         isLevelCleared,

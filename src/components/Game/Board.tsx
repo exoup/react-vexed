@@ -8,10 +8,12 @@ import {
 } from "@/util/board";
 
 function BoardContent() {
-    const { currentLevel, moveGem, score } = useGameState();
+    const { currentLevel, moveGem, score, currentPack } = useGameState();
+    if (!currentPack) return null;
     if (!currentLevel) return null;
 
-    const { currentBoardState, initialBoardState, gemColorsById, moveCount, par, title } = currentLevel;
+    const { currentBoardState, initialBoardState, gemColorsById, moveCount, par, title, id: levelId } = currentLevel;
+    const { levels, metadata } = currentPack;
 
     const boundaryLevelMap = initialBoardState.map((row) =>
         row.map((cell) => (cell === 1 ? 1 : 0)),
@@ -50,9 +52,10 @@ function BoardContent() {
 
     return (
         <>
+            <div>{metadata.name}</div>
             <div>{moveCount}</div>
             <div>{par}</div>
-            <div>{title}</div>
+            <div>{title} #{levelId + 1} / {levels.length}</div>
             <div>{score}</div>
             <div
                 className="relative bg-transparent border-t border-l border-t-boundary-edge/50 border-l-boundary-edge/50 shadow-2xl rounded-xs select-none touch-none"
