@@ -19,6 +19,12 @@ import {
 } from "react";
 import { useGemState } from "@/components/Context/GemStateContext";
 
+type LevelDefinition = {
+    title: string;
+    solution?: string;
+    board: string;
+}
+
 type PackState = {
     id: number;
     metadata: {
@@ -28,12 +34,11 @@ type PackState = {
         url: string;
         description: string;
     };
-    levels: LevelState[];
+    levels: LevelDefinition[];
 };
 
 type LevelState = {
     id: number;
-    packName: string;
     title: string;
     solution?: string;
     par?: number;
@@ -298,11 +303,7 @@ export function GameStateProvider({ children }: PropsWithChildren) {
 
         clearTransientBoardState();
         setScore(0);
-        setCurrentPack({
-            id,
-            metadata: levelPack.metadata,
-            levels: [nextLevel],
-        });
+        setCurrentPack({ id, ...levelPack });
         setCurrentLevel(nextLevel);
         setHistory({
             past: [],
